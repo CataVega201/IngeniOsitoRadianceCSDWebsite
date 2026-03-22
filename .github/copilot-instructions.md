@@ -1,0 +1,2 @@
+Instructions: Remember, ALWAYS make sure:
+This website should work perfectly, function perfectly, as well as look perfectly on any screen/device. This entire website should be as lightweight, fast, future proof and optimized as possible. Do not add/make any comments inside the code. Lets go step by step, so, DO NOT do or add anything else unless I tell you to do so. Keep the code prettified. Make sure the spelling and grammar of everything is PERFECT and correct (Colombia Spanish).
