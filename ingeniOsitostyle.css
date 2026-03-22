@@ -311,6 +311,68 @@ img {
   text-wrap: balance;
 }
 
+
+.content-section--info {
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.info-panel {
+  display: grid;
+  justify-items: center;
+  gap: 1.2rem;
+  width: min(100%, 42rem);
+  margin-inline: auto;
+}
+
+.info-panel__title {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+  text-wrap: balance;
+}
+
+.info-panel__divider {
+  width: min(16rem, 60vw);
+  height: 0.24rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(120, 255, 247, 0.05), rgba(135, 255, 250, 0.98) 50%, rgba(120, 255, 247, 0.05));
+  box-shadow:
+    0 0 0.4rem rgba(120, 255, 247, 0.9),
+    0 0 1rem rgba(96, 255, 226, 0.6),
+    0 0 1.7rem rgba(78, 223, 231, 0.35);
+}
+
+.info-panel__graphic {
+  width: min(50vw, 14rem);
+  filter:
+    drop-shadow(0 0 0.35rem rgba(145, 255, 166, 0.42))
+    drop-shadow(0 0 1.1rem rgba(90, 255, 140, 0.24));
+  animation: info-float 5.8s ease-in-out infinite;
+}
+
+.info-panel__textbox {
+  width: min(100%, 34rem);
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(5, 19, 54, 0.62), rgba(3, 12, 34, 0.78));
+  box-shadow:
+    0 0 0 1px rgba(128, 255, 243, 0.05) inset,
+    0 0.9rem 2.5rem rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(12px);
+}
+
+.info-panel__textbox p {
+  max-width: none;
+  font-size: clamp(0.88rem, 1.6vw, 1rem);
+  line-height: 1.7;
+  color: rgba(247, 248, 255, 0.94);
+}
+
 @keyframes bg-flow {
   0% {
     background-position: 0% 0%, 100% 0%, 0% 100%, 0% 50%;
@@ -363,6 +425,17 @@ img {
   50% {
     background-position: 100% 50%;
     filter: drop-shadow(0 0 0.42rem rgba(255, 224, 138, 0.35));
+  }
+}
+
+@keyframes info-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -0.65rem, 0);
   }
 }
 
@@ -472,6 +545,28 @@ img {
 
   .content-section p {
     font-size: clamp(1.85rem, 12vw, 3.1rem);
+  }
+
+  .info-panel {
+    width: min(100%, 30rem);
+    gap: 1rem;
+  }
+
+  .info-panel__title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .info-panel__graphic {
+    width: min(58vw, 11.5rem);
+  }
+
+  .info-panel__textbox {
+    padding: 0.9rem 0.95rem;
+  }
+
+  .info-panel__textbox p {
+    font-size: 0.82rem;
+    line-height: 1.6;
   }
 }
 
