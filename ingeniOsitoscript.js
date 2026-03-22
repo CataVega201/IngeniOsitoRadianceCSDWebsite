@@ -1,8 +1,10 @@
 const sections = [...document.querySelectorAll('[data-section]')];
-const navLinks = [...document.querySelectorAll('.nav-link[data-route]')];
+const navLinks = [...document.querySelectorAll('.topbar__links .nav-link[data-route]')];
+const logoLink = document.querySelector('.topbar__logo[data-route]');
+const routeLinks = logoLink ? [logoLink, ...navLinks] : navLinks;
 const sectionMap = new Map(sections.map((section) => [section.id, section]));
 const defaultSectionId = sections[0]?.id || '';
-let activeSectionId = defaultSectionId;
+let activeSectionId = '';
 
 const updateNavigationState = (targetId) => {
   navLinks.forEach((link) => {
@@ -35,32 +37,34 @@ const navigateToSection = (targetId, options = {}) => {
   const { historyMode = 'push', focusSection = false } = options;
   const resolvedId = resolveSectionId(targetId);
 
-  if (!resolvedId || resolvedId === activeSectionId) {
-    if (historyMode === 'replace') {
-      window.history.replaceState({ sectionId: resolvedId }, '', `#${resolvedId}`);
-    }
+  if (!resolvedId) {
     return;
   }
 
-  activeSectionId = resolvedId;
-  updateNavigationState(resolvedId);
-  updateSectionState(resolvedId);
+  const shouldSyncHistory = resolvedId !== activeSectionId || historyMode === 'replace';
 
-  const nextUrl = `#${resolvedId}`;
+  if (resolvedId !== activeSectionId) {
+    activeSectionId = resolvedId;
+    updateNavigationState(resolvedId);
+    updateSectionState(resolvedId);
+  }
 
-  if (historyMode === 'replace') {
-    window.history.replaceState({ sectionId: resolvedId }, '', nextUrl);
-  } else {
-    window.history.pushState({ sectionId: resolvedId }, '', nextUrl);
+  if (shouldSyncHistory) {
+    const nextUrl = `#${resolvedId}`;
+
+    if (historyMode === 'replace') {
+      window.history.replaceState({ sectionId: resolvedId }, '', nextUrl);
+    } else {
+      window.history.pushState({ sectionId: resolvedId }, '', nextUrl);
+    }
   }
 
   if (focusSection) {
-    const activeSection = sectionMap.get(resolvedId);
-    activeSection?.focus({ preventScroll: true });
+    sectionMap.get(resolvedId)?.focus({ preventScroll: true });
   }
 };
 
-navLinks.forEach((link) => {
+routeLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
     navigateToSection(link.dataset.route, { historyMode: 'push', focusSection: true });
@@ -68,14 +72,11 @@ navLinks.forEach((link) => {
 });
 
 window.addEventListener('popstate', () => {
-  const targetId = resolveSectionId(window.location.hash);
-  activeSectionId = '';
-  navigateToSection(targetId, { historyMode: 'replace' });
+  navigateToSection(window.location.hash, { historyMode: 'replace' });
 });
 
 sections.forEach((section) => {
   section.setAttribute('tabindex', '-1');
 });
 
-activeSectionId = '';
-navigateToSection(resolveSectionId(window.location.hash), { historyMode: 'replace' });
+navigateToSection(window.location.hash, { historyMode: 'replace' });
