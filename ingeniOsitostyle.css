@@ -23,6 +23,8 @@
   --max-width: 1200px;
   --nav-height: 5.5rem;
   --section-spacing: clamp(4.5rem, 10vw, 8rem);
+  --transition-duration: 420ms;
+  --transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -172,24 +174,39 @@ img {
   transform: scaleX(1);
 }
 
-main {
+.spa-shell {
+  position: relative;
   padding-top: 2rem;
+  min-height: calc(100svh - var(--nav-height) - 3rem);
 }
 
 .content-section {
-  min-height: calc(100svh - var(--nav-height) - 3rem);
+  position: absolute;
+  inset: 2rem 0 0;
   display: grid;
   align-items: center;
+  width: 100%;
+  min-height: calc(100svh - var(--nav-height) - 5rem);
   padding: var(--section-spacing) clamp(1rem, 4vw, 3rem);
-  scroll-margin-top: calc(var(--nav-height) + 2.5rem);
   opacity: 0;
-  transform: translateY(2rem);
-  transition: opacity 500ms ease, transform 500ms ease;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate3d(0, 2rem, 0);
+  transition:
+    opacity var(--transition-duration) var(--transition-ease),
+    transform var(--transition-duration) var(--transition-ease),
+    visibility 0s linear var(--transition-duration);
 }
 
-.content-section.is-visible {
+.content-section.active {
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity var(--transition-duration) var(--transition-ease),
+    transform var(--transition-duration) var(--transition-ease),
+    visibility 0s linear 0s;
 }
 
 .content-section--hero {
@@ -275,11 +292,6 @@ main {
     border-radius: 1.75rem;
     padding: 0.85rem;
   }
-
-  .content-section {
-    min-height: auto;
-    padding-block: clamp(5rem, 16vw, 7rem);
-  }
 }
 
 @media (max-width: 560px) {
@@ -308,6 +320,10 @@ main {
     width: min(42vw, 10rem);
   }
 
+  .content-section {
+    min-height: calc(100svh - var(--nav-height) - 6.5rem);
+  }
+
   .content-section p {
     font-size: clamp(1.85rem, 12vw, 3.1rem);
   }
@@ -318,15 +334,15 @@ main {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
+  body,
+  body::before {
+    animation: none;
   }
 
+  .topbar__logo,
+  .nav-link,
+  .nav-link::after,
   .content-section {
-    opacity: 1;
-    transform: none;
+    transition-duration: 1ms;
   }
 }
