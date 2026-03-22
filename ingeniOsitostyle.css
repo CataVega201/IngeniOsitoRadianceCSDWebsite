@@ -311,6 +311,64 @@ img {
   text-wrap: balance;
 }
 
+.section-about {
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.about-panel {
+  width: min(100%, 42rem);
+  display: grid;
+  justify-items: center;
+  gap: clamp(0.9rem, 2vw, 1.35rem);
+  margin-inline: auto;
+}
+
+.about-panel__title {
+  margin: 0;
+  font-size: clamp(2.1rem, 6vw, 3.35rem);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.about-panel__divider {
+  width: min(100%, 18rem);
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(97, 222, 255, 0.1) 18%, rgba(97, 222, 255, 0.95) 50%, rgba(97, 222, 255, 0.1) 82%, transparent 100%);
+  box-shadow: 0 0 0.9rem rgba(97, 222, 255, 0.52);
+}
+
+.about-panel__image {
+  width: min(55vw, 12rem);
+  filter: drop-shadow(0 0 0.35rem rgba(124, 255, 159, 0.38)) drop-shadow(0 0 0.9rem rgba(124, 255, 159, 0.16));
+  animation: about-float 5.8s ease-in-out infinite;
+}
+
+.about-panel__text {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  line-height: 1.42;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.about-panel__text-highlight {
+  color: #91e8ff;
+}
+
+.about-panel__text-gradient {
+  background: linear-gradient(90deg, #ff3131 0%, #ff914d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @keyframes bg-flow {
   0% {
     background-position: 0% 0%, 100% 0%, 0% 100%, 0% 50%;
@@ -363,6 +421,17 @@ img {
   50% {
     background-position: 100% 50%;
     filter: drop-shadow(0 0 0.42rem rgba(255, 224, 138, 0.35));
+  }
+}
+
+@keyframes about-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -0.55rem, 0);
   }
 }
 
@@ -473,6 +542,29 @@ img {
   .content-section p {
     font-size: clamp(1.85rem, 12vw, 3.1rem);
   }
+
+  .about-panel {
+    width: min(100%, 31rem);
+    gap: 0.85rem;
+  }
+
+  .about-panel__title {
+    font-size: clamp(1.9rem, 10vw, 2.8rem);
+  }
+
+  .about-panel__divider {
+    width: min(100%, 14rem);
+  }
+
+  .about-panel__image {
+    width: min(62vw, 9.5rem);
+  }
+
+  .about-panel__text {
+    max-width: 19rem;
+    font-size: clamp(0.98rem, 4.3vw, 1.25rem);
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 360px) {
@@ -504,7 +596,8 @@ img {
 
   .hero-lockup__logo,
   .hero-lockup__title,
-  .hero-particle {
+  .hero-particle,
+  .about-panel__image {
     animation: none;
   }
 }
