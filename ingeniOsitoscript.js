@@ -36,3 +36,45 @@ if (sections.length > 0) {
   setActiveSection(sections[0].id);
   sections[0].classList.add('is-visible');
 }
+
+const particlesRoot = document.getElementById('hero-particles');
+const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const PARTICLE_COUNT = 18;
+
+const createParticles = () => {
+  if (!particlesRoot || reducedMotionQuery.matches) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  for (let i = 0; i < PARTICLE_COUNT; i += 1) {
+    const particle = document.createElement('span');
+    particle.className = 'hero-lockup__particle';
+
+    const radius = 32 + Math.random() * 34;
+    const angle = Math.random() * Math.PI * 2;
+    const x = 50 + Math.cos(angle) * radius;
+    const y = 50 + Math.sin(angle) * radius;
+    const size = 0.14 + Math.random() * 0.32;
+    const duration = 4.7 + Math.random() * 3.3;
+    const delay = -Math.random() * duration;
+    const shiftX = (Math.random() * 0.65 - 0.325).toFixed(3);
+    const shiftY = -(0.55 + Math.random() * 0.85).toFixed(3);
+
+    particle.style.left = `${x}%`;
+    particle.style.top = `${y}%`;
+    particle.style.width = `${size}rem`;
+    particle.style.height = `${size}rem`;
+    particle.style.setProperty('--particle-duration', `${duration.toFixed(2)}s`);
+    particle.style.setProperty('--particle-delay', `${delay.toFixed(2)}s`);
+    particle.style.setProperty('--particle-shift-x', `${shiftX}rem`);
+    particle.style.setProperty('--particle-shift-y', `${shiftY}rem`);
+
+    fragment.append(particle);
+  }
+
+  particlesRoot.append(fragment);
+};
+
+createParticles();
