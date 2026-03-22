@@ -39,10 +39,10 @@ body {
   font-family: "Zekton", "Segoe UI", sans-serif;
   color: var(--white);
   background:
-    radial-gradient(circle at 12% 18%, rgba(255, 127, 200, 0.17), transparent 20%),
-    radial-gradient(circle at 84% 16%, rgba(207, 203, 255, 0.18), transparent 22%),
-    radial-gradient(circle at 18% 84%, rgba(13, 79, 92, 0.42), transparent 30%),
-    linear-gradient(135deg, #010716 0%, var(--navy-deep) 32%, var(--imperial-blue) 66%, var(--teal-deep) 100%);
+    radial-gradient(circle at 12% 18%, rgba(255, 127, 200, 0.1), transparent 18%),
+    radial-gradient(circle at 84% 16%, rgba(207, 203, 255, 0.11), transparent 20%),
+    radial-gradient(circle at 18% 84%, rgba(13, 79, 92, 0.26), transparent 28%),
+    linear-gradient(135deg, #01040e 0%, #010b24 30%, #001247 64%, #041f27 100%);
   background-size: 180% 180%, 160% 160%, 170% 170%, 180% 180%;
   background-attachment: fixed;
   animation: bg-flow 18s ease-in-out infinite;
@@ -54,8 +54,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(120deg, rgba(216, 166, 63, 0.11), transparent 28%),
-    linear-gradient(300deg, rgba(255, 224, 138, 0.08), transparent 30%);
+    linear-gradient(120deg, rgba(216, 166, 63, 0.07), transparent 26%),
+    linear-gradient(300deg, rgba(255, 224, 138, 0.05), transparent 28%);
   mix-blend-mode: screen;
   animation: shimmer-flow 20s ease-in-out infinite;
 }
@@ -296,8 +296,8 @@ img {
 .hero-lockup__subtitle {
   width: 100%;
   margin: 0;
-  font-size: clamp(0.6rem, 1vw, 0.72rem);
-  letter-spacing: 0.06em;
+  font-size: clamp(0.46rem, 0.7vw, 0.56rem);
+  letter-spacing: 0.04em;
   text-align: center;
   color: rgba(255, 234, 182, 0.92);
   text-transform: none;
@@ -461,8 +461,8 @@ img {
   }
 
   .hero-lockup__subtitle {
-    font-size: clamp(0.56rem, 2.4vw, 0.7rem);
-    letter-spacing: 0.05em;
+    font-size: clamp(0.42rem, 1.8vw, 0.52rem);
+    letter-spacing: 0.035em;
   }
 
   .content-section {
