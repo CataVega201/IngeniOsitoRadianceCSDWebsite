@@ -204,7 +204,7 @@ img {
   align-items: start;
   align-content: start;
   width: 100%;
-  min-height: 100%;
+  min-height: 0;
   padding: var(--section-spacing) clamp(1rem, 4vw, 3rem);
   opacity: 0;
   visibility: hidden;
