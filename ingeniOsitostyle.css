@@ -520,13 +520,13 @@ img {
 
 .que-es-esto-feature__expert-stars {
   position: absolute;
-  top: 2%;
+  top: 4%;
   left: 50%;
   display: grid;
   grid-template-columns: repeat(3, max-content);
   align-items: end;
   justify-items: center;
-  column-gap: clamp(0.45rem, 1.2vw, 0.9rem);
+  column-gap: clamp(0.08rem, 0.45vw, 0.22rem);
   transform: translateX(-50%);
 }
 
@@ -563,7 +563,7 @@ img {
 .que-es-esto-feature__illustration--expert-person {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: clamp(0.3rem, 1.4vw, 0.85rem);
   width: min(46%, 5.15rem);
   height: auto;
   transform: translateX(-50%);
