@@ -454,7 +454,16 @@ img {
 }
 
 .que-es-esto-feature__scene--gears {
-  overflow: visible;
+  overflow: hidden;
+}
+
+.que-es-esto-feature__gear-cluster {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 62%;
+  height: 62%;
+  transform: translate(-50%, -50%);
 }
 
 .que-es-esto-feature__illustration--gear {
@@ -463,17 +472,17 @@ img {
 }
 
 .que-es-esto-feature__illustration--gear-large {
-  inset: 20% 47% 24% 17%;
+  inset: 18% 43% 22% 11%;
   animation: que-es-esto-gear-spin-clockwise 10.4s linear infinite;
 }
 
 .que-es-esto-feature__illustration--gear-medium {
-  inset: 13% 18% 50% 48%;
+  inset: 6% 9% 48% 47%;
   animation: que-es-esto-gear-spin-counter 8.9s linear infinite;
 }
 
 .que-es-esto-feature__illustration--gear-small {
-  inset: 50% 17% 18% 50%;
+  inset: 47% 12% 9% 50%;
   animation: que-es-esto-gear-spin-clockwise 7.8s linear infinite;
 }
 
