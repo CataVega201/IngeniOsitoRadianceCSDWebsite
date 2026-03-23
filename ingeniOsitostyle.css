@@ -316,7 +316,8 @@ img {
 
 .content-section--que-es-esto {
   justify-items: center;
-  align-content: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .que-es-esto-panel {
