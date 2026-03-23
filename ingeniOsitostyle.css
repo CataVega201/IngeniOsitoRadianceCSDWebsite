@@ -461,28 +461,53 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 54%;
-  height: 54%;
+  width: 52%;
+  height: 52%;
   transform: translate(-50%, -50%);
 }
 
+.que-es-esto-feature__gear-item {
+  position: absolute;
+}
+
+.que-es-esto-feature__gear-item--large {
+  top: 18%;
+  left: 4%;
+  width: 45%;
+  height: 45%;
+}
+
+.que-es-esto-feature__gear-item--medium {
+  top: 0;
+  right: 4%;
+  width: 34%;
+  height: 34%;
+}
+
+.que-es-esto-feature__gear-item--small {
+  right: 7%;
+  bottom: 2%;
+  width: 29%;
+  height: 29%;
+}
+
 .que-es-esto-feature__illustration--gear {
+  position: static;
+  width: 100%;
+  height: 100%;
   filter: drop-shadow(0 0.85rem 1.5rem rgba(0, 0, 0, 0.24));
   will-change: transform;
 }
 
 .que-es-esto-feature__illustration--gear-large {
-  inset: 18% 50% 22% 6%;
   animation: que-es-esto-gear-spin-clockwise 10.4s linear infinite;
 }
 
 .que-es-esto-feature__illustration--gear-medium {
-  inset: 1% 6% 55% 53%;
   animation: que-es-esto-gear-spin-counter 8.9s linear infinite;
 }
 
 .que-es-esto-feature__illustration--gear-small {
-  inset: 55% 10% 1% 53%;
   animation: que-es-esto-gear-spin-clockwise 7.8s linear infinite;
 }
 
