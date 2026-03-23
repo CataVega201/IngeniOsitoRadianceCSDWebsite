@@ -374,16 +374,16 @@ img {
 .que-es-esto-panel__feature-intro {
   display: grid;
   width: min(100%, 64rem);
-  margin-top: clamp(2rem, 4vw, 3rem);
+  margin-top: clamp(3rem, 6vw, 4.5rem);
   gap: 1.4rem;
 }
 
 .que-es-esto-panel__feature-title {
   margin: 0;
   color: #bbf5ff;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1.3rem, 2.8vw, 1.8rem);
   letter-spacing: 0.06em;
-  text-align: left;
+  text-align: center;
 }
 
 .que-es-esto-panel__feature-list {
@@ -409,7 +409,7 @@ img {
 .que-es-esto-feature__media,
 .que-es-esto-feature__content {
   min-width: 0;
-  min-height: clamp(12rem, 28vw, 16rem);
+  min-height: clamp(10rem, 24vw, 13.5rem);
   border-radius: 1.4rem;
 }
 
@@ -421,14 +421,14 @@ img {
 
 .que-es-esto-feature__icon {
   width: min(100%, 28rem);
-  max-height: clamp(12rem, 28vw, 16rem);
+  max-height: clamp(10rem, 24vw, 13.5rem);
   object-fit: contain;
 }
 
 .que-es-esto-feature__content {
   display: grid;
   align-content: center;
-  padding: clamp(1.1rem, 3vw, 1.6rem);
+  padding: clamp(0.95rem, 2.4vw, 1.2rem);
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(145deg, rgba(2, 17, 59, 0.9), rgba(4, 31, 39, 0.82));
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
@@ -649,16 +649,16 @@ img {
   }
 
   .que-es-esto-feature__media {
-    min-height: 11rem;
+    min-height: 9.5rem;
   }
 
   .que-es-esto-feature__icon {
     width: min(100%, 22rem);
-    max-height: 11rem;
+    max-height: 9.5rem;
   }
 
   .que-es-esto-feature__content {
-    padding: 1rem;
+    padding: 0.95rem;
   }
 }
 
