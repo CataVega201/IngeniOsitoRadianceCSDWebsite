@@ -408,6 +408,35 @@ img {
   padding: 0;
 }
 
+.que-es-esto-feature__media--magnifier {
+  isolation: isolate;
+}
+
+.que-es-esto-feature__scene {
+  position: relative;
+  width: min(100%, 28rem);
+  aspect-ratio: 640 / 420;
+}
+
+.que-es-esto-feature__illustration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.que-es-esto-feature__illustration--paper {
+  filter: drop-shadow(0 0.7rem 1.4rem rgba(0, 0, 0, 0.22));
+}
+
+.que-es-esto-feature__illustration--magnifier {
+  transform-origin: 52% 54%;
+  filter: drop-shadow(0 0.85rem 1.5rem rgba(0, 0, 0, 0.28));
+  animation: que-es-esto-magnifier-float 5.8s ease-in-out infinite;
+  will-change: transform;
+}
+
 .que-es-esto-feature__icon {
   width: min(100%, 28rem);
   max-height: clamp(10rem, 24vw, 13.5rem);
@@ -497,6 +526,25 @@ img {
   50% {
     transform: translate3d(-50%, -50%, 0) translate3d(var(--particle-drift), -0.8rem, 0) scale(calc(var(--particle-scale) + 0.18));
     opacity: calc(var(--particle-opacity) + 0.24);
+  }
+}
+
+@keyframes que-es-esto-magnifier-float {
+  0%,
+  100% {
+    transform: translate3d(-2%, 4%, 0) rotate(-10deg) scale(1);
+  }
+
+  25% {
+    transform: translate3d(4%, -3%, 0) rotate(-3deg) scale(1.015);
+  }
+
+  50% {
+    transform: translate3d(9%, -7%, 0) rotate(5deg) scale(1.02);
+  }
+
+  75% {
+    transform: translate3d(1%, 1%, 0) rotate(-2deg) scale(1.01);
   }
 }
 
@@ -637,6 +685,7 @@ img {
     min-height: 9.5rem;
   }
 
+  .que-es-esto-feature__scene,
   .que-es-esto-feature__icon {
     width: min(100%, 22rem);
     max-height: 9.5rem;
@@ -676,7 +725,8 @@ img {
 
   .hero-lockup__logo,
   .hero-lockup__title,
-  .hero-particle {
+  .hero-particle,
+  .que-es-esto-feature__illustration--magnifier {
     animation: none;
   }
 }
