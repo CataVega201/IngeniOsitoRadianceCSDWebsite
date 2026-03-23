@@ -514,27 +514,26 @@ img {
 
 .que-es-esto-feature__scene--expert {
   display: grid;
-  align-content: end;
-  justify-items: center;
-  padding: clamp(0.3rem, 1vw, 0.55rem) clamp(0.25rem, 0.9vw, 0.5rem) 0;
+  place-items: center;
+  padding: clamp(0.15rem, 0.7vw, 0.35rem) clamp(0.15rem, 0.7vw, 0.35rem) 0;
 }
 
 .que-es-esto-feature__expert-stars {
   position: absolute;
-  top: 5%;
+  top: 2%;
   left: 50%;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, max-content);
   align-items: end;
-  column-gap: clamp(0.35rem, 1vw, 0.65rem);
+  justify-items: center;
+  column-gap: clamp(0.45rem, 1.2vw, 0.9rem);
   transform: translateX(-50%);
-  width: min(88%, 11rem);
 }
 
 .que-es-esto-feature__illustration--expert-star {
   position: relative;
   inset: auto;
-  width: 100%;
+  width: auto;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 0.6rem 1.05rem rgba(0, 0, 0, 0.2));
@@ -544,7 +543,7 @@ img {
 
 .que-es-esto-feature__illustration--expert-star-left,
 .que-es-esto-feature__illustration--expert-star-right {
-  width: clamp(2rem, 22%, 2.7rem);
+  width: clamp(2.7rem, 30%, 3.75rem);
 }
 
 .que-es-esto-feature__illustration--expert-star-left {
@@ -552,8 +551,8 @@ img {
 }
 
 .que-es-esto-feature__illustration--expert-star-center {
-  width: clamp(2.45rem, 28%, 3.3rem);
-  margin-bottom: clamp(0.24rem, 1.1vw, 0.5rem);
+  width: clamp(3.35rem, 38%, 4.65rem);
+  margin-bottom: clamp(0.35rem, 1.35vw, 0.7rem);
   animation-delay: 0.3s;
 }
 
@@ -563,8 +562,9 @@ img {
 
 .que-es-esto-feature__illustration--expert-person {
   position: absolute;
-  inset: auto 50% 0;
-  width: min(76%, 8.4rem);
+  left: 50%;
+  bottom: 0;
+  width: min(46%, 5.15rem);
   height: auto;
   transform: translateX(-50%);
   object-fit: contain;
