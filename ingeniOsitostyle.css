@@ -79,7 +79,7 @@ img {
 
 .page-shell {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
   width: min(100%, calc(var(--max-width) + 3rem));
   min-height: 100svh;
   margin: 0 auto;
