@@ -188,8 +188,6 @@ img {
 
 .spa-shell {
   position: relative;
-  height: calc(100svh - var(--nav-height) - 3rem);
-  min-height: calc(100svh - var(--nav-height) - 3rem);
   padding-top: 2rem;
 }
 
@@ -203,7 +201,6 @@ img {
   width: 100%;
   min-height: calc(100svh - var(--nav-height) - 5rem);
   padding: var(--section-spacing) clamp(1rem, 4vw, 3rem);
-  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -215,6 +212,8 @@ img {
 }
 
 .content-section.active {
+  position: relative;
+  inset: auto;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
