@@ -35,7 +35,7 @@ const createParticles = () => {
 
   const fragment = document.createDocumentFragment();
 
-  Array.from({ length: particleCount }).forEach((_, index) => {
+  Array.from({ length: particleCount }).forEach(() => {
     const particle = document.createElement('span');
     particle.className = 'hero-particle';
     particle.style.setProperty('--particle-size', `${(Math.random() * 0.7 + 0.35).toFixed(2)}rem`);
@@ -46,7 +46,6 @@ const createParticles = () => {
     particle.style.setProperty('--particle-drift', `${(Math.random() * 3 - 1.5).toFixed(2)}rem`);
     particle.style.setProperty('--particle-scale', `${(Math.random() * 0.7 + 0.7).toFixed(2)}`);
     particle.style.setProperty('--particle-opacity', `${(Math.random() * 0.35 + 0.25).toFixed(2)}`);
-    particle.dataset.index = String(index);
     fragment.appendChild(particle);
   });
 
@@ -69,7 +68,6 @@ const updateNavigationState = (targetId) => {
 const updateSectionState = (targetId) => {
   sections.forEach((section) => {
     const isActive = section.id === targetId;
-    section.classList.toggle('active', isActive);
     section.toggleAttribute('inert', !isActive);
     section.toggleAttribute('hidden', !isActive);
     section.setAttribute('aria-hidden', String(!isActive));
@@ -120,7 +118,11 @@ window.addEventListener('popstate', () => {
   navigateToSection(window.location.hash, { historyMode: 'replace' });
 });
 
-motionPreference.addEventListener('change', createParticles);
+if (typeof motionPreference.addEventListener === 'function') {
+  motionPreference.addEventListener('change', createParticles);
+} else if (typeof motionPreference.addListener === 'function') {
+  motionPreference.addListener(createParticles);
+}
 
 createParticles();
 navigateToSection(window.location.hash, { historyMode: 'replace' });
