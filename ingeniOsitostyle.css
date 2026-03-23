@@ -461,8 +461,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 52%;
-  height: 52%;
+  width: 58%;
+  height: 58%;
   transform: translate(-50%, -50%);
 }
 
@@ -471,24 +471,24 @@ img {
 }
 
 .que-es-esto-feature__gear-item--large {
-  top: 18%;
-  left: 4%;
-  width: 45%;
-  height: 45%;
+  top: 17%;
+  left: 7%;
+  width: 47%;
+  height: 47%;
 }
 
 .que-es-esto-feature__gear-item--medium {
-  top: 0;
-  right: 4%;
-  width: 34%;
-  height: 34%;
+  top: 7%;
+  right: 7%;
+  width: 36%;
+  height: 36%;
 }
 
 .que-es-esto-feature__gear-item--small {
-  right: 7%;
-  bottom: 2%;
-  width: 29%;
-  height: 29%;
+  right: 10%;
+  bottom: 8%;
+  width: 31%;
+  height: 31%;
 }
 
 .que-es-esto-feature__illustration--gear {
