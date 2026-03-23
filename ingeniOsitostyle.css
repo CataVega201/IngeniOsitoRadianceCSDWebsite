@@ -382,9 +382,9 @@ img {
 
 .que-es-esto-feature {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   align-items: stretch;
-  gap: clamp(0.9rem, 3vw, 1.5rem);
+  gap: clamp(0.6rem, 2vw, 1rem);
 }
 
 .que-es-esto-feature--reverse > .que-es-esto-feature__media {
@@ -398,13 +398,13 @@ img {
 .que-es-esto-feature__media,
 .que-es-esto-feature__content {
   min-width: 0;
-  min-height: clamp(10rem, 24vw, 13.5rem);
   border-radius: 1.4rem;
 }
 
 .que-es-esto-feature__media {
   display: grid;
   place-items: center;
+  min-height: clamp(9rem, 22vw, 12rem);
   padding: 0;
 }
 
@@ -414,7 +414,7 @@ img {
 
 .que-es-esto-feature__scene {
   position: relative;
-  width: min(100%, 28rem);
+  width: min(100%, 24rem);
   aspect-ratio: 640 / 420;
 }
 
@@ -427,6 +427,7 @@ img {
 }
 
 .que-es-esto-feature__illustration--paper {
+  transform: scale(0.8);
   filter: drop-shadow(0 0.7rem 1.4rem rgba(0, 0, 0, 0.22));
 }
 
@@ -438,15 +439,16 @@ img {
 }
 
 .que-es-esto-feature__icon {
-  width: min(100%, 28rem);
-  max-height: clamp(10rem, 24vw, 13.5rem);
+  width: min(100%, 24rem);
+  max-height: clamp(9rem, 22vw, 12rem);
   object-fit: contain;
 }
 
 .que-es-esto-feature__content {
   display: grid;
   align-content: center;
-  padding: clamp(0.95rem, 2.4vw, 1.2rem);
+  min-height: clamp(8.25rem, 18vw, 10.5rem);
+  padding: clamp(0.72rem, 1.8vw, 0.95rem);
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(145deg, rgba(2, 17, 59, 0.9), rgba(4, 31, 39, 0.82));
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
@@ -456,8 +458,8 @@ img {
 .que-es-esto-feature__text {
   margin: 0;
   color: var(--white);
-  font-size: clamp(0.96rem, 1.85vw, 1.08rem);
-  line-height: 1.7;
+  font-size: clamp(0.94rem, 1.7vw, 1.04rem);
+  line-height: 1.6;
   text-wrap: pretty;
 }
 
@@ -532,19 +534,19 @@ img {
 @keyframes que-es-esto-magnifier-float {
   0%,
   100% {
-    transform: translate3d(-2%, 4%, 0) rotate(-10deg) scale(1);
+    transform: translate3d(0%, 3%, 0) rotate(-10deg) scale(0.82);
   }
 
   25% {
-    transform: translate3d(4%, -3%, 0) rotate(-3deg) scale(1.015);
+    transform: translate3d(4%, -2%, 0) rotate(-4deg) scale(0.835);
   }
 
   50% {
-    transform: translate3d(9%, -7%, 0) rotate(5deg) scale(1.02);
+    transform: translate3d(7%, -6%, 0) rotate(3deg) scale(0.845);
   }
 
   75% {
-    transform: translate3d(1%, 1%, 0) rotate(-2deg) scale(1.01);
+    transform: translate3d(1%, 0%, 0) rotate(-2deg) scale(0.83);
   }
 }
 
@@ -682,17 +684,17 @@ img {
   }
 
   .que-es-esto-feature__media {
-    min-height: 9.5rem;
+    min-height: 8.5rem;
   }
 
   .que-es-esto-feature__scene,
   .que-es-esto-feature__icon {
-    width: min(100%, 22rem);
-    max-height: 9.5rem;
+    width: min(100%, 18rem);
+    max-height: 8.5rem;
   }
 
   .que-es-esto-feature__content {
-    padding: 0.95rem;
+    padding: 0.82rem;
   }
 }
 
