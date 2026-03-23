@@ -259,6 +259,7 @@ img {
 
 .about-panel__plant {
   width: min(18rem, 60vw);
+  margin-block: clamp(1rem, 3vw, 2.25rem);
   filter: drop-shadow(0 0 0.4rem rgba(82, 255, 138, 0.42)) drop-shadow(0 0 1rem rgba(82, 255, 138, 0.18));
   animation: plant-float 6.2s ease-in-out infinite;
   transform-origin: center;
@@ -276,8 +277,8 @@ img {
 
 .about-panel__copy p {
   max-width: none;
-  font-size: clamp(1rem, 1.6vw, 1.22rem);
-  line-height: 1.75;
+  font-size: clamp(0.56rem, 0.78vw, 0.68rem);
+  line-height: 1.7;
   color: rgba(247, 248, 255, 0.94);
 }
 
