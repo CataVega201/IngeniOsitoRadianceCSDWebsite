@@ -37,6 +37,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100svh;
+  overflow: hidden;
   font-family: "Zekton", "Segoe UI", sans-serif;
   color: var(--white);
   background:
@@ -81,7 +82,7 @@ img {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   width: min(100%, calc(var(--max-width) + 3rem));
-  min-height: 100svh;
+  height: 100svh;
   margin: 0 auto;
   padding: 1rem 1.5rem 1rem;
 }
@@ -194,6 +195,7 @@ img {
   position: relative;
   min-height: 0;
   padding-top: 0.75rem;
+  overflow: hidden;
 }
 
 .content-section {
@@ -205,6 +207,9 @@ img {
   align-content: start;
   width: 100%;
   min-height: 0;
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: var(--section-spacing) clamp(1rem, 4vw, 3rem);
   opacity: 0;
   visibility: hidden;
@@ -219,6 +224,7 @@ img {
 .content-section.active {
   position: relative;
   inset: auto;
+  height: 100%;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -552,10 +558,6 @@ img {
   .topbar__links {
     width: 100%;
   }
-
-  .content-section {
-    min-height: calc(100svh - var(--nav-height) - 6rem);
-  }
 }
 
 @media (max-width: 560px) {
@@ -615,7 +617,6 @@ img {
   }
 
   .content-section {
-    min-height: calc(100svh - var(--nav-height) - 7rem);
     padding-inline: 0.75rem;
   }
 
