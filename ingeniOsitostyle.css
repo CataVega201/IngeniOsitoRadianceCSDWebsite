@@ -463,18 +463,18 @@ img {
 }
 
 .que-es-esto-feature__illustration--gear-large {
-  inset: 14% 40% 16% 8%;
-  animation: que-es-esto-gear-spin-clockwise 8.2s linear infinite;
+  inset: 20% 47% 24% 17%;
+  animation: que-es-esto-gear-spin-clockwise 10.4s linear infinite;
 }
 
 .que-es-esto-feature__illustration--gear-medium {
-  inset: 6% 10% 44% 40%;
-  animation: que-es-esto-gear-spin-counter 6.8s linear infinite;
+  inset: 13% 18% 50% 48%;
+  animation: que-es-esto-gear-spin-counter 8.9s linear infinite;
 }
 
 .que-es-esto-feature__illustration--gear-small {
-  inset: 42% 8% 10% 42%;
-  animation: que-es-esto-gear-spin-clockwise 5.9s linear infinite;
+  inset: 50% 17% 18% 50%;
+  animation: que-es-esto-gear-spin-clockwise 7.8s linear infinite;
 }
 
 .que-es-esto-feature__icon {
