@@ -188,18 +188,22 @@ img {
 
 .spa-shell {
   position: relative;
-  padding-top: 2rem;
+  height: calc(100svh - var(--nav-height) - 3rem);
   min-height: calc(100svh - var(--nav-height) - 3rem);
+  padding-top: 2rem;
 }
 
 .content-section {
   position: absolute;
   inset: 2rem 0 0;
   display: grid;
-  align-items: center;
+  justify-items: center;
+  align-items: start;
+  align-content: start;
   width: 100%;
   min-height: calc(100svh - var(--nav-height) - 5rem);
   padding: var(--section-spacing) clamp(1rem, 4vw, 3rem);
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -223,14 +227,14 @@ img {
 
 .content-section--hero {
   justify-items: center;
-  align-content: center;
+  align-content: start;
   text-align: center;
 }
 
 .hero-lockup {
   display: grid;
   justify-items: center;
-  align-content: center;
+  align-content: start;
   width: min(100%, 44rem);
   margin-inline: auto;
   gap: 0.28rem;
@@ -413,26 +417,13 @@ img {
 .que-es-esto-feature__media {
   display: grid;
   place-items: center;
-  padding: 1.2rem;
-  border: 1px solid rgba(187, 245, 255, 0.18);
-  background:
-    linear-gradient(145deg, rgba(6, 46, 53, 0.92), rgba(1, 18, 71, 0.82)),
-    linear-gradient(135deg, rgba(187, 245, 255, 0.22), rgba(255, 224, 138, 0.12));
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2), inset 0 0 1rem rgba(187, 245, 255, 0.08);
+  padding: 0;
 }
 
 .que-es-esto-feature__icon {
-  display: inline-grid;
-  place-items: center;
-  width: clamp(4.5rem, 10vw, 6rem);
-  aspect-ratio: 1;
-  border: 1px solid rgba(187, 245, 255, 0.34);
-  border-radius: 1.1rem;
-  color: #bbf5ff;
-  font-size: clamp(1.15rem, 2.8vw, 1.6rem);
-  letter-spacing: 0.08em;
-  background: linear-gradient(145deg, rgba(187, 245, 255, 0.08), rgba(255, 255, 255, 0.02));
-  box-shadow: 0 0 1.4rem rgba(187, 245, 255, 0.12);
+  width: min(100%, 28rem);
+  max-height: clamp(12rem, 28vw, 16rem);
+  object-fit: contain;
 }
 
 .que-es-esto-feature__content {
@@ -660,6 +651,11 @@ img {
 
   .que-es-esto-feature__media {
     min-height: 11rem;
+  }
+
+  .que-es-esto-feature__icon {
+    width: min(100%, 22rem);
+    max-height: 11rem;
   }
 
   .que-es-esto-feature__content {
