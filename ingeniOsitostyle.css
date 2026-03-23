@@ -423,6 +423,10 @@ img {
   isolation: isolate;
 }
 
+.que-es-esto-feature__media--expert {
+  isolation: isolate;
+}
+
 .que-es-esto-feature:not(.que-es-esto-feature--reverse) > .que-es-esto-feature__media {
   justify-self: start;
 }
@@ -511,10 +515,63 @@ img {
   animation: que-es-esto-gear-spin-clockwise 7.8s linear infinite;
 }
 
-.que-es-esto-feature__icon {
-  width: 100%;
-  height: 100%;
+.que-es-esto-feature__scene--expert {
+  display: grid;
+  place-items: end center;
+  overflow: visible;
+}
+
+.que-es-esto-feature__illustration--expert-person {
+  inset: auto;
+  bottom: 0;
+  left: 50%;
+  width: 70%;
+  height: auto;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 0.85rem 1.4rem rgba(0, 0, 0, 0.24));
+}
+
+.que-es-esto-feature__expert-stars {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: end;
+  gap: clamp(0.2rem, 1.2vw, 0.45rem);
+  transform: translateX(-50%);
+}
+
+.que-es-esto-feature__illustration--expert-star {
+  position: relative;
+  inset: auto;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 0.6rem 1rem rgba(0, 0, 0, 0.2));
+  animation: que-es-esto-star-bounce 2.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.que-es-esto-feature__illustration--expert-star-left,
+.que-es-esto-feature__illustration--expert-star-right {
+  width: clamp(1.45rem, 4vw, 2rem);
+}
+
+.que-es-esto-feature__illustration--expert-star-center {
+  width: clamp(1.8rem, 4.8vw, 2.45rem);
+}
+
+.que-es-esto-feature__illustration--expert-star-left {
+  animation-delay: 0s;
+}
+
+.que-es-esto-feature__illustration--expert-star-center {
+  animation-delay: 0.22s;
+}
+
+.que-es-esto-feature__illustration--expert-star-right {
+  animation-delay: 0.44s;
 }
 
 .que-es-esto-feature__content {
@@ -641,6 +698,25 @@ img {
 
   to {
     transform: rotate(-360deg);
+  }
+}
+
+@keyframes que-es-esto-star-bounce {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  22% {
+    transform: translate3d(0, -0.18rem, 0) scale(1.035);
+  }
+
+  40% {
+    transform: translate3d(0, 0.08rem, 0) scale(0.985);
+  }
+
+  58% {
+    transform: translate3d(0, -0.08rem, 0) scale(1.01);
   }
 }
 
@@ -824,7 +900,8 @@ img {
   .hero-lockup__title,
   .hero-particle,
   .que-es-esto-feature__illustration--magnifier,
-  .que-es-esto-feature__illustration--gear {
+  .que-es-esto-feature__illustration--gear,
+  .que-es-esto-feature__illustration--expert-star {
     animation: none;
   }
 }
