@@ -368,6 +368,91 @@ img {
   text-wrap: pretty;
 }
 
+.que-es-esto-panel__feature-intro {
+  display: grid;
+  width: min(100%, 64rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+  gap: 1.4rem;
+}
+
+.que-es-esto-panel__feature-title {
+  margin: 0;
+  color: #bbf5ff;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+.que-es-esto-panel__feature-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.que-es-esto-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(0.9rem, 3vw, 1.5rem);
+}
+
+.que-es-esto-feature--reverse > .que-es-esto-feature__media {
+  order: 2;
+}
+
+.que-es-esto-feature--reverse > .que-es-esto-feature__content {
+  order: 1;
+}
+
+.que-es-esto-feature__media,
+.que-es-esto-feature__content {
+  min-width: 0;
+  min-height: clamp(12rem, 28vw, 16rem);
+  border-radius: 1.4rem;
+}
+
+.que-es-esto-feature__media {
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  border: 1px solid rgba(187, 245, 255, 0.18);
+  background:
+    linear-gradient(145deg, rgba(6, 46, 53, 0.92), rgba(1, 18, 71, 0.82)),
+    linear-gradient(135deg, rgba(187, 245, 255, 0.22), rgba(255, 224, 138, 0.12));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2), inset 0 0 1rem rgba(187, 245, 255, 0.08);
+}
+
+.que-es-esto-feature__icon {
+  display: inline-grid;
+  place-items: center;
+  width: clamp(4.5rem, 10vw, 6rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(187, 245, 255, 0.34);
+  border-radius: 1.1rem;
+  color: #bbf5ff;
+  font-size: clamp(1.15rem, 2.8vw, 1.6rem);
+  letter-spacing: 0.08em;
+  background: linear-gradient(145deg, rgba(187, 245, 255, 0.08), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 0 1.4rem rgba(187, 245, 255, 0.12);
+}
+
+.que-es-esto-feature__content {
+  display: grid;
+  align-content: center;
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(2, 17, 59, 0.9), rgba(4, 31, 39, 0.82));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+  text-align: left;
+}
+
+.que-es-esto-feature__text {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(0.96rem, 1.85vw, 1.08rem);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
 @keyframes bg-flow {
   0% {
     background-position: 0% 0%, 100% 0%, 0% 100%, 0% 50%;
@@ -553,6 +638,32 @@ img {
 
   .que-es-esto-panel__text {
     font-size: 0.84rem;
+  }
+
+  .que-es-esto-panel__feature-intro {
+    gap: 1rem;
+  }
+
+  .que-es-esto-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .que-es-esto-feature--reverse > .que-es-esto-feature__media,
+  .que-es-esto-feature--reverse > .que-es-esto-feature__content {
+    order: initial;
+  }
+
+  .que-es-esto-feature__media,
+  .que-es-esto-feature__content {
+    min-height: auto;
+  }
+
+  .que-es-esto-feature__media {
+    min-height: 11rem;
+  }
+
+  .que-es-esto-feature__content {
+    padding: 1rem;
   }
 }
 
