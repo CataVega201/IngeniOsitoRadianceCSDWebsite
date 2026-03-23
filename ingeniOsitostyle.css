@@ -419,6 +419,10 @@ img {
   isolation: isolate;
 }
 
+.que-es-esto-feature__media--gears {
+  isolation: isolate;
+}
+
 .que-es-esto-feature:not(.que-es-esto-feature--reverse) > .que-es-esto-feature__media {
   justify-self: start;
 }
@@ -447,6 +451,30 @@ img {
   filter: drop-shadow(0 0.85rem 1.5rem rgba(0, 0, 0, 0.28));
   animation: que-es-esto-magnifier-float 5.8s ease-in-out infinite;
   will-change: transform;
+}
+
+.que-es-esto-feature__scene--gears {
+  overflow: visible;
+}
+
+.que-es-esto-feature__illustration--gear {
+  filter: drop-shadow(0 0.85rem 1.5rem rgba(0, 0, 0, 0.24));
+  will-change: transform;
+}
+
+.que-es-esto-feature__illustration--gear-large {
+  inset: 14% 40% 16% 8%;
+  animation: que-es-esto-gear-spin-clockwise 8.2s linear infinite;
+}
+
+.que-es-esto-feature__illustration--gear-medium {
+  inset: 6% 10% 44% 40%;
+  animation: que-es-esto-gear-spin-counter 6.8s linear infinite;
+}
+
+.que-es-esto-feature__illustration--gear-small {
+  inset: 42% 8% 10% 42%;
+  animation: que-es-esto-gear-spin-clockwise 5.9s linear infinite;
 }
 
 .que-es-esto-feature__icon {
@@ -559,6 +587,26 @@ img {
 
   75% {
     transform: translate3d(1%, 0%, 0) rotate(-2deg) scale(0.83);
+  }
+}
+
+@keyframes que-es-esto-gear-spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes que-es-esto-gear-spin-counter {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
   }
 }
 
@@ -741,7 +789,8 @@ img {
   .hero-lockup__logo,
   .hero-lockup__title,
   .hero-particle,
-  .que-es-esto-feature__illustration--magnifier {
+  .que-es-esto-feature__illustration--magnifier,
+  .que-es-esto-feature__illustration--gear {
     animation: none;
   }
 }
