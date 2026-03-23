@@ -78,8 +78,8 @@ img {
 }
 
 .page-shell {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
   width: min(100%, calc(var(--max-width) + 3rem));
   min-height: 100svh;
   margin: 0 auto;
@@ -191,16 +191,12 @@ img {
 }
 
 .spa-shell {
-  position: relative;
   display: grid;
-  flex: 1 1 auto;
   min-height: 0;
   padding-top: 0.75rem;
 }
 
 .content-section {
-  position: absolute;
-  inset: 0;
   display: grid;
   justify-items: center;
   align-items: start;
@@ -208,28 +204,10 @@ img {
   width: 100%;
   min-height: 100%;
   padding: var(--section-spacing) clamp(1rem, 4vw, 3rem);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translate3d(0, 2rem, 0);
-  transition:
-    opacity var(--transition-duration) var(--transition-ease),
-    transform var(--transition-duration) var(--transition-ease),
-    visibility 0s linear var(--transition-duration);
 }
 
-.content-section.active {
-  position: relative;
-  inset: auto;
-  min-height: 100%;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translate3d(0, 0, 0);
-  transition:
-    opacity var(--transition-duration) var(--transition-ease),
-    transform var(--transition-duration) var(--transition-ease),
-    visibility 0s linear 0s;
+.content-section[hidden] {
+  display: none;
 }
 
 .content-section--hero {
