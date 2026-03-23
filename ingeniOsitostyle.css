@@ -525,7 +525,7 @@ img {
   inset: auto;
   bottom: 4%;
   left: 50%;
-  width: 40%;
+  width: 52%;
   height: auto;
   transform: translateX(-50%);
   filter: drop-shadow(0 0.85rem 1.4rem rgba(0, 0, 0, 0.24));
@@ -555,11 +555,11 @@ img {
 
 .que-es-esto-feature__illustration--expert-star-left,
 .que-es-esto-feature__illustration--expert-star-right {
-  width: clamp(2.05rem, 5.6vw, 2.95rem);
+  width: clamp(2.9rem, 7.4vw, 4.05rem);
 }
 
 .que-es-esto-feature__illustration--expert-star-center {
-  width: clamp(2.55rem, 6.8vw, 3.5rem);
+  width: clamp(3.2rem, 8vw, 4.45rem);
 }
 
 .que-es-esto-feature__illustration--expert-star-left {
