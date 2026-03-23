@@ -276,13 +276,6 @@ img {
   box-shadow: 0 0.9rem 2.2rem rgba(0, 0, 0, 0.3), 0 0 1rem rgba(216, 166, 63, 0.2);
 }
 
-.about-panel__textbox p {
-  margin: 0;
-  max-width: none;
-  font-size: clamp(0.56rem, 0.9vw, 0.68rem);
-  line-height: 1.65;
-  color: rgba(247, 248, 255, 0.96);
-}
 
 .hero-lockup {
   display: grid;
@@ -366,6 +359,15 @@ img {
   font-size: clamp(2rem, 8vw, 5rem);
   line-height: 0.95;
   text-wrap: balance;
+}
+
+.content-section .about-panel__textbox p {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(0.56rem, 0.9vw, 0.68rem);
+  line-height: 1.65;
+  color: rgba(247, 248, 255, 0.96);
+  text-wrap: pretty;
 }
 
 @keyframes bg-flow {
@@ -546,7 +548,7 @@ img {
     margin-block: 1.15rem 1.6rem;
   }
 
-  .about-panel__textbox p {
+  .content-section .about-panel__textbox p {
     font-size: 0.58rem;
     line-height: 1.5;
   }
