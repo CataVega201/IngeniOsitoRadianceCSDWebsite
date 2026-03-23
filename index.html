@@ -9,8 +9,15 @@
     />
     <title>IngenioSito Radiance</title>
     <link rel="icon" href="ingeniOsitoAssets/IngeniOsitoFavicon.ico" />
-    <link rel="preload" href="ingeniOsitoAssets/ingOsFonts/zektonfont/Zekton2.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="ingeniOsitoAssets/ingOsFonts/zektonfont/Zekton2.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="ingeniOsitostyle.css" />
+    <script src="ingeniOsitoscript.js" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -32,8 +39,13 @@
         </nav>
       </header>
 
-      <main class="spa-shell">
-        <section class="content-section content-section--hero active" id="inicio" data-section aria-labelledby="titulo-inicio">
+      <main class="spa-shell" id="contenido-principal">
+        <section
+          class="content-section content-section--hero active"
+          id="inicio"
+          data-section
+          aria-labelledby="titulo-inicio"
+        >
           <div class="hero-lockup">
             <div class="hero-lockup__visual" aria-hidden="true">
               <div class="hero-lockup__particles" data-particles></div>
@@ -43,7 +55,14 @@
             <p class="hero-lockup__subtitle">por Radiance</p>
           </div>
         </section>
-        <section class="content-section content-section--que-es-esto" id="que-es-esto" data-section aria-labelledby="titulo-que-es-esto" inert>
+        <section
+          class="content-section content-section--que-es-esto"
+          id="que-es-esto"
+          data-section
+          aria-labelledby="titulo-que-es-esto"
+          inert
+          hidden
+        >
           <div class="que-es-esto-panel">
             <h2 class="que-es-esto-panel__title" id="titulo-que-es-esto">¿Qué es esto?</h2>
             <div class="que-es-esto-panel__divider" aria-hidden="true"></div>
@@ -59,27 +78,25 @@
             </div>
           </div>
         </section>
-        <section class="content-section" id="quienes-somos" data-section aria-labelledby="titulo-quienes-somos" inert>
+        <section class="content-section" id="quienes-somos" data-section aria-labelledby="titulo-quienes-somos" inert hidden>
           <p class="content-section__placeholder" id="titulo-quienes-somos">Placeholder de ¿Quiénes somos?</p>
         </section>
-        <section class="content-section" id="experiencias" data-section aria-labelledby="titulo-experiencias" inert>
+        <section class="content-section" id="experiencias" data-section aria-labelledby="titulo-experiencias" inert hidden>
           <p class="content-section__placeholder" id="titulo-experiencias">Placeholder de Experiencias.</p>
         </section>
-        <section class="content-section" id="perspectivas" data-section aria-labelledby="titulo-perspectivas" inert>
+        <section class="content-section" id="perspectivas" data-section aria-labelledby="titulo-perspectivas" inert hidden>
           <p class="content-section__placeholder" id="titulo-perspectivas">Placeholder de Perspectivas.</p>
         </section>
-        <section class="content-section" id="experto" data-section aria-labelledby="titulo-experto" inert>
+        <section class="content-section" id="experto" data-section aria-labelledby="titulo-experto" inert hidden>
           <p class="content-section__placeholder" id="titulo-experto">Placeholder de Experto.</p>
         </section>
-        <section class="content-section" id="proceso" data-section aria-labelledby="titulo-proceso" inert>
+        <section class="content-section" id="proceso" data-section aria-labelledby="titulo-proceso" inert hidden>
           <p class="content-section__placeholder" id="titulo-proceso">Placeholder de Proceso.</p>
         </section>
-        <section class="content-section" id="aprendizajes" data-section aria-labelledby="titulo-aprendizajes" inert>
+        <section class="content-section" id="aprendizajes" data-section aria-labelledby="titulo-aprendizajes" inert hidden>
           <p class="content-section__placeholder" id="titulo-aprendizajes">Placeholder de Aprendizajes.</p>
         </section>
       </main>
     </div>
-
-    <script src="ingeniOsitoscript.js"></script>
   </body>
 </html>
