@@ -1,3 +1,14 @@
+const sectionLabels = {
+  inicio: 'Inicio',
+  'que-es-esto': '¿Qué es esto?',
+  'quienes-somos': '¿Quiénes somos?',
+  experiencias: 'Experiencias',
+  perspectivas: 'Perspectivas',
+  experto: 'Experto',
+  proceso: 'Proceso',
+  aprendizajes: 'Aprendizajes',
+};
+
 const sections = [...document.querySelectorAll('[data-section]')];
 const navLinks = [...document.querySelectorAll('.topbar__links .nav-link[data-route]')];
 const logoLink = document.querySelector('.topbar__logo[data-route]');
@@ -6,10 +17,19 @@ const sectionMap = new Map(sections.map((section) => [section.id, section]));
 const defaultSectionId = sections[0]?.id || '';
 const particleContainer = document.querySelector('[data-particles]');
 const particleCount = 18;
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 let activeSectionId = '';
 
+const syncPageTitle = (targetId) => {
+  const label = sectionLabels[targetId] || 'IngeniOsito Radiance';
+  document.title = label === 'Inicio' ? 'IngeniOsito Radiance' : `${label} | IngeniOsito Radiance`;
+};
+
 const createParticles = () => {
-  if (!particleContainer) {
+  if (!particleContainer || motionPreference.matches) {
+    if (particleContainer) {
+      particleContainer.replaceChildren();
+    }
     return;
   }
 
@@ -34,9 +54,9 @@ const createParticles = () => {
 };
 
 const updateNavigationState = (targetId) => {
-  navLinks.forEach((link) => {
+  routeLinks.forEach((link) => {
     const isActive = link.dataset.route === targetId;
-    link.classList.toggle('is-active', isActive);
+    link.classList.toggle('is-active', isActive && link !== logoLink);
 
     if (isActive) {
       link.setAttribute('aria-current', 'page');
@@ -51,6 +71,7 @@ const updateSectionState = (targetId) => {
     const isActive = section.id === targetId;
     section.classList.toggle('active', isActive);
     section.toggleAttribute('inert', !isActive);
+    section.toggleAttribute('hidden', !isActive);
     section.setAttribute('aria-hidden', String(!isActive));
   });
 };
@@ -74,6 +95,7 @@ const navigateToSection = (targetId, options = {}) => {
     activeSectionId = resolvedId;
     updateNavigationState(resolvedId);
     updateSectionState(resolvedId);
+    syncPageTitle(resolvedId);
   }
 
   if (shouldSyncHistory) {
@@ -97,6 +119,8 @@ routeLinks.forEach((link) => {
 window.addEventListener('popstate', () => {
   navigateToSection(window.location.hash, { historyMode: 'replace' });
 });
+
+motionPreference.addEventListener('change', createParticles);
 
 createParticles();
 navigateToSection(window.location.hash, { historyMode: 'replace' });
