@@ -36,6 +36,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  min-height: 100svh;
   font-family: "Zekton", "Segoe UI", sans-serif;
   color: var(--white);
   background:
@@ -77,9 +78,12 @@ img {
 }
 
 .page-shell {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
   width: min(100%, calc(var(--max-width) + 3rem));
+  min-height: 100svh;
   margin: 0 auto;
-  padding: 1rem 1.5rem 3rem;
+  padding: 1rem 1.5rem 1rem;
 }
 
 .topbar {
@@ -188,17 +192,19 @@ img {
 
 .spa-shell {
   position: relative;
-  padding-top: 2rem;
-  min-height: calc(100svh - var(--nav-height) - 3rem);
+  min-height: 0;
+  padding-top: 0.75rem;
 }
 
 .content-section {
   position: absolute;
-  inset: 2rem 0 0;
+  inset: 0;
   display: grid;
-  align-items: center;
+  justify-items: center;
+  align-items: start;
+  align-content: start;
   width: 100%;
-  min-height: calc(100svh - var(--nav-height) - 5rem);
+  min-height: 0;
   padding: var(--section-spacing) clamp(1rem, 4vw, 3rem);
   opacity: 0;
   visibility: hidden;
@@ -211,6 +217,8 @@ img {
 }
 
 .content-section.active {
+  position: relative;
+  inset: auto;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -223,14 +231,14 @@ img {
 
 .content-section--hero {
   justify-items: center;
-  align-content: center;
+  align-content: start;
   text-align: center;
 }
 
 .hero-lockup {
   display: grid;
   justify-items: center;
-  align-content: center;
+  align-content: start;
   width: min(100%, 44rem);
   margin-inline: auto;
   gap: 0.28rem;
@@ -313,7 +321,8 @@ img {
 
 .content-section--que-es-esto {
   justify-items: center;
-  align-content: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .que-es-esto-panel {
@@ -365,6 +374,78 @@ img {
   color: var(--white);
   font-size: clamp(0.88rem, 1.65vw, 1rem);
   line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.que-es-esto-panel__feature-intro {
+  display: grid;
+  width: min(100%, 64rem);
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  gap: 1.4rem;
+}
+
+.que-es-esto-panel__feature-title {
+  margin: 0;
+  color: #bbf5ff;
+  font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.que-es-esto-panel__feature-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.que-es-esto-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(0.9rem, 3vw, 1.5rem);
+}
+
+.que-es-esto-feature--reverse > .que-es-esto-feature__media {
+  order: 2;
+}
+
+.que-es-esto-feature--reverse > .que-es-esto-feature__content {
+  order: 1;
+}
+
+.que-es-esto-feature__media,
+.que-es-esto-feature__content {
+  min-width: 0;
+  min-height: clamp(10rem, 24vw, 13.5rem);
+  border-radius: 1.4rem;
+}
+
+.que-es-esto-feature__media {
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.que-es-esto-feature__icon {
+  width: min(100%, 28rem);
+  max-height: clamp(10rem, 24vw, 13.5rem);
+  object-fit: contain;
+}
+
+.que-es-esto-feature__content {
+  display: grid;
+  align-content: center;
+  padding: clamp(0.95rem, 2.4vw, 1.2rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(2, 17, 59, 0.9), rgba(4, 31, 39, 0.82));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+  text-align: left;
+}
+
+.que-es-esto-feature__text {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(0.96rem, 1.85vw, 1.08rem);
+  line-height: 1.7;
   text-wrap: pretty;
 }
 
@@ -553,6 +634,37 @@ img {
 
   .que-es-esto-panel__text {
     font-size: 0.84rem;
+  }
+
+  .que-es-esto-panel__feature-intro {
+    gap: 1rem;
+  }
+
+  .que-es-esto-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .que-es-esto-feature--reverse > .que-es-esto-feature__media,
+  .que-es-esto-feature--reverse > .que-es-esto-feature__content {
+    order: initial;
+  }
+
+  .que-es-esto-feature__media,
+  .que-es-esto-feature__content {
+    min-height: auto;
+  }
+
+  .que-es-esto-feature__media {
+    min-height: 9.5rem;
+  }
+
+  .que-es-esto-feature__icon {
+    width: min(100%, 22rem);
+    max-height: 9.5rem;
+  }
+
+  .que-es-esto-feature__content {
+    padding: 0.95rem;
   }
 }
 
