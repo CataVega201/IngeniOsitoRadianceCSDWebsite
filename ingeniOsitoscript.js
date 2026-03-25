@@ -25,6 +25,36 @@ const syncPageTitle = (targetId) => {
   document.title = label === 'Inicio' ? 'IngeniOsito Radiance' : `${label} | IngeniOsito Radiance`;
 };
 
+const createSectionSkies = () => {
+  sections.forEach((section) => {
+    if (section.querySelector('.section-sky')) {
+      return;
+    }
+
+    const sky = document.createElement('div');
+    sky.className = 'section-sky';
+    sky.setAttribute('aria-hidden', 'true');
+
+    const small = document.createElement('span');
+    small.className = 'section-sky__layer section-sky__layer--small';
+
+    const medium = document.createElement('span');
+    medium.className = 'section-sky__layer section-sky__layer--medium';
+
+    const large = document.createElement('span');
+    large.className = 'section-sky__layer section-sky__layer--large';
+
+    const shootingOne = document.createElement('span');
+    shootingOne.className = 'section-sky__shooting section-sky__shooting--one';
+
+    const shootingTwo = document.createElement('span');
+    shootingTwo.className = 'section-sky__shooting section-sky__shooting--two';
+
+    sky.append(small, medium, large, shootingOne, shootingTwo);
+    section.prepend(sky);
+  });
+};
+
 const createParticles = () => {
   if (!particleContainer || motionPreference.matches) {
     if (particleContainer) {
@@ -124,5 +154,6 @@ if (typeof motionPreference.addEventListener === 'function') {
   motionPreference.addListener(createParticles);
 }
 
+createSectionSkies();
 createParticles();
 navigateToSection(window.location.hash, { historyMode: 'replace' });
