@@ -591,7 +591,6 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100svh;
   font-family: "Zekton", "Segoe UI", sans-serif;
   color: var(--white);
   background:
@@ -650,9 +649,8 @@ img {
 
 .page-shell {
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: auto auto;
   width: min(100%, calc(var(--max-width) + 3rem));
-  min-height: 100svh;
   margin: 0 auto;
   padding: 1rem 1.5rem 1rem;
 }
@@ -775,7 +773,7 @@ img {
   align-items: start;
   align-content: start;
   width: 100%;
-  min-height: 100%;
+  min-height: auto;
   padding: var(--section-spacing) clamp(1rem, 4vw, 3rem);
 }
 
@@ -809,6 +807,7 @@ img {
   left: -1600px;
   width: 1px;
   height: 1px;
+  border-radius: 50%;
   background: transparent;
 }
 
@@ -819,6 +818,7 @@ img {
   left: 0;
   width: inherit;
   height: inherit;
+  border-radius: inherit;
   box-shadow: inherit;
 }
 
@@ -1009,9 +1009,24 @@ img {
 .que-es-esto-panel__text {
   margin: 0;
   color: var(--white);
-  font-size: clamp(0.88rem, 1.65vw, 1rem);
+  font-size: clamp(1rem, 1.9vw, 1.14rem);
   line-height: 1.65;
   text-wrap: pretty;
+}
+
+.que-es-esto-panel__text-highlight {
+  font-weight: 600;
+}
+
+.que-es-esto-panel__text-highlight--cyan {
+  color: #aef8ff;
+}
+
+.que-es-esto-panel__text-highlight--warm {
+  background: linear-gradient(95deg, #ff5c5c 8%, #ff9a42 92%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .que-es-esto-panel__feature-intro {
@@ -1246,6 +1261,22 @@ img {
   font-size: clamp(0.94rem, 1.7vw, 1.04rem);
   line-height: 1.6;
   text-wrap: pretty;
+}
+
+.que-es-esto-feature__label {
+  font-weight: 700;
+}
+
+.que-es-esto-feature__label--evidencia {
+  color: #7be9ff;
+}
+
+.que-es-esto-feature__label--contraste {
+  color: #ff8fda;
+}
+
+.que-es-esto-feature__label--analisis {
+  color: #9cffb9;
 }
 
 @keyframes bg-flow {
@@ -1515,7 +1546,7 @@ img {
   }
 
   .que-es-esto-panel__text {
-    font-size: 0.84rem;
+    font-size: 0.96rem;
   }
 
   .que-es-esto-panel__feature-intro {
