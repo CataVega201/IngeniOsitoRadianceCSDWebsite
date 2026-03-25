@@ -1031,7 +1031,7 @@ img {
 
 .que-es-esto-panel__context {
   width: min(100%, 36rem);
-  margin-top: 1rem;
+  margin-block: 1.5rem 1.25rem;
   padding: 1rem 1.15rem;
   border: 0.08rem solid rgba(142, 248, 255, 0.35);
   border-radius: 1.1rem;
@@ -1074,6 +1074,159 @@ img {
   width: min(100%, 64rem);
   margin-top: clamp(3rem, 6vw, 4.5rem);
   gap: 1.4rem;
+}
+
+.content-section--quienes-somos {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.quienes-somos-panel {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 68rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.quienes-somos-panel__title {
+  margin: 0;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-wrap: balance;
+}
+
+.quienes-somos-panel__divider {
+  width: min(100%, 16rem);
+  height: 0.26rem;
+  margin-top: 0.85rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 227, 154, 0.2), var(--gold-bright) 50%, rgba(255, 227, 154, 0.2));
+  box-shadow: 0 0 0.55rem rgba(255, 227, 154, 0.55), 0 0 1.3rem rgba(201, 149, 42, 0.38);
+}
+
+.quienes-somos-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(100%, 68rem);
+  margin-top: clamp(1.5rem, 3vw, 2.2rem);
+  gap: 1rem;
+}
+
+.quienes-somos-card {
+  border: 0;
+  border-radius: 1rem;
+  background:
+    linear-gradient(145deg, rgba(3, 9, 31, 0.95), rgba(6, 30, 60, 0.9)) padding-box,
+    linear-gradient(135deg, rgba(174, 248, 255, 0.75), rgba(201, 149, 42, 0.7), rgba(255, 240, 192, 0.75)) border-box;
+  border: 0.12rem solid transparent;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(123, 233, 255, 0.08);
+  text-align: left;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.quienes-somos-card:hover,
+.quienes-somos-card:focus-within {
+  transform: translateY(-0.12rem);
+  box-shadow: 0 1.1rem 2.8rem rgba(0, 0, 0, 0.36), 0 0 1.2rem rgba(174, 248, 255, 0.16);
+}
+
+.quienes-somos-card__summary {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1rem 0.95rem;
+}
+
+.quienes-somos-card__summary::-webkit-details-marker {
+  display: none;
+}
+
+.quienes-somos-card__name {
+  color: #fff4ce;
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.quienes-somos-card__email {
+  color: #aef8ff;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  overflow-wrap: anywhere;
+}
+
+.quienes-somos-card__color {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.55rem;
+  padding: 0.2rem 0.58rem;
+  border-radius: 999px;
+  color: #08152f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.quienes-somos-card__color--cata {
+  background: linear-gradient(90deg, #ff9fd9, #ff7cc8);
+}
+
+.quienes-somos-card__color--sofia {
+  background: linear-gradient(90deg, #d7b3ff, #bea0ff);
+}
+
+.quienes-somos-card__color--david {
+  background: linear-gradient(90deg, #90d4ff, #68bfff);
+}
+
+.quienes-somos-card__toggle {
+  justify-self: end;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  border: 0.08rem solid rgba(174, 248, 255, 0.55);
+  background: radial-gradient(circle at 50% 38%, rgba(174, 248, 255, 0.28), rgba(12, 38, 74, 0.88) 65%);
+  position: relative;
+}
+
+.quienes-somos-card__toggle::before,
+.quienes-somos-card__toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.7rem;
+  height: 0.11rem;
+  border-radius: 999px;
+  background: #aef8ff;
+  transform: translate(-50%, -50%);
+}
+
+.quienes-somos-card__toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform 180ms ease;
+}
+
+.quienes-somos-card[open] .quienes-somos-card__toggle::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.quienes-somos-card__bio {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  color: var(--white);
+  font-size: clamp(0.95rem, 1.75vw, 1.05rem);
+  line-height: 1.55;
+  text-wrap: pretty;
 }
 
 .que-es-esto-panel__feature-title {
@@ -1510,6 +1663,10 @@ img {
     width: 100%;
   }
 
+  .quienes-somos-panel__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
 }
 
 @media (max-width: 560px) {
@@ -1595,6 +1752,19 @@ img {
 
   .que-es-esto-panel__context-question,
   .que-es-esto-panel__context-item {
+    font-size: 0.96rem;
+  }
+
+  .quienes-somos-panel__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quienes-somos-card__summary {
+    padding: 0.9rem 0.9rem 0.85rem;
+  }
+
+  .quienes-somos-card__bio {
+    padding: 0 0.9rem 0.9rem;
     font-size: 0.96rem;
   }
 
