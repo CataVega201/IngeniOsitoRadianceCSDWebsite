@@ -959,6 +959,92 @@ img {
   padding-top: clamp(1rem, 2.5vw, 1.5rem);
 }
 
+.content-section--quienes-somos {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.quienes-somos-panel {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 66rem);
+  margin-inline: auto;
+  gap: 1.2rem;
+}
+
+.quienes-somos-panel__title {
+  margin: 0;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.quienes-somos-panel__divider {
+  width: min(100%, 16rem);
+  height: 0.26rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 227, 154, 0.2), var(--gold-bright) 50%, rgba(255, 227, 154, 0.2));
+  box-shadow: 0 0 0.55rem rgba(255, 227, 154, 0.55), 0 0 1.3rem rgba(201, 149, 42, 0.38);
+}
+
+.quienes-somos-panel__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  gap: 1rem;
+}
+
+.quienes-somos-card {
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
+  min-height: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(123, 233, 255, 0.26);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+  text-align: left;
+}
+
+.quienes-somos-card__name {
+  margin: 0;
+  color: var(--cyan);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.quienes-somos-card__email {
+  color: var(--gold-bright);
+  font-size: clamp(0.88rem, 1.45vw, 0.95rem);
+  line-height: 1.4;
+  text-decoration-color: rgba(255, 227, 154, 0.7);
+  text-underline-offset: 0.16em;
+  text-decoration-thickness: 0.08em;
+  overflow-wrap: anywhere;
+}
+
+.quienes-somos-card__email:hover,
+.quienes-somos-card__email:focus-visible {
+  color: #fff4ce;
+}
+
+.quienes-somos-card__bio {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(0.93rem, 1.55vw, 1rem);
+  line-height: 1.62;
+  text-wrap: pretty;
+}
+
 .que-es-esto-panel {
   display: grid;
   justify-items: center;
@@ -1521,6 +1607,9 @@ img {
     width: 100%;
   }
 
+  .quienes-somos-panel__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
@@ -1590,6 +1679,18 @@ img {
   .que-es-esto-panel__graphic {
     width: min(72vw, 12rem);
     margin-block: 1.4rem;
+  }
+
+  .quienes-somos-panel {
+    gap: 1rem;
+  }
+
+  .quienes-somos-panel__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quienes-somos-card {
+    padding: 0.95rem;
   }
 
   .que-es-esto-panel__textbox {
