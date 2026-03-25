@@ -965,6 +965,12 @@ img {
   padding-top: clamp(1rem, 2.5vw, 1.5rem);
 }
 
+.content-section--experiencias {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
 .quienes-somos-panel {
   display: grid;
   justify-items: center;
@@ -1042,6 +1048,139 @@ img {
   color: var(--white);
   font-size: clamp(0.93rem, 1.55vw, 1rem);
   line-height: 1.62;
+  text-wrap: pretty;
+}
+
+.experiencias-panel {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 74rem);
+  margin-inline: auto;
+  gap: 1rem;
+}
+
+.experiencias-panel__title {
+  margin: 0;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.experiencias-panel__divider {
+  width: min(100%, 16rem);
+  height: 0.26rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 227, 154, 0.2), var(--gold-bright) 50%, rgba(255, 227, 154, 0.2));
+  box-shadow: 0 0 0.55rem rgba(255, 227, 154, 0.55), 0 0 1.3rem rgba(201, 149, 42, 0.38);
+}
+
+.experiencias-panel__intro,
+.experiencias-panel__question {
+  width: min(100%, 62rem);
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.experiencias-panel__intro {
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+  line-height: 1.68;
+}
+
+.experiencias-panel__question {
+  font-size: clamp(1rem, 1.9vw, 1.16rem);
+  line-height: 1.62;
+  color: var(--cyan);
+}
+
+.experiencias-panel__columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: 1rem;
+}
+
+.experiencias-block {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+  min-height: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(123, 233, 255, 0.25);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+}
+
+.experiencias-block--inmersion {
+  border-color: rgba(255, 117, 212, 0.3);
+}
+
+.experiencias-block--inspiracion {
+  border-color: rgba(143, 255, 192, 0.32);
+}
+
+.experiencias-block__heading {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.experiencias-block__place {
+  margin: 0;
+  color: var(--lavender);
+  font-size: clamp(0.92rem, 1.6vw, 1rem);
+  line-height: 1.4;
+}
+
+.experiencias-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experiencias-item {
+  display: grid;
+  gap: 0.24rem;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid rgba(123, 233, 255, 0.2);
+  border-radius: 0.85rem;
+  background: rgba(3, 17, 35, 0.55);
+}
+
+.experiencias-item__title,
+.experiencias-item__lead,
+.experiencias-item__text {
+  margin: 0;
+}
+
+.experiencias-item__title {
+  color: var(--cyan);
+  font-size: clamp(0.92rem, 1.5vw, 1rem);
+  line-height: 1.35;
+}
+
+.experiencias-item__lead {
+  color: var(--gold-bright);
+  font-size: clamp(0.86rem, 1.35vw, 0.93rem);
+  line-height: 1.38;
+}
+
+.experiencias-item__text {
+  color: var(--white);
+  font-size: clamp(0.86rem, 1.35vw, 0.93rem);
+  line-height: 1.56;
   text-wrap: pretty;
 }
 
@@ -1610,6 +1749,10 @@ img {
   .quienes-somos-panel__list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .experiencias-panel__columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 560px) {
@@ -1691,6 +1834,18 @@ img {
 
   .quienes-somos-card {
     padding: 0.95rem;
+  }
+
+  .experiencias-panel {
+    gap: 0.9rem;
+  }
+
+  .experiencias-block {
+    padding: 0.95rem;
+  }
+
+  .experiencias-item {
+    padding: 0.65rem 0.68rem;
   }
 
   .que-es-esto-panel__textbox {
