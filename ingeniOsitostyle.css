@@ -237,77 +237,48 @@ img {
 }
 
 
-.content-section--hero {
+.content-section {
   position: relative;
   isolation: isolate;
   overflow: hidden;
 }
 
-.hero-sky {
+.content-section::before,
+.content-section::after {
+  content: "";
   position: absolute;
-  inset: 0;
   pointer-events: none;
-  z-index: 0;
 }
 
-.hero-sky__layer {
-  position: absolute;
+.content-section::before {
   inset: -125% 0 0;
+  z-index: 0;
+  opacity: 0.72;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0.045rem, transparent 0.05rem),
+    radial-gradient(circle, rgba(221, 238, 255, 0.76) 0.07rem, transparent 0.08rem),
+    radial-gradient(circle, rgba(255, 255, 255, 0.92) 0.095rem, transparent 0.11rem);
   background-repeat: repeat;
+  background-size: 6.2rem 6.2rem, 9.8rem 9.8rem, 15.5rem 15.5rem;
+  background-position: 0 0, 0.8rem 0.4rem, 2.2rem 1.4rem;
+  animation: section-star-drift 260s linear infinite;
   will-change: transform;
 }
 
-.hero-sky__layer--small {
-  opacity: 0.54;
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0.045rem, transparent 0.05rem),
-    radial-gradient(circle, rgba(221, 238, 255, 0.7) 0.035rem, transparent 0.04rem);
-  background-size: 6.2rem 6.2rem, 8.7rem 8.7rem;
-  background-position: 0 0, 2.4rem 3.5rem;
-  animation: hero-star-drift 160s linear infinite;
-}
-
-.hero-sky__layer--medium {
-  opacity: 0.68;
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.92) 0.07rem, transparent 0.08rem),
-    radial-gradient(circle, rgba(208, 226, 255, 0.72) 0.055rem, transparent 0.065rem);
-  background-size: 9.8rem 9.8rem, 13.8rem 13.8rem;
-  background-position: 0.8rem 0.4rem, 4.4rem 6.8rem;
-  animation: hero-star-drift 230s linear infinite;
-}
-
-.hero-sky__layer--large {
-  opacity: 0.75;
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0.095rem, transparent 0.11rem);
-  background-size: 15.5rem 15.5rem;
-  background-position: 2.2rem 1.4rem;
-  animation: hero-star-drift 320s linear infinite;
-}
-
-.hero-sky__shooting {
-  position: absolute;
+.content-section::after {
   top: 0;
   left: -12%;
+  z-index: 0;
   width: clamp(4rem, 7vw, 7rem);
   height: 1px;
   opacity: 0;
   transform: rotate(-18deg) translate3d(0, 0, 0);
   background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.94), rgba(255, 227, 154, 0));
   filter: drop-shadow(0 0 0.35rem rgba(255, 255, 255, 0.62));
+  animation: section-shooting-star 52s linear infinite;
 }
 
-.hero-sky__shooting--one {
-  animation: hero-shooting-star 34s linear infinite;
-}
-
-.hero-sky__shooting--two {
-  animation: hero-shooting-star 47s linear infinite;
-  animation-delay: 12s;
-}
-
-.hero-lockup {
+.content-section > * {
   position: relative;
   z-index: 1;
 }
@@ -724,7 +695,7 @@ img {
   }
 }
 
-@keyframes hero-star-drift {
+@keyframes section-star-drift {
   from {
     transform: translate3d(0, 0, 0);
   }
@@ -734,7 +705,7 @@ img {
   }
 }
 
-@keyframes hero-shooting-star {
+@keyframes section-shooting-star {
   0%,
   92%,
   100% {
@@ -1027,15 +998,15 @@ img {
   .hero-lockup__logo,
   .hero-lockup__title,
   .hero-particle,
-  .hero-sky__layer,
-  .hero-sky__shooting,
+  .content-section::before,
+  .content-section::after,
   .que-es-esto-feature__illustration--magnifier,
   .que-es-esto-feature__illustration--gear,
   .que-es-esto-feature__illustration--expert-star {
     animation: none;
   }
 
-  .hero-sky__shooting {
+  .content-section::after {
     opacity: 0;
   }
 }
