@@ -959,6 +959,623 @@ img {
   padding-top: clamp(1rem, 2.5vw, 1.5rem);
 }
 
+.content-section--quienes-somos {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.content-section--experiencias {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.content-section--perspectivas {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.content-section--experto {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.experto-panel {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 64rem);
+  gap: 0.85rem;
+}
+
+.experto-panel__title {
+  margin: 0;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.experto-panel__divider {
+  width: min(100%, 16rem);
+  height: 0.26rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 227, 154, 0.2), var(--gold-bright) 50%, rgba(255, 227, 154, 0.2));
+  box-shadow: 0 0 0.55rem rgba(255, 227, 154, 0.55), 0 0 1.3rem rgba(201, 149, 42, 0.38);
+}
+
+.experto-panel__intro {
+  width: min(100%, 52rem);
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+  line-height: 1.68;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.quienes-somos-panel {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 66rem);
+  margin-inline: auto;
+  gap: 1.2rem;
+}
+
+.quienes-somos-panel__title {
+  margin: 0;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.quienes-somos-panel__divider {
+  width: min(100%, 16rem);
+  height: 0.26rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 227, 154, 0.2), var(--gold-bright) 50%, rgba(255, 227, 154, 0.2));
+  box-shadow: 0 0 0.55rem rgba(255, 227, 154, 0.55), 0 0 1.3rem rgba(201, 149, 42, 0.38);
+}
+
+.quienes-somos-panel__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  gap: 1rem;
+}
+
+.quienes-somos-card {
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
+  min-height: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(123, 233, 255, 0.26);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+  text-align: left;
+}
+
+.quienes-somos-card__name {
+  margin: 0;
+  color: var(--cyan);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.quienes-somos-card__email {
+  color: var(--gold-bright);
+  font-size: clamp(0.88rem, 1.45vw, 0.95rem);
+  line-height: 1.4;
+  text-decoration-color: rgba(255, 227, 154, 0.7);
+  text-underline-offset: 0.16em;
+  text-decoration-thickness: 0.08em;
+  overflow-wrap: anywhere;
+}
+
+.quienes-somos-card__email:hover,
+.quienes-somos-card__email:focus-visible {
+  color: #fff4ce;
+}
+
+.quienes-somos-card__bio {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(0.93rem, 1.55vw, 1rem);
+  line-height: 1.62;
+  text-wrap: pretty;
+}
+
+.experiencias-panel {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 74rem);
+  margin-inline: auto;
+  gap: 1rem;
+}
+
+.experiencias-panel__title {
+  margin: 0;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.experiencias-panel__divider {
+  width: min(100%, 16rem);
+  height: 0.26rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 227, 154, 0.2), var(--gold-bright) 50%, rgba(255, 227, 154, 0.2));
+  box-shadow: 0 0 0.55rem rgba(255, 227, 154, 0.55), 0 0 1.3rem rgba(201, 149, 42, 0.38);
+}
+
+.experiencias-panel__intro,
+.experiencias-panel__question {
+  width: min(100%, 62rem);
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.experiencias-panel__intro {
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+  line-height: 1.68;
+}
+
+.experiencias-panel__question {
+  font-size: clamp(1rem, 1.9vw, 1.16rem);
+  line-height: 1.62;
+  color: var(--cyan);
+}
+
+.experiencias-panel__columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: 1rem;
+}
+
+.experiencias-block {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+  min-height: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(123, 233, 255, 0.25);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+}
+
+.experiencias-block--inmersion {
+  border-color: rgba(255, 117, 212, 0.3);
+}
+
+.experiencias-block--inspiracion {
+  border-color: rgba(143, 255, 192, 0.32);
+}
+
+.experiencias-block__heading {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.experiencias-block__place {
+  margin: 0;
+  color: var(--lavender);
+  font-size: clamp(0.92rem, 1.6vw, 1rem);
+  line-height: 1.4;
+}
+
+.experiencias-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experiencias-item {
+  display: grid;
+  gap: 0.24rem;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid rgba(123, 233, 255, 0.2);
+  border-radius: 0.85rem;
+  background: rgba(3, 17, 35, 0.55);
+}
+
+.experiencias-item__title,
+.experiencias-item__lead,
+.experiencias-item__text {
+  margin: 0;
+}
+
+.experiencias-item__title {
+  color: var(--cyan);
+  font-size: clamp(0.92rem, 1.5vw, 1rem);
+  line-height: 1.35;
+}
+
+.experiencias-item__lead {
+  color: var(--gold-bright);
+  font-size: clamp(0.86rem, 1.35vw, 0.93rem);
+  line-height: 1.38;
+}
+
+.experiencias-item__text {
+  color: var(--white);
+  font-size: clamp(0.86rem, 1.35vw, 0.93rem);
+  line-height: 1.56;
+  text-wrap: pretty;
+}
+
+.perspectivas-panel {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 58rem);
+  margin-inline: auto;
+  gap: 1rem;
+}
+
+.perspectivas-panel__title {
+  margin: 0;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.perspectivas-panel__divider {
+  width: min(100%, 16rem);
+  height: 0.26rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 227, 154, 0.2), var(--gold-bright) 50%, rgba(255, 227, 154, 0.2));
+  box-shadow: 0 0 0.55rem rgba(255, 227, 154, 0.55), 0 0 1.3rem rgba(201, 149, 42, 0.38);
+}
+
+.perspectivas-panel__intro {
+  width: min(100%, 52rem);
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+  line-height: 1.68;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.perspectivas-card {
+  display: grid;
+  width: 100%;
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 1px solid rgba(123, 233, 255, 0.24);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+}
+
+.perspectivas-card__title,
+.perspectivas-card__subtitle,
+.perspectivas-card__description {
+  margin: 0;
+}
+
+.perspectivas-card__title {
+  color: var(--cyan);
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.perspectivas-card__subtitle {
+  color: var(--gold-bright);
+  font-size: clamp(0.92rem, 1.6vw, 1rem);
+  line-height: 1.4;
+}
+
+.perspectivas-card__description {
+  color: var(--white);
+  font-size: clamp(0.9rem, 1.4vw, 0.97rem);
+  line-height: 1.56;
+  text-wrap: pretty;
+}
+
+.perspectivas-card__question-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--white);
+}
+
+.perspectivas-card__question {
+  font-size: clamp(0.9rem, 1.35vw, 0.96rem);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.experto-cv {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  width: 100%;
+  border: 1px solid rgba(143, 255, 192, 0.3);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(4, 11, 26, 0.94);
+  box-shadow: 0 1rem 2.2rem rgba(0, 0, 0, 0.34);
+}
+
+.experto-cv__sidebar {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  padding: 1rem 0.9rem;
+  background: linear-gradient(180deg, #3f7a4e 0%, #245535 58%, #1e432a 100%);
+  color: #ecfff1;
+}
+
+.experto-cv__avatar {
+  display: grid;
+  place-items: center;
+  width: min(100%, 8.9rem);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  border: 0.3rem solid rgba(255, 255, 255, 0.88);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #a3f3bc 0%, #5cb978 42%, #2f6f44 100%);
+  box-shadow: 0 0.9rem 2rem rgba(0, 0, 0, 0.35);
+}
+
+.experto-cv__avatar-initials {
+  color: #f5fff8;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  letter-spacing: 0.08em;
+}
+
+.experto-cv__section {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: 0.2rem;
+  border-top: 1px solid rgba(236, 255, 241, 0.48);
+}
+
+.experto-cv__section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.experto-cv__section-title {
+  margin: 0;
+  color: #f1fff5;
+  font-size: clamp(1.04rem, 2vw, 1.25rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.experto-cv__contact-list,
+.experto-cv__bullet-list {
+  display: grid;
+  gap: 0.43rem;
+  margin: 0;
+}
+
+.experto-cv__contact-list {
+  padding: 0;
+  list-style: none;
+}
+
+.experto-cv__contact-item {
+  font-size: clamp(0.88rem, 1.45vw, 0.95rem);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.experto-cv__bullet-list {
+  padding-left: 1.1rem;
+  color: #f0fff5;
+  font-size: clamp(0.88rem, 1.45vw, 0.95rem);
+  line-height: 1.48;
+}
+
+.experto-cv__main {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  padding: 0 0 0.85rem;
+  background: linear-gradient(180deg, #eef5f1 0%, #ddebe2 100%);
+  color: #11281b;
+}
+
+.experto-cv__header {
+  display: grid;
+  gap: 0.28rem;
+  padding: 0.92rem 1rem;
+  background: linear-gradient(135deg, #43534b 0%, #647469 100%);
+}
+
+.experto-cv__name,
+.experto-cv__role {
+  margin: 0;
+}
+
+.experto-cv__name {
+  color: #f2fff6;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.experto-cv__role {
+  color: #e7f6ec;
+  font-size: clamp(0.95rem, 1.7vw, 1.2rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.experto-cv__block {
+  display: grid;
+  gap: 0.38rem;
+  padding-inline: 1rem;
+}
+
+.experto-cv__block-title {
+  margin: 0;
+  color: #2c7a45;
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.experto-cv__mini-title,
+.experto-cv__paragraph,
+.experto-cv__meta {
+  margin: 0;
+}
+
+.experto-cv__mini-title {
+  color: #235f38;
+  font-size: clamp(0.93rem, 1.5vw, 1.03rem);
+  line-height: 1.35;
+}
+
+.experto-cv__paragraph,
+.experto-cv__meta {
+  color: #173626;
+  font-size: clamp(0.84rem, 1.28vw, 0.9rem);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.experto-cv__timeline {
+  display: grid;
+  gap: 0.46rem;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  list-style: none;
+  border-left: 2px solid rgba(35, 95, 56, 0.45);
+}
+
+.experto-cv__timeline-item {
+  position: relative;
+  display: grid;
+  gap: 0.14rem;
+  padding-left: 0.9rem;
+}
+
+.experto-cv__timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 0.52rem;
+  left: -0.44rem;
+  width: 0.63rem;
+  height: 0.63rem;
+  border-radius: 50%;
+  background: #3aa65f;
+}
+
+.experto-cv__bullet-list--main {
+  padding-left: 1.1rem;
+  color: #173626;
+  font-size: clamp(0.84rem, 1.25vw, 0.9rem);
+  line-height: 1.48;
+}
+
+.experto-cv__detail-list {
+  display: grid;
+  gap: 0.18rem;
+  margin: 0;
+  padding-left: 1rem;
+  color: #173626;
+  font-size: clamp(0.82rem, 1.2vw, 0.88rem);
+  line-height: 1.45;
+}
+
+.experto-cv__question-list {
+  display: grid;
+  gap: 0.44rem;
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #173626;
+  font-size: clamp(0.88rem, 1.35vw, 0.95rem);
+  line-height: 1.5;
+}
+
+.experto-panel__content {
+  display: grid;
+  width: 100%;
+  gap: 0.8rem;
+}
+
+.experto-panel__card {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(123, 233, 255, 0.22);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3), inset 0 0 1rem rgba(143, 255, 192, 0.06);
+}
+
+.experto-panel__card-title,
+.experto-panel__text {
+  margin: 0;
+}
+
+.experto-panel__card-title {
+  color: var(--green);
+  font-size: clamp(1.05rem, 1.9vw, 1.45rem);
+  line-height: 1.3;
+}
+
+.experto-panel__text {
+  color: var(--white);
+  font-size: clamp(0.9rem, 1.4vw, 0.98rem);
+  line-height: 1.62;
+  text-wrap: pretty;
+}
+
+.experto-panel__question-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--white);
+  font-size: clamp(0.9rem, 1.35vw, 0.96rem);
+  line-height: 1.55;
+}
+
 .que-es-esto-panel {
   display: grid;
   justify-items: center;
@@ -1027,6 +1644,57 @@ img {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.que-es-esto-panel__diagnostic {
+  display: grid;
+  width: min(100%, 36rem);
+  margin-top: 1.2rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(143, 255, 192, 0.34);
+  border-radius: 1.1rem;
+  gap: 0.75rem;
+  text-align: left;
+  background: linear-gradient(148deg, rgba(5, 28, 42, 0.9), rgba(3, 14, 30, 0.94));
+  box-shadow: 0 0.9rem 2rem rgba(0, 0, 0, 0.3), inset 0 0 1rem rgba(143, 255, 192, 0.08);
+}
+
+.que-es-esto-panel__diagnostic-title {
+  margin: 0;
+  color: var(--green);
+  font-size: clamp(1rem, 2.1vw, 1.15rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.que-es-esto-panel__diagnostic-question {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1rem, 1.9vw, 1.1rem);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.que-es-esto-panel__diagnostic-subtitle {
+  margin: 0.2rem 0 0;
+  color: var(--cyan);
+  font-size: clamp(0.95rem, 2vw, 1.06rem);
+  letter-spacing: 0.04em;
+}
+
+.que-es-esto-panel__diagnostic-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--white);
+}
+
+.que-es-esto-panel__diagnostic-item {
+  margin: 0;
+  font-size: clamp(0.93rem, 1.72vw, 1rem);
+  line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .que-es-esto-panel__feature-intro {
@@ -1470,6 +2138,29 @@ img {
     width: 100%;
   }
 
+  .quienes-somos-panel__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experiencias-panel__columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .experto-cv {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .experto-cv__sidebar {
+    padding: 1.05rem 1rem;
+  }
+
+  .experto-cv__avatar {
+    width: min(100%, 8.8rem);
+  }
+
+  .experto-panel__intro {
+    width: min(100%, 60ch);
+  }
 }
 
 @media (max-width: 560px) {
@@ -1541,12 +2232,79 @@ img {
     margin-block: 1.4rem;
   }
 
+  .quienes-somos-panel {
+    gap: 1rem;
+  }
+
+  .quienes-somos-panel__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quienes-somos-card {
+    padding: 0.95rem;
+  }
+
+  .experiencias-panel {
+    gap: 0.9rem;
+  }
+
+  .perspectivas-panel {
+    gap: 0.9rem;
+  }
+
+  .experiencias-block {
+    padding: 0.95rem;
+  }
+
+  .perspectivas-card {
+    padding: 0.95rem;
+  }
+
+  .experto-cv__header {
+    padding: 1rem 1rem 0.95rem;
+  }
+
+  .experto-cv__block {
+    padding-inline: 1rem;
+  }
+
+  .experto-cv__section-title {
+    font-size: 1rem;
+  }
+
+  .experto-panel__card {
+    padding: 0.95rem;
+  }
+
+  .experto-cv__contact-item,
+  .experto-cv__bullet-list,
+  .experto-cv__paragraph,
+  .experto-cv__meta,
+  .experto-cv__question-list,
+  .experto-panel__question-list,
+  .experto-panel__text {
+    font-size: 0.9rem;
+  }
+
+  .experiencias-item {
+    padding: 0.65rem 0.68rem;
+  }
+
   .que-es-esto-panel__textbox {
     padding: 0.95rem 1rem;
   }
 
   .que-es-esto-panel__text {
     font-size: 0.96rem;
+  }
+
+  .que-es-esto-panel__diagnostic {
+    padding: 0.95rem 1rem;
+    gap: 0.65rem;
+  }
+
+  .que-es-esto-panel__diagnostic-list {
+    padding-left: 1rem;
   }
 
   .que-es-esto-panel__feature-intro {
