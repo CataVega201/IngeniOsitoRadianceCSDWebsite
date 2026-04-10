@@ -1070,6 +1070,31 @@ img {
   text-align: left;
 }
 
+.quienes-somos-card__avatar {
+  justify-self: center;
+  width: clamp(7.8rem, 24vw, 9.8rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 227, 154, 0.72);
+  box-shadow: 0 0.45rem 1rem rgba(0, 0, 0, 0.42), 0 0 0.85rem rgba(123, 233, 255, 0.28);
+}
+
+.quienes-somos-card:nth-child(1) {
+  border-color: rgba(255, 144, 207, 0.55);
+  background: linear-gradient(145deg, rgba(24, 9, 40, 0.94), rgba(57, 18, 55, 0.9));
+}
+
+.quienes-somos-card:nth-child(2) {
+  border-color: rgba(196, 169, 255, 0.55);
+  background: linear-gradient(145deg, rgba(20, 13, 48, 0.94), rgba(38, 26, 70, 0.9));
+}
+
+.quienes-somos-card:nth-child(3) {
+  border-color: rgba(199, 210, 225, 0.45);
+  background: linear-gradient(145deg, rgba(15, 20, 36, 0.94), rgba(41, 48, 62, 0.9));
+}
+
 .quienes-somos-card__name {
   margin: 0;
   color: var(--cyan);
@@ -1099,6 +1124,26 @@ img {
   font-size: clamp(0.93rem, 1.55vw, 1rem);
   line-height: 1.62;
   text-wrap: pretty;
+}
+
+.quienes-somos-card__favorite-color {
+  margin: 0;
+  color: var(--gold-soft);
+  font-size: clamp(0.88rem, 1.4vw, 0.94rem);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.quienes-somos-card:nth-child(1) .quienes-somos-card__favorite-color {
+  color: #ff9ad4;
+}
+
+.quienes-somos-card:nth-child(2) .quienes-somos-card__favorite-color {
+  color: #d3b6ff;
+}
+
+.quienes-somos-card:nth-child(3) .quienes-somos-card__favorite-color {
+  color: #d0d6df;
 }
 
 .experiencias-panel {
