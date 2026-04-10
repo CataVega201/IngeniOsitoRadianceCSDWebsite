@@ -1199,27 +1199,20 @@ img {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
-  gap: 1rem;
+  gap: 1.25rem;
+  align-items: start;
 }
 
 .experiencias-block {
   display: grid;
   align-content: start;
-  gap: 0.85rem;
+  gap: 1rem;
   min-height: 100%;
-  padding: 1rem;
-  border: 1px solid rgba(123, 233, 255, 0.25);
-  border-radius: 1.1rem;
-  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
-}
-
-.experiencias-block--inmersion {
-  border-color: rgba(255, 117, 212, 0.3);
-}
-
-.experiencias-block--inspiracion {
-  border-color: rgba(143, 255, 192, 0.32);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .experiencias-block__heading {
@@ -1239,7 +1232,8 @@ img {
 
 .experiencias-list {
   display: grid;
-  gap: 0.7rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1247,11 +1241,13 @@ img {
 
 .experiencias-item {
   display: grid;
-  gap: 0.24rem;
-  padding: 0.7rem 0.75rem;
-  border: 1px solid rgba(123, 233, 255, 0.2);
-  border-radius: 0.85rem;
-  background: rgba(3, 17, 35, 0.55);
+  gap: 0.28rem;
+  position: relative;
+  justify-self: center;
+  align-content: center;
+  text-align: center;
+  animation: experiencias-float 6.2s ease-in-out infinite;
+  transform: translate3d(0, 0, 0);
 }
 
 .experiencias-item__title,
@@ -1277,6 +1273,57 @@ img {
   font-size: clamp(0.86rem, 1.35vw, 0.93rem);
   line-height: 1.56;
   text-wrap: pretty;
+}
+
+.experiencias-block--inmersion .experiencias-list {
+  grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 19vw, 12.5rem), 1fr));
+  justify-items: center;
+}
+
+.experiencias-block--inmersion .experiencias-item {
+  width: min(100%, clamp(10rem, 19vw, 12.5rem));
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: clamp(0.85rem, 1.7vw, 1.15rem);
+  border: 1px solid rgba(184, 239, 255, 0.42);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.22), rgba(130, 214, 255, 0.18) 38%, rgba(80, 140, 255, 0.2) 100%);
+  box-shadow: inset 0 0 0.9rem rgba(255, 255, 255, 0.2), 0 0.7rem 1.3rem rgba(3, 14, 36, 0.35);
+  backdrop-filter: blur(10px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+  overflow: auto;
+}
+
+.experiencias-block--inspiracion .experiencias-list {
+  grid-template-columns: repeat(auto-fit, minmax(clamp(11rem, 22vw, 14rem), 1fr));
+  justify-items: center;
+}
+
+.experiencias-block--inspiracion .experiencias-item {
+  width: min(100%, clamp(11rem, 22vw, 14rem));
+  min-height: clamp(7.8rem, 14vw, 9.3rem);
+  padding: clamp(1rem, 1.6vw, 1.25rem) clamp(1.2rem, 2.2vw, 1.8rem);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.experiencias-block--inspiracion .experiencias-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("./ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") no-repeat center / 100% 100%;
+  filter: drop-shadow(0 0.65rem 0.85rem rgba(1, 8, 25, 0.28));
+  z-index: -1;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(2n),
+.experiencias-block--inspiracion .experiencias-item:nth-child(2n) {
+  animation-delay: -1.7s;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(3n),
+.experiencias-block--inspiracion .experiencias-item:nth-child(3n) {
+  animation-delay: -2.9s;
 }
 
 .perspectivas-panel {
@@ -2155,6 +2202,17 @@ img {
 
   50% {
     transform: translate3d(0, -0.55rem, 0);
+  }
+}
+
+@keyframes experiencias-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -0.5rem, 0);
   }
 }
 
