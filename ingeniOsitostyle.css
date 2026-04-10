@@ -1205,13 +1205,13 @@ img {
 .experiencias-block {
   display: grid;
   align-content: start;
-  gap: 0.85rem;
+  gap: 1rem;
   min-height: 100%;
-  padding: 1rem;
-  border: 1px solid rgba(123, 233, 255, 0.25);
-  border-radius: 1.1rem;
-  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+  padding: 0.4rem 0.2rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .experiencias-block--inmersion {
@@ -1238,8 +1238,11 @@ img {
 }
 
 .experiencias-list {
-  display: grid;
-  gap: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1247,11 +1250,80 @@ img {
 
 .experiencias-item {
   display: grid;
-  gap: 0.24rem;
-  padding: 0.7rem 0.75rem;
-  border: 1px solid rgba(123, 233, 255, 0.2);
-  border-radius: 0.85rem;
-  background: rgba(3, 17, 35, 0.55);
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  gap: 0.2rem;
+  animation: experiencias-float 5.8s ease-in-out infinite;
+}
+
+.experiencias-block--inmersion .experiencias-item {
+  width: clamp(10.5rem, 19vw, 12.5rem);
+  aspect-ratio: 1 / 1;
+  padding: clamp(0.75rem, 1.35vw, 1.05rem);
+  border-radius: 50%;
+  border: 1px solid #ffffff73;
+  background: radial-gradient(
+      circle at 72% 28%,
+      #ffffffe6 0 4px,
+      #ffffff40 7px,
+      #fff0 10px
+    ),
+    radial-gradient(
+      circle at 30% 30%,
+      #ffffff47,
+      #ffffff0d 38%,
+      #fff0 70%
+    ),
+    radial-gradient(circle at 50% 55%, #ffffff14, #ffffff05 55%, #fff0);
+  box-shadow: inset 0 0 24px #ffffff73, inset 14px 0 28px #ffffff2e,
+    inset -18px -40px 60px #ffffff26, inset 0 35px 65px #bee6ff24,
+    0 0 16px #ffffff59, 0 10px 30px #78b4ff2e;
+  backdrop-filter: blur(2px) saturate(120%);
+  -webkit-backdrop-filter: blur(2px) saturate(120%);
+  position: relative;
+}
+
+.experiencias-block--inmersion .experiencias-item::before,
+.experiencias-block--inmersion .experiencias-item::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.experiencias-block--inmersion .experiencias-item::before {
+  width: 58%;
+  height: 34%;
+  top: 9%;
+  left: 11%;
+  transform: rotate(-18deg);
+  background: radial-gradient(ellipse, #ffffff8c, #fff0 70%);
+  filter: blur(0.4px);
+}
+
+.experiencias-block--inspiracion .experiencias-item {
+  width: clamp(10.8rem, 20vw, 13rem);
+  aspect-ratio: 1.58 / 1;
+  padding: clamp(1rem, 1.6vw, 1.3rem) clamp(1rem, 1.8vw, 1.45rem);
+  border: 0;
+  border-radius: 0;
+  background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / contain no-repeat;
+  color: #10254a;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(odd),
+.experiencias-block--inspiracion .experiencias-item:nth-child(odd) {
+  transform: translateY(-0.35rem) rotate(-1.25deg);
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(even),
+.experiencias-block--inspiracion .experiencias-item:nth-child(even) {
+  transform: translateY(0.5rem) rotate(1.15deg);
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(3n),
+.experiencias-block--inspiracion .experiencias-item:nth-child(3n) {
+  transform: translateY(0.15rem) rotate(-0.75deg);
 }
 
 .experiencias-item__title,
@@ -1277,6 +1349,22 @@ img {
   font-size: clamp(0.86rem, 1.35vw, 0.93rem);
   line-height: 1.56;
   text-wrap: pretty;
+}
+
+.experiencias-block--inspiracion .experiencias-item__title,
+.experiencias-block--inspiracion .experiencias-item__lead,
+.experiencias-block--inspiracion .experiencias-item__text {
+  color: #163157;
+}
+
+@keyframes experiencias-float {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -0.45rem;
+  }
 }
 
 .perspectivas-panel {
@@ -2331,8 +2419,12 @@ img {
     font-size: 0.9rem;
   }
 
-  .experiencias-item {
-    padding: 0.65rem 0.68rem;
+  .experiencias-block--inmersion .experiencias-item {
+    padding: 0.72rem;
+  }
+
+  .experiencias-block--inspiracion .experiencias-item {
+    padding: 0.85rem 0.92rem;
   }
 
   .que-es-esto-panel__textbox {
