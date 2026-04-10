@@ -1072,7 +1072,7 @@ img {
 
 .quienes-somos-card__avatar {
   justify-self: center;
-  width: clamp(5.6rem, 18vw, 7rem);
+  width: clamp(7.8rem, 24vw, 9.8rem);
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
