@@ -1208,18 +1208,16 @@ img {
   gap: 0.85rem;
   min-height: 100%;
   padding: 1rem;
-  border: 1px solid rgba(123, 233, 255, 0.25);
-  border-radius: 1.1rem;
-  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.experiencias-block--inmersion {
-  border-color: rgba(255, 117, 212, 0.3);
-}
-
-.experiencias-block--inspiracion {
-  border-color: rgba(143, 255, 192, 0.32);
+.experiencias-block--inmersion .experiencias-list,
+.experiencias-block--inspiracion .experiencias-list {
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.9rem;
 }
 
 .experiencias-block__heading {
@@ -1254,6 +1252,64 @@ img {
   background: rgba(3, 17, 35, 0.55);
 }
 
+.experiencias-block--inmersion .experiencias-item {
+  width: min(100%, 13.2rem);
+  aspect-ratio: 1 / 1;
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ffffff73;
+  background: radial-gradient(circle at 72% 28%, #ffffffe6 0 4px, #ffffff40 7px, #fff0 10px),
+    radial-gradient(circle at 30% 30%, #ffffff47, #ffffff0d 38%, #fff0 70%),
+    radial-gradient(circle at 50% 55%, #ffffff14, #ffffff05 55%, #fff0);
+  box-shadow: inset 0 0 24px #ffffff73, inset 14px 0 28px #ffffff2e,
+    inset -18px -40px 60px #ffffff26, inset 0 35px 65px #bee6ff24,
+    0 0 16px #ffffff59, 0 10px 30px #78b4ff2e;
+  backdrop-filter: blur(2px) saturate(120%);
+  -webkit-backdrop-filter: blur(2px) saturate(120%);
+  animation: experiencias-float-bubble 6s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(even) {
+  animation-delay: -2s;
+}
+
+.experiencias-block--inmersion .experiencias-item::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 35%;
+  top: 9%;
+  left: 12%;
+  transform: rotate(-18deg);
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #ffffff8c, #fff0 70%);
+  filter: blur(0.4px);
+}
+
+.experiencias-block--inspiracion .experiencias-item {
+  width: min(100%, 13.4rem);
+  aspect-ratio: 1 / 1;
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  border: 0;
+  border-radius: 0;
+  background: center / contain no-repeat url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg");
+  box-shadow: none;
+  animation: experiencias-float-cloud 7.2s ease-in-out infinite;
+  padding: 1.35rem 1.15rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(even) {
+  animation-delay: -2.4s;
+}
+
 .experiencias-item__title,
 .experiencias-item__lead,
 .experiencias-item__text {
@@ -1277,6 +1333,27 @@ img {
   font-size: clamp(0.86rem, 1.35vw, 0.93rem);
   line-height: 1.56;
   text-wrap: pretty;
+}
+
+
+@keyframes experiencias-float-bubble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes experiencias-float-cloud {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
 }
 
 .perspectivas-panel {
