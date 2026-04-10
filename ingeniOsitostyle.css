@@ -1208,10 +1208,10 @@ img {
   gap: 0.85rem;
   min-height: 100%;
   padding: 1rem;
-  border: 1px solid rgba(123, 233, 255, 0.25);
-  border-radius: 1.1rem;
-  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .experiencias-block--inmersion {
@@ -1252,6 +1252,31 @@ img {
   border: 1px solid rgba(123, 233, 255, 0.2);
   border-radius: 0.85rem;
   background: rgba(3, 17, 35, 0.55);
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+.experiencias-block--inmersion .experiencias-item {
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, rgba(143, 244, 255, 0.34), rgba(7, 32, 53, 0.88));
+  box-shadow: 0 0.75rem 1.1rem rgba(8, 21, 46, 0.35), inset 0 0 0.55rem rgba(218, 252, 255, 0.18);
+}
+
+.experiencias-block--inspiracion .experiencias-item {
+  border-radius: 1.65rem;
+  background:
+    radial-gradient(circle at 32% 34%, rgba(255, 255, 255, 0.28) 0 30%, transparent 31%),
+    radial-gradient(circle at 68% 34%, rgba(255, 255, 255, 0.24) 0 30%, transparent 31%),
+    radial-gradient(circle at 50% 63%, rgba(230, 255, 255, 0.26) 0 34%, transparent 35%),
+    linear-gradient(150deg, rgba(208, 240, 255, 0.28), rgba(60, 121, 153, 0.54));
+  box-shadow: 0 0.82rem 1.2rem rgba(7, 18, 37, 0.32), inset 0 0 0.55rem rgba(247, 254, 255, 0.22);
+}
+
+.experiencias-block .experiencias-item:nth-child(2n) {
+  animation-duration: 6.6s;
+}
+
+.experiencias-block .experiencias-item:nth-child(3n) {
+  animation-duration: 5.4s;
 }
 
 .experiencias-item__title,
