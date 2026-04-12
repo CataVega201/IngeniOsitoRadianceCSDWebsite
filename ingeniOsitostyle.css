@@ -1196,10 +1196,31 @@ img {
 }
 
 .experiencias-panel__columns {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
-  gap: 1rem;
+  column-gap: clamp(1.5rem, 3vw, 2.5rem);
+  row-gap: 1rem;
+}
+
+.experiencias-panel__columns::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(184, 233, 255, 0) 0%,
+    rgba(184, 233, 255, 0.38) 14%,
+    rgba(184, 233, 255, 0.46) 50%,
+    rgba(184, 233, 255, 0.38) 86%,
+    rgba(184, 233, 255, 0) 100%
+  );
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .experiencias-block {
@@ -1239,10 +1260,10 @@ img {
 
 .experiencias-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
   align-items: start;
-  gap: 0.85rem;
+  gap: clamp(1.15rem, 2.2vw, 1.75rem);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1261,15 +1282,15 @@ img {
   isolation: isolate;
   --jitter-x: 0rem;
   --jitter-y: 0rem;
-  animation: experiencias-float 6.4s ease-in-out infinite;
+  animation: experiencias-float 9.6s ease-in-out infinite;
 }
 
 .experiencias-item:nth-child(2n) {
-  animation-duration: 7.2s;
+  animation-duration: 10.4s;
 }
 
 .experiencias-item:nth-child(3n) {
-  animation-duration: 5.7s;
+  animation-duration: 8.8s;
 }
 
 .experiencias-item:nth-child(4n) {
@@ -1278,6 +1299,40 @@ img {
 
 .experiencias-item:nth-child(5n) {
   animation-delay: -0.9s;
+}
+
+.experiencias-list .experiencias-item:nth-child(odd) {
+  grid-column: 1;
+  justify-self: end;
+}
+
+.experiencias-list .experiencias-item:nth-child(even) {
+  grid-column: 2;
+  justify-self: start;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(1),
+.experiencias-block--inspiracion .experiencias-item:nth-child(1) {
+  grid-row: 1;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(2),
+.experiencias-block--inspiracion .experiencias-item:nth-child(2) {
+  grid-row: 2;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(3),
+.experiencias-block--inspiracion .experiencias-item:nth-child(3) {
+  grid-row: 3;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(4),
+.experiencias-block--inspiracion .experiencias-item:nth-child(4) {
+  grid-row: 4;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(5) {
+  grid-row: 5;
 }
 
 .experiencias-block--inmersion .experiencias-item:nth-child(1) {
@@ -1361,10 +1416,15 @@ img {
 }
 
 .experiencias-block--inspiracion .experiencias-item {
+  aspect-ratio: 1 / 1;
+  border-radius: 0;
   border: 0;
+  padding: clamp(0.95rem, 1.8vw, 1.15rem);
   background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
-  box-shadow: 0 0.5rem 1.6rem rgba(111, 152, 185, 0.22);
+  box-shadow: none;
   color: #0c2239;
+  overflow: visible;
+  isolation: auto;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
@@ -1395,7 +1455,14 @@ img {
 }
 
 .experiencias-block--inspiracion .experiencias-item__title,
-.experiencias-block--inspiracion .experiencias-item__lead,
+.experiencias-block--inspiracion .experiencias-item__lead {
+  color: #122e49;
+}
+
+.experiencias-block--inspiracion .experiencias-item__lead {
+  color: #1a3a58;
+}
+
 .experiencias-block--inspiracion .experiencias-item__text {
   color: #0c2239;
 }
@@ -2191,7 +2258,7 @@ img {
   }
 
   50% {
-    transform: translate3d(var(--jitter-x), calc(var(--jitter-y) - 0.5rem), 0);
+    transform: translate3d(var(--jitter-x), calc(var(--jitter-y) - 0.24rem), 0);
   }
 }
 
@@ -2321,6 +2388,10 @@ img {
 
   .experiencias-panel__columns {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .experiencias-panel__columns::before {
+    content: none;
   }
 
   .experto-cv {
@@ -2466,6 +2537,16 @@ img {
   .experiencias-item {
     width: clamp(11.6rem, 64vw, 13.2rem);
     padding: 0.8rem;
+  }
+
+  .experiencias-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .experiencias-list .experiencias-item:nth-child(odd),
+  .experiencias-list .experiencias-item:nth-child(even) {
+    grid-column: 1;
+    justify-self: center;
   }
 
   .que-es-esto-panel__textbox {
