@@ -1416,10 +1416,10 @@ img {
 }
 
 .experiencias-block--inspiracion .experiencias-item {
-  aspect-ratio: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 0;
   border: 0;
-  padding: clamp(1.2rem, 2vw, 1.4rem) clamp(1rem, 1.8vw, 1.2rem) clamp(1rem, 1.8vw, 1.2rem);
+  padding: clamp(0.95rem, 1.8vw, 1.15rem);
   background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
   box-shadow: none;
   color: #0c2239;
@@ -1455,7 +1455,14 @@ img {
 }
 
 .experiencias-block--inspiracion .experiencias-item__title,
-.experiencias-block--inspiracion .experiencias-item__lead,
+.experiencias-block--inspiracion .experiencias-item__lead {
+  color: #122e49;
+}
+
+.experiencias-block--inspiracion .experiencias-item__lead {
+  color: #1a3a58;
+}
+
 .experiencias-block--inspiracion .experiencias-item__text {
   color: #0c2239;
 }
