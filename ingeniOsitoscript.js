@@ -34,23 +34,6 @@ const createSectionSkies = () => {
     const sky = document.createElement('div');
     sky.className = 'section-sky';
     sky.setAttribute('aria-hidden', 'true');
-
-    const small = document.createElement('span');
-    small.className = 'section-sky__layer section-sky__layer--small';
-
-    const medium = document.createElement('span');
-    medium.className = 'section-sky__layer section-sky__layer--medium';
-
-    const large = document.createElement('span');
-    large.className = 'section-sky__layer section-sky__layer--large';
-
-    const shootingOne = document.createElement('span');
-    shootingOne.className = 'section-sky__shooting section-sky__shooting--one';
-
-    const shootingTwo = document.createElement('span');
-    shootingTwo.className = 'section-sky__shooting section-sky__shooting--two';
-
-    sky.append(small, medium, large, shootingOne, shootingTwo);
     section.prepend(sky);
   });
 };
