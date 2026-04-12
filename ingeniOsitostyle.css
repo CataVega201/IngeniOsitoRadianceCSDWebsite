@@ -757,29 +757,20 @@ img {
 
 .experiencias-block--inspiracion .experiencias-item {
   container-type: inline-size;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 400 / 283;
+  align-self: center;
   border-radius: 0;
   border: 0;
   padding: clamp(1rem, 9.2cqi, 1.55rem);
-  background: none;
+  background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
   box-shadow: none;
   color: #0c2239;
-  overflow: hidden;
+  overflow: visible;
   isolation: auto;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-}
-
-.experiencias-item--cloud::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  aspect-ratio: 400 / 283;
-  transform: translate(-50%, -50%);
-  background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
-  z-index: -1;
 }
 
 .experiencias-item__title,
