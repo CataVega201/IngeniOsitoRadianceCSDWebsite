@@ -1207,11 +1207,11 @@ img {
   align-content: start;
   gap: 0.85rem;
   min-height: 100%;
-  padding: 1rem;
-  border: 1px solid rgba(123, 233, 255, 0.25);
-  border-radius: 1.1rem;
-  background: linear-gradient(145deg, rgba(3, 9, 31, 0.93), rgba(4, 31, 39, 0.88));
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+  padding: 0.2rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .experiencias-block--inmersion {
@@ -1239,7 +1239,10 @@ img {
 
 .experiencias-list {
   display: grid;
-  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  justify-items: center;
+  align-items: start;
+  gap: 0.85rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1247,11 +1250,123 @@ img {
 
 .experiencias-item {
   display: grid;
-  gap: 0.24rem;
-  padding: 0.7rem 0.75rem;
-  border: 1px solid rgba(123, 233, 255, 0.2);
-  border-radius: 0.85rem;
-  background: rgba(3, 17, 35, 0.55);
+  place-items: center;
+  align-content: center;
+  width: clamp(12.4rem, 22vw, 15.2rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: clamp(0.95rem, 1.8vw, 1.15rem);
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+  --jitter-x: 0rem;
+  --jitter-y: 0rem;
+  animation: experiencias-float 6.4s ease-in-out infinite;
+}
+
+.experiencias-item:nth-child(2n) {
+  animation-duration: 7.2s;
+}
+
+.experiencias-item:nth-child(3n) {
+  animation-duration: 5.7s;
+}
+
+.experiencias-item:nth-child(4n) {
+  animation-delay: -1.6s;
+}
+
+.experiencias-item:nth-child(5n) {
+  animation-delay: -0.9s;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(1) {
+  --jitter-x: -0.45rem;
+  --jitter-y: -0.25rem;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(2) {
+  --jitter-x: 0.4rem;
+  --jitter-y: 0.35rem;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(3) {
+  --jitter-x: -0.3rem;
+  --jitter-y: 0.25rem;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(4) {
+  --jitter-x: 0.35rem;
+  --jitter-y: -0.2rem;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(5) {
+  --jitter-x: -0.2rem;
+  --jitter-y: 0.42rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(1) {
+  --jitter-x: -0.4rem;
+  --jitter-y: 0.25rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(2) {
+  --jitter-x: 0.33rem;
+  --jitter-y: -0.3rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(3) {
+  --jitter-x: -0.28rem;
+  --jitter-y: -0.2rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(4) {
+  --jitter-x: 0.4rem;
+  --jitter-y: 0.2rem;
+}
+
+.experiencias-block--inmersion .experiencias-item {
+  border: 1px solid #ffffff73;
+  background: radial-gradient(
+      circle at 72% 28%,
+      #ffffffe6 0 4px,
+      #ffffff40 7px,
+      #fff0 10px
+    ),
+    radial-gradient(circle at 30% 30%, #ffffff47, #ffffff0d 38%, #fff0 70%),
+    radial-gradient(circle at 50% 55%, #ffffff14, #ffffff05 55%, #fff0);
+  box-shadow: inset 0 0 24px #ffffff73, inset 14px 0 28px #ffffff2e,
+    inset -18px -40px 60px #ffffff26, inset 0 35px 65px #bee6ff24, 0 0 16px #ffffff59,
+    0 10px 30px #78b4ff2e;
+  backdrop-filter: blur(2px) saturate(120%);
+  -webkit-backdrop-filter: blur(2px) saturate(120%);
+}
+
+.experiencias-block--inmersion .experiencias-item::before,
+.experiencias-block--inmersion .experiencias-item::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.experiencias-block--inmersion .experiencias-item::before {
+  width: 62%;
+  height: 34%;
+  top: 10%;
+  left: 11%;
+  transform: rotate(-18deg);
+  background: radial-gradient(ellipse, #ffffff8c, #fff0 70%);
+  filter: blur(0.4px);
+}
+
+.experiencias-block--inspiracion .experiencias-item {
+  border: 0;
+  background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
+  box-shadow: 0 0.5rem 1.6rem rgba(111, 152, 185, 0.22);
+  color: #0c2239;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .experiencias-item__title,
@@ -1262,21 +1377,27 @@ img {
 
 .experiencias-item__title {
   color: var(--cyan);
-  font-size: clamp(0.92rem, 1.5vw, 1rem);
+  font-size: clamp(0.8rem, 1.25vw, 0.92rem);
   line-height: 1.35;
 }
 
 .experiencias-item__lead {
   color: var(--gold-bright);
-  font-size: clamp(0.86rem, 1.35vw, 0.93rem);
+  font-size: clamp(0.74rem, 1.1vw, 0.84rem);
   line-height: 1.38;
 }
 
 .experiencias-item__text {
   color: var(--white);
-  font-size: clamp(0.86rem, 1.35vw, 0.93rem);
-  line-height: 1.56;
+  font-size: clamp(0.72rem, 1.06vw, 0.82rem);
+  line-height: 1.42;
   text-wrap: pretty;
+}
+
+.experiencias-block--inspiracion .experiencias-item__title,
+.experiencias-block--inspiracion .experiencias-item__lead,
+.experiencias-block--inspiracion .experiencias-item__text {
+  color: #0c2239;
 }
 
 .perspectivas-panel {
@@ -2063,6 +2184,17 @@ img {
   }
 }
 
+@keyframes experiencias-float {
+  0%,
+  100% {
+    transform: translate3d(var(--jitter-x), var(--jitter-y), 0);
+  }
+
+  50% {
+    transform: translate3d(var(--jitter-x), calc(var(--jitter-y) - 0.5rem), 0);
+  }
+}
+
 @keyframes title-glow {
   0%,
   100% {
@@ -2298,7 +2430,7 @@ img {
   }
 
   .experiencias-block {
-    padding: 0.95rem;
+    padding: 0.2rem;
   }
 
   .perspectivas-card {
@@ -2332,7 +2464,8 @@ img {
   }
 
   .experiencias-item {
-    padding: 0.65rem 0.68rem;
+    width: clamp(11.6rem, 64vw, 13.2rem);
+    padding: 0.8rem;
   }
 
   .que-es-esto-panel__textbox {
