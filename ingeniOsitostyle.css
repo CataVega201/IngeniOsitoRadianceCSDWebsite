@@ -753,7 +753,7 @@ img {
 
 .experiencias-block--inspiracion .experiencias-item {
   container-type: inline-size;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 400 / 283;
   border-radius: 0;
   border: 0;
   padding: clamp(1rem, 9.2cqi, 1.55rem);
