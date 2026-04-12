@@ -627,6 +627,29 @@ img {
   pointer-events: none;
 }
 
+.experiencias-panel__versus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(2.3rem, 5vw, 3rem);
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(184, 233, 255, 0.38);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.3), rgba(11, 20, 49, 0.92) 62%);
+  color: #d5f6ff;
+  font-size: clamp(0.8rem, 1.6vw, 0.96rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 1rem rgba(136, 221, 255, 0.24);
+  pointer-events: none;
+}
+
 .experiencias-block {
   display: grid;
   align-content: start;
@@ -729,10 +752,11 @@ img {
 }
 
 .experiencias-block--inspiracion .experiencias-item {
+  container-type: inline-size;
   aspect-ratio: 1 / 1;
   border-radius: 0;
   border: 0;
-  padding: clamp(0.95rem, 1.8vw, 1.15rem);
+  padding: clamp(1rem, 9.2cqi, 1.55rem);
   background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
   box-shadow: none;
   color: #0c2239;
@@ -778,6 +802,66 @@ img {
 
 .experiencias-block--inspiracion .experiencias-item__text {
   color: #0c2239;
+}
+
+.experiencias-item--cloud .experiencias-item__title {
+  font-size: clamp(0.8rem, 8.1cqi, 0.92rem);
+}
+
+.experiencias-item--cloud .experiencias-item__lead {
+  font-size: clamp(0.74rem, 7cqi, 0.84rem);
+}
+
+.experiencias-item--cloud .experiencias-item__text {
+  font-size: clamp(0.72rem, 6.5cqi, 0.82rem);
+}
+
+.experiencias-item--cloud-azul .experiencias-item__title {
+  color: #0f3f73;
+}
+
+.experiencias-item--cloud-azul .experiencias-item__lead {
+  color: #1f568f;
+}
+
+.experiencias-item--cloud-azul .experiencias-item__text {
+  color: #2f6ca7;
+}
+
+.experiencias-item--cloud-verde .experiencias-item__title {
+  color: #1c5a3f;
+}
+
+.experiencias-item--cloud-verde .experiencias-item__lead {
+  color: #2b7554;
+}
+
+.experiencias-item--cloud-verde .experiencias-item__text {
+  color: #3f8d68;
+}
+
+.experiencias-item--cloud-morado .experiencias-item__title {
+  color: #4a3e83;
+}
+
+.experiencias-item--cloud-morado .experiencias-item__lead {
+  color: #5d4f9f;
+}
+
+.experiencias-item--cloud-morado .experiencias-item__text {
+  color: #7165b5;
+}
+
+.experiencias-item--cloud-dorado .experiencias-item__title {
+  color: #855115;
+}
+
+.experiencias-item--cloud-dorado .experiencias-item__lead {
+  color: #9e6720;
+}
+
+.experiencias-item--cloud-dorado .experiencias-item__text {
+  color: #b17a31;
 }
 
 .perspectivas-panel {
@@ -1693,6 +1777,10 @@ img {
 
   .experiencias-panel__columns::before {
     content: none;
+  }
+
+  .experiencias-panel__versus {
+    display: none;
   }
 
   .experto-cv {
