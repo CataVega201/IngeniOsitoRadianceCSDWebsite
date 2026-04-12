@@ -1242,7 +1242,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   justify-items: center;
   align-items: start;
-  gap: 0.85rem;
+  gap: clamp(1.15rem, 2.2vw, 1.75rem);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1361,10 +1361,15 @@ img {
 }
 
 .experiencias-block--inspiracion .experiencias-item {
+  aspect-ratio: auto;
+  border-radius: 0;
   border: 0;
+  padding: clamp(1.2rem, 2vw, 1.4rem) clamp(1rem, 1.8vw, 1.2rem) clamp(1rem, 1.8vw, 1.2rem);
   background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
-  box-shadow: 0 0.5rem 1.6rem rgba(111, 152, 185, 0.22);
+  box-shadow: none;
   color: #0c2239;
+  overflow: visible;
+  isolation: auto;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
