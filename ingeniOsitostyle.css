@@ -686,8 +686,11 @@ img {
 }
 
 .experiencias-list {
+  --experiencias-cell-size: clamp(12.4rem, 22vw, 15.2rem);
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, var(--experiencias-cell-size)));
+  grid-auto-rows: var(--experiencias-cell-size);
+  justify-content: center;
   justify-items: center;
   align-items: start;
   gap: clamp(1.15rem, 2.2vw, 1.75rem);
@@ -700,7 +703,8 @@ img {
   display: grid;
   place-items: center;
   align-content: center;
-  width: clamp(12.4rem, 22vw, 15.2rem);
+  width: 100%;
+  height: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   padding: clamp(0.95rem, 1.8vw, 1.15rem);
@@ -753,17 +757,29 @@ img {
 
 .experiencias-block--inspiracion .experiencias-item {
   container-type: inline-size;
-  aspect-ratio: 400 / 283;
+  aspect-ratio: 1 / 1;
   border-radius: 0;
   border: 0;
   padding: clamp(1rem, 9.2cqi, 1.55rem);
-  background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
+  background: none;
   box-shadow: none;
   color: #0c2239;
-  overflow: visible;
+  overflow: hidden;
   isolation: auto;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+}
+
+.experiencias-item--cloud::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  aspect-ratio: 400 / 283;
+  transform: translate(-50%, -50%);
+  background: url("ingeniOsitoAssets/IngOsGraphics/cloudvector.svg") center / 100% 100% no-repeat;
+  z-index: -1;
 }
 
 .experiencias-item__title,
@@ -1923,16 +1939,16 @@ img {
     font-size: 0.9rem;
   }
 
-  .experiencias-item {
-    width: clamp(11.6rem, 64vw, 13.2rem);
-    padding: 0.8rem;
-  }
-
   .experiencias-list {
-    grid-template-columns: minmax(0, 1fr);
+    --experiencias-cell-size: clamp(11.6rem, 64vw, 13.2rem);
+    grid-template-columns: minmax(0, var(--experiencias-cell-size));
+    grid-auto-rows: var(--experiencias-cell-size);
   }
 
   .experiencias-item {
+    width: 100%;
+    height: 100%;
+    padding: 0.8rem;
     grid-column: 1;
     justify-self: center;
   }
