@@ -26,7 +26,19 @@
           <a class="topbar__logo" href="#inicio" data-route="inicio" aria-label="Ir a Inicio">
             <img src="ingeniOsitoAssets/IngOsGraphics/IngeniOsitoLogoVector.svg" alt="IngenioSito" />
           </a>
-          <div class="topbar__links">
+          <button
+            class="topbar__menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="topbar-links"
+            aria-label="Abrir menú de navegación"
+          >
+            <span class="topbar__menu-toggle-line" aria-hidden="true"></span>
+            <span class="topbar__menu-toggle-line" aria-hidden="true"></span>
+            <span class="topbar__menu-toggle-line" aria-hidden="true"></span>
+            Menú
+          </button>
+          <div class="topbar__links" id="topbar-links">
             <a class="nav-link" href="#inicio" data-route="inicio">Inicio</a>
             <a class="nav-link" href="#que-es-esto" data-route="que-es-esto">¿Qué es esto?</a>
             <a class="nav-link" href="#quienes-somos" data-route="quienes-somos">¿Quiénes somos?</a>
