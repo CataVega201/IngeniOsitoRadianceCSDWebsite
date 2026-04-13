@@ -604,7 +604,22 @@ img {
 }
 
 .experiencias-block--inspiracion {
+  position: relative;
+  overflow: hidden;
+  padding-left: clamp(4.5rem, 14vw, 7.25rem);
   border-color: rgba(143, 255, 192, 0.32);
+}
+
+.experiencias-block__alive-tree {
+  position: absolute;
+  left: 0.2rem;
+  top: 50%;
+  z-index: 0;
+  width: auto;
+  max-height: 100%;
+  height: calc(100% - 1.4rem);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .experiencias-block__heading {
@@ -1540,6 +1555,10 @@ img {
     padding-right: clamp(5rem, 18vw, 7rem);
   }
 
+  .experiencias-block--inspiracion {
+    padding-left: clamp(5rem, 18vw, 7rem);
+  }
+
   .experto-cv {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1654,8 +1673,17 @@ img {
     padding-right: clamp(4.8rem, 23vw, 6.2rem);
   }
 
+  .experiencias-block--inspiracion {
+    padding-left: clamp(4.8rem, 23vw, 6.2rem);
+  }
+
   .experiencias-block__dead-tree {
     right: 0;
+    height: calc(100% - 1.1rem);
+  }
+
+  .experiencias-block__alive-tree {
+    left: 0;
     height: calc(100% - 1.1rem);
   }
 
