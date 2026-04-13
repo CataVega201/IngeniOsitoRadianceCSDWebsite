@@ -46,7 +46,7 @@
           data-section
           aria-labelledby="titulo-inicio"
         >
-          <div class="hero-lockup">
+          <div class="hero-lockup content-section__layer">
             <div class="hero-lockup__visual" aria-hidden="true">
               <div class="hero-lockup__particles" data-particles></div>
               <img class="hero-lockup__logo" src="ingeniOsitoAssets/IngOsGraphics/IngeniOsitoLogoVector.svg" alt="IngenioSito" />
@@ -63,7 +63,7 @@
           inert
           hidden
         >
-          <div class="que-es-esto-panel">
+          <div class="que-es-esto-panel content-section__layer">
             <h2 class="que-es-esto-panel__title" id="titulo-que-es-esto">¿Qué es esto?</h2>
             <div class="que-es-esto-panel__divider" aria-hidden="true"></div>
             <img
@@ -109,7 +109,7 @@
               <h3 class="que-es-esto-panel__feature-title" id="titulo-lo-que-encontraras">Lo que encontrarás aquí</h3>
               <div class="que-es-esto-panel__feature-list">
                 <article class="que-es-esto-feature">
-                  <div class="que-es-esto-feature__media que-es-esto-feature__media--magnifier" aria-hidden="true">
+                  <div class="que-es-esto-feature__media que-es-esto-feature__media--magnifier que-es-esto-feature__media--default" aria-hidden="true">
                     <div class="que-es-esto-feature__scene">
                       <img
                         class="que-es-esto-feature__illustration que-es-esto-feature__illustration--paper"
@@ -132,7 +132,7 @@
                   </div>
                 </article>
                 <article class="que-es-esto-feature que-es-esto-feature--reverse">
-                  <div class="que-es-esto-feature__media que-es-esto-feature__media--gears" aria-hidden="true">
+                  <div class="que-es-esto-feature__media que-es-esto-feature__media--gears que-es-esto-feature__media--reverse" aria-hidden="true">
                     <div class="que-es-esto-feature__scene que-es-esto-feature__scene--gears">
                       <div class="que-es-esto-feature__gear-cluster">
                         <div class="que-es-esto-feature__gear-item que-es-esto-feature__gear-item--large">
@@ -159,7 +159,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="que-es-esto-feature__content">
+                  <div class="que-es-esto-feature__content que-es-esto-feature__content--reverse">
                     <p class="que-es-esto-feature__text">
                       <span class="que-es-esto-feature__label que-es-esto-feature__label--contraste"
                         >Contraste de sistemas:</span
@@ -169,7 +169,7 @@
                   </div>
                 </article>
                 <article class="que-es-esto-feature">
-                  <div class="que-es-esto-feature__media que-es-esto-feature__media--expert" aria-hidden="true">
+                  <div class="que-es-esto-feature__media que-es-esto-feature__media--expert que-es-esto-feature__media--default" aria-hidden="true">
                     <div class="que-es-esto-feature__scene que-es-esto-feature__scene--expert">
                       <img
                         class="que-es-esto-feature__illustration que-es-esto-feature__illustration--expert-person"
@@ -215,11 +215,11 @@
           inert
           hidden
         >
-          <div class="quienes-somos-panel">
+          <div class="quienes-somos-panel content-section__layer">
             <h2 class="quienes-somos-panel__title" id="titulo-quienes-somos">¿Quiénes somos?</h2>
             <div class="quienes-somos-panel__divider" aria-hidden="true"></div>
             <div class="quienes-somos-panel__list">
-              <article class="quienes-somos-card" aria-labelledby="miembro-catalina">
+              <article class="quienes-somos-card quienes-somos-card--catalina" aria-labelledby="miembro-catalina">
                 <img
                   class="quienes-somos-card__avatar"
                   src="ingeniOsitoAssets/IngOsImages/IngOsProfilePictures/catapfp.jpg"
@@ -236,9 +236,9 @@
                   programación, los computadores y los distintos campos de acción. Me gusta el skateboarding, la
                   naturaleza, los deportes, los videojuegos, y mi color favorito es el rosa.
                 </p>
-                <p class="quienes-somos-card__favorite-color">Color favorito: Rosa</p>
+                <p class="quienes-somos-card__favorite-color quienes-somos-card__favorite-color--rosa">Color favorito: Rosa</p>
               </article>
-              <article class="quienes-somos-card" aria-labelledby="miembro-sofia">
+              <article class="quienes-somos-card quienes-somos-card--sofia" aria-labelledby="miembro-sofia">
                 <img
                   class="quienes-somos-card__avatar"
                   src="ingeniOsitoAssets/IngOsImages/IngOsProfilePictures/sofipfp.jpg"
@@ -246,19 +246,19 @@
                   loading="lazy"
                   decoding="async"
                 />
-                <h3 class="quienes-somos-card__name" id="miembro-sofia">Sofía Romero</h3>
+                <h3 class="quienes-somos-card__name" id="miembro-sofia">Sofía Romero Díaz</h3>
                 <a class="quienes-somos-card__email" href="mailto:sofiaromero@unisabana.edu.co"
                   >sofiaromero@unisabana.edu.co</a
                 >
                 <p class="quienes-somos-card__bio">
                   Estudiante de ingeniería informática de primer semestre. Nací en Venezuela, pero llevo más de 10
                   años viviendo en Colombia. Mi parte favorita de mi carrera es la amplitud del campo laboral y las
-                  posibilidades de creación tecnológica que esta permite. En mis tiempos libres me gusta jugar
+                  posibilidades de creación tecnológica que esta me permite. En mis tiempos libres me gusta jugar
                   videojuegos y escuchar música. Mi color favorito es el lavanda.
                 </p>
-                <p class="quienes-somos-card__favorite-color">Color favorito: Lavanda</p>
+                <p class="quienes-somos-card__favorite-color quienes-somos-card__favorite-color--lavanda">Color favorito: Lavanda</p>
               </article>
-              <article class="quienes-somos-card" aria-labelledby="miembro-david">
+              <article class="quienes-somos-card quienes-somos-card--david" aria-labelledby="miembro-david">
                 <img
                   class="quienes-somos-card__avatar"
                   src="ingeniOsitoAssets/IngOsImages/IngOsProfilePictures/davidpfp.jpg"
@@ -266,7 +266,7 @@
                   loading="lazy"
                   decoding="async"
                 />
-                <h3 class="quienes-somos-card__name" id="miembro-david">David Diaz</h3>
+                <h3 class="quienes-somos-card__name" id="miembro-david">David Díaz</h3>
                 <a class="quienes-somos-card__email" href="mailto:daviddiaz@unisabana.edu.co">daviddiaz@unisabana.edu.co</a>
                 <p class="quienes-somos-card__bio">
                   Estudiante de ingeniería informática de primer semestre. Nací en Bucaramanga, Colombia. Mi parte
@@ -274,7 +274,7 @@
                   junto a la universidad. En mis tiempos libres, me gusta jugar fútbol, jugar videojuegos
                   competitivos y escuchar Bad Bunny. Mi color favorito es el gris.
                 </p>
-                <p class="quienes-somos-card__favorite-color">Color favorito: Gris</p>
+                <p class="quienes-somos-card__favorite-color quienes-somos-card__favorite-color--gris">Color favorito: Gris</p>
               </article>
             </div>
           </div>
@@ -287,7 +287,7 @@
           inert
           hidden
         >
-          <div class="experiencias-panel">
+          <div class="experiencias-panel content-section__layer">
             <h2 class="experiencias-panel__title" id="titulo-experiencias">Experiencias</h2>
             <div class="experiencias-panel__divider" aria-hidden="true"></div>
             <p class="experiencias-panel__intro">
@@ -395,7 +395,7 @@
           inert
           hidden
         >
-          <div class="perspectivas-panel">
+          <div class="perspectivas-panel content-section__layer">
             <h2 class="perspectivas-panel__title" id="titulo-perspectivas">Perspectivas</h2>
             <div class="perspectivas-panel__divider" aria-hidden="true"></div>
             <p class="perspectivas-panel__intro">
@@ -446,7 +446,7 @@
           inert
           hidden
         >
-          <div class="experto-panel">
+          <div class="experto-panel content-section__layer">
             <h2 class="experto-panel__title" id="titulo-experto">Experto</h2>
             <div class="experto-panel__divider" aria-hidden="true"></div>
             <p class="experto-panel__intro">
@@ -498,7 +498,7 @@
               </aside>
               <div class="experto-cv__main">
                 <header class="experto-cv__header">
-                  <h3 class="experto-cv__name">Juan Pablo Lopez</h3>
+                  <h3 class="experto-cv__name">Juan Pablo López</h3>
                   <p class="experto-cv__role">Magíster en Innovación Educativa mediada por TIC</p>
                 </header>
                 <section class="experto-cv__block" aria-labelledby="experto-perfil">
@@ -641,10 +641,10 @@
           </div>
         </section>
         <section class="content-section" id="proceso" data-section aria-labelledby="titulo-proceso" inert hidden>
-          <p class="content-section__placeholder" id="titulo-proceso">Placeholder de Proceso.</p>
+          <p class="content-section__placeholder content-section__layer" id="titulo-proceso">Contenido de Proceso en construcción.</p>
         </section>
         <section class="content-section" id="aprendizajes" data-section aria-labelledby="titulo-aprendizajes" inert hidden>
-          <p class="content-section__placeholder" id="titulo-aprendizajes">Placeholder de Aprendizajes.</p>
+          <p class="content-section__placeholder content-section__layer" id="titulo-aprendizajes">Contenido de Aprendizajes en construcción.</p>
         </section>
       </main>
     </div>
