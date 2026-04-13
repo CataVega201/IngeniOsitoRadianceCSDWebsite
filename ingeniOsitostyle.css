@@ -577,7 +577,27 @@ img {
 }
 
 .experiencias-block--inmersion {
+  position: relative;
+  isolation: isolate;
   border-color: rgba(255, 117, 212, 0.3);
+}
+
+.experiencias-block__dead-tree {
+  position: absolute;
+  left: -4.8rem;
+  top: 50%;
+  z-index: 0;
+  width: clamp(4rem, 10vw, 5.8rem);
+  transform: translateY(-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.experiencias-block__heading,
+.experiencias-block__place,
+.experiencias-list {
+  position: relative;
+  z-index: 1;
 }
 
 .experiencias-block--inspiracion {
@@ -1513,6 +1533,11 @@ img {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .experiencias-block__dead-tree {
+    left: -3.6rem;
+    width: clamp(3.4rem, 12vw, 4.8rem);
+  }
+
   .experto-cv {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1621,6 +1646,12 @@ img {
 
   .experiencias-block {
     padding: 0.95rem;
+  }
+
+  .experiencias-block__dead-tree {
+    left: -2.2rem;
+    width: clamp(3rem, 16vw, 4.2rem);
+    opacity: 0.7;
   }
 
   .perspectivas-card {
