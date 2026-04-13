@@ -862,7 +862,7 @@ img {
   animation-delay: 17s;
 }
 
-.content-section > * {
+.content-section__layer {
   position: relative;
   z-index: 1;
 }
@@ -1080,17 +1080,17 @@ img {
   box-shadow: 0 0.45rem 1rem rgba(0, 0, 0, 0.42), 0 0 0.85rem rgba(123, 233, 255, 0.28);
 }
 
-.quienes-somos-card:nth-child(1) {
+.quienes-somos-card--catalina {
   border-color: rgba(255, 144, 207, 0.55);
   background: linear-gradient(145deg, rgba(24, 9, 40, 0.94), rgba(57, 18, 55, 0.9));
 }
 
-.quienes-somos-card:nth-child(2) {
+.quienes-somos-card--sofia {
   border-color: rgba(196, 169, 255, 0.55);
   background: linear-gradient(145deg, rgba(20, 13, 48, 0.94), rgba(38, 26, 70, 0.9));
 }
 
-.quienes-somos-card:nth-child(3) {
+.quienes-somos-card--david {
   border-color: rgba(199, 210, 225, 0.45);
   background: linear-gradient(145deg, rgba(15, 20, 36, 0.94), rgba(41, 48, 62, 0.9));
 }
@@ -1134,15 +1134,15 @@ img {
   letter-spacing: 0.02em;
 }
 
-.quienes-somos-card:nth-child(1) .quienes-somos-card__favorite-color {
+.quienes-somos-card__favorite-color--rosa {
   color: #ff9ad4;
 }
 
-.quienes-somos-card:nth-child(2) .quienes-somos-card__favorite-color {
+.quienes-somos-card__favorite-color--lavanda {
   color: #d3b6ff;
 }
 
-.quienes-somos-card:nth-child(3) .quienes-somos-card__favorite-color {
+.quienes-somos-card__favorite-color--gris {
   color: #d0d6df;
 }
 
@@ -1774,12 +1774,12 @@ img {
   grid-template-columns: minmax(0, 1fr) minmax(0, var(--que-es-esto-feature-media-column));
 }
 
-.que-es-esto-feature--reverse > .que-es-esto-feature__media {
+.que-es-esto-feature__media--reverse {
   order: 2;
   justify-self: end;
 }
 
-.que-es-esto-feature--reverse > .que-es-esto-feature__content {
+.que-es-esto-feature__content--reverse {
   order: 1;
 }
 
@@ -1809,7 +1809,7 @@ img {
   isolation: isolate;
 }
 
-.que-es-esto-feature:not(.que-es-esto-feature--reverse) > .que-es-esto-feature__media {
+.que-es-esto-feature__media--default {
   justify-self: start;
 }
 
@@ -2361,8 +2361,8 @@ img {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .que-es-esto-feature--reverse > .que-es-esto-feature__media,
-  .que-es-esto-feature--reverse > .que-es-esto-feature__content {
+  .que-es-esto-feature__media--reverse,
+  .que-es-esto-feature__content--reverse {
     order: initial;
   }
 

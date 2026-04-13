@@ -10,7 +10,7 @@ const sectionLabels = {
 };
 
 const sections = [...document.querySelectorAll('[data-section]')];
-const navLinks = [...document.querySelectorAll('.topbar__links .nav-link[data-route]')];
+const navLinks = [...document.querySelectorAll('.nav-link[data-route]')];
 const logoLink = document.querySelector('.topbar__logo[data-route]');
 const routeLinks = logoLink ? [logoLink, ...navLinks] : navLinks;
 const sectionMap = new Map(sections.map((section) => [section.id, section]));
