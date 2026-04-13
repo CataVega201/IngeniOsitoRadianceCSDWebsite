@@ -1080,17 +1080,17 @@ img {
   box-shadow: 0 0.45rem 1rem rgba(0, 0, 0, 0.42), 0 0 0.85rem rgba(123, 233, 255, 0.28);
 }
 
-.quienes-somos-card--catalina {
+.quienes-somos-card:nth-child(1) {
   border-color: rgba(255, 144, 207, 0.55);
   background: linear-gradient(145deg, rgba(24, 9, 40, 0.94), rgba(57, 18, 55, 0.9));
 }
 
-.quienes-somos-card--sofia {
+.quienes-somos-card:nth-child(2) {
   border-color: rgba(196, 169, 255, 0.55);
   background: linear-gradient(145deg, rgba(20, 13, 48, 0.94), rgba(38, 26, 70, 0.9));
 }
 
-.quienes-somos-card--david {
+.quienes-somos-card:nth-child(3) {
   border-color: rgba(199, 210, 225, 0.45);
   background: linear-gradient(145deg, rgba(15, 20, 36, 0.94), rgba(41, 48, 62, 0.9));
 }
@@ -1134,15 +1134,15 @@ img {
   letter-spacing: 0.02em;
 }
 
-.quienes-somos-card__favorite-color--catalina {
+.quienes-somos-card:nth-child(1) .quienes-somos-card__favorite-color {
   color: #ff9ad4;
 }
 
-.quienes-somos-card__favorite-color--sofia {
+.quienes-somos-card:nth-child(2) .quienes-somos-card__favorite-color {
   color: #d3b6ff;
 }
 
-.quienes-somos-card__favorite-color--david {
+.quienes-somos-card:nth-child(3) .quienes-somos-card__favorite-color {
   color: #d0d6df;
 }
 
@@ -1280,13 +1280,104 @@ img {
   text-align: center;
   overflow: hidden;
   isolation: isolate;
-  grid-column: var(--grid-column, auto);
-  grid-row: var(--grid-row, auto);
-  justify-self: var(--grid-justify, center);
   --jitter-x: 0rem;
   --jitter-y: 0rem;
-  animation: experiencias-float var(--float-duration, 9.6s) ease-in-out infinite;
-  animation-delay: var(--float-delay, 0s);
+  animation: experiencias-float 9.6s ease-in-out infinite;
+}
+
+.experiencias-item:nth-child(2n) {
+  animation-duration: 10.4s;
+}
+
+.experiencias-item:nth-child(3n) {
+  animation-duration: 8.8s;
+}
+
+.experiencias-item:nth-child(4n) {
+  animation-delay: -1.6s;
+}
+
+.experiencias-item:nth-child(5n) {
+  animation-delay: -0.9s;
+}
+
+.experiencias-list .experiencias-item:nth-child(odd) {
+  grid-column: 1;
+  justify-self: end;
+}
+
+.experiencias-list .experiencias-item:nth-child(even) {
+  grid-column: 2;
+  justify-self: start;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(1),
+.experiencias-block--inspiracion .experiencias-item:nth-child(1) {
+  grid-row: 1;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(2),
+.experiencias-block--inspiracion .experiencias-item:nth-child(2) {
+  grid-row: 2;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(3),
+.experiencias-block--inspiracion .experiencias-item:nth-child(3) {
+  grid-row: 3;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(4),
+.experiencias-block--inspiracion .experiencias-item:nth-child(4) {
+  grid-row: 4;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(5) {
+  grid-row: 5;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(1) {
+  --jitter-x: -0.45rem;
+  --jitter-y: -0.25rem;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(2) {
+  --jitter-x: 0.4rem;
+  --jitter-y: 0.35rem;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(3) {
+  --jitter-x: -0.3rem;
+  --jitter-y: 0.25rem;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(4) {
+  --jitter-x: 0.35rem;
+  --jitter-y: -0.2rem;
+}
+
+.experiencias-block--inmersion .experiencias-item:nth-child(5) {
+  --jitter-x: -0.2rem;
+  --jitter-y: 0.42rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(1) {
+  --jitter-x: -0.4rem;
+  --jitter-y: 0.25rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(2) {
+  --jitter-x: 0.33rem;
+  --jitter-y: -0.3rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(3) {
+  --jitter-x: -0.28rem;
+  --jitter-y: -0.2rem;
+}
+
+.experiencias-block--inspiracion .experiencias-item:nth-child(4) {
+  --jitter-x: 0.4rem;
+  --jitter-y: 0.2rem;
 }
 
 .experiencias-block--inmersion .experiencias-item {
@@ -2452,7 +2543,8 @@ img {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .experiencias-item {
+  .experiencias-list .experiencias-item:nth-child(odd),
+  .experiencias-list .experiencias-item:nth-child(even) {
     grid-column: 1;
     justify-self: center;
   }
