@@ -582,13 +582,37 @@ img {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
   gap: 1rem;
+  justify-items: center;
+}
+
+.experiencias-column {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+  width: min(100%, 35.5rem);
+}
+
+.experiencias-column__heading {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.experiencias-column__place {
+  margin: 0;
+  color: var(--lavender);
+  font-size: clamp(0.92rem, 1.6vw, 1rem);
+  line-height: 1.4;
 }
 
 .experiencias-block {
   display: grid;
   align-content: start;
   gap: 0.85rem;
-  min-height: 100%;
+  width: min(100%, 35.5rem);
+  height: clamp(38rem, 56vw, 44rem);
   padding: 1rem;
   border: 0;
   border-radius: 1.1rem;
@@ -640,21 +664,6 @@ img {
   height: calc(100% - 1.4rem);
   transform: translateY(-50%);
   pointer-events: none;
-}
-
-.experiencias-block__heading {
-  margin: 0;
-  color: var(--gold-bright);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.35;
-  text-wrap: balance;
-}
-
-.experiencias-block__place {
-  margin: 0;
-  color: var(--lavender);
-  font-size: clamp(0.92rem, 1.6vw, 1rem);
-  line-height: 1.4;
 }
 
 .experiencias-list {
@@ -1571,6 +1580,10 @@ img {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .experiencias-column {
+    width: min(100%, 36rem);
+  }
+
   .experiencias-block--inmersion {
     padding-right: clamp(5rem, 18vw, 7rem);
   }
@@ -1687,6 +1700,8 @@ img {
 
   .experiencias-block {
     padding: 0.95rem;
+    width: 100%;
+    height: clamp(36rem, 120vw, 41rem);
   }
 
   .experiencias-block--inmersion {
