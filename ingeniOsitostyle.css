@@ -536,27 +536,6 @@ img {
   gap: 1rem;
 }
 
-.experiencias-panel__title {
-  margin: 0;
-  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  line-height: 1.05;
-  letter-spacing: 0.04em;
-  text-wrap: balance;
-  text-align: center;
-}
-
-.experiencias-panel__divider {
-  width: min(100%, 16rem);
-  height: 0.26rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 227, 154, 0.2), var(--gold-bright) 50%, rgba(255, 227, 154, 0.2));
-  box-shadow: 0 0 0.55rem rgba(255, 227, 154, 0.55), 0 0 1.3rem rgba(201, 149, 42, 0.38);
-}
-
 .experiencias-panel__intro,
 .experiencias-panel__question {
   width: min(100%, 62rem);
@@ -584,11 +563,38 @@ img {
   gap: 1rem;
 }
 
+.experiencias-column {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+}
+
+.experiencias-column__title,
+.experiencias-column__place {
+  margin: 0;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.experiencias-column__title {
+  color: var(--gold-bright);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.35;
+}
+
+.experiencias-column__place {
+  color: var(--lavender);
+  font-size: clamp(0.92rem, 1.6vw, 1rem);
+  line-height: 1.4;
+}
+
 .experiencias-block {
   display: grid;
   align-content: start;
   gap: 0.85rem;
-  min-height: 100%;
+  inline-size: min(100%, 35rem);
+  block-size: clamp(30rem, 60vw, 34rem);
+  margin-inline: auto;
   padding: 1rem;
   border: 0;
   border-radius: 1.1rem;
@@ -640,21 +646,6 @@ img {
   height: calc(100% - 1.4rem);
   transform: translateY(-50%);
   pointer-events: none;
-}
-
-.experiencias-block__heading {
-  margin: 0;
-  color: var(--gold-bright);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.35;
-  text-wrap: balance;
-}
-
-.experiencias-block__place {
-  margin: 0;
-  color: var(--lavender);
-  font-size: clamp(0.92rem, 1.6vw, 1rem);
-  line-height: 1.4;
 }
 
 .experiencias-list {
@@ -1569,6 +1560,11 @@ img {
 
   .experiencias-panel__columns {
     grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .experiencias-column {
+    width: min(100%, 35rem);
   }
 
   .experiencias-block--inmersion {
@@ -1686,6 +1682,7 @@ img {
   }
 
   .experiencias-block {
+    block-size: clamp(25rem, 150vw, 31rem);
     padding: 0.95rem;
   }
 
