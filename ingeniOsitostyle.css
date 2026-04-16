@@ -573,6 +573,15 @@ img {
   width: min(100%, 35rem);
 }
 
+.experiencias-column__place {
+  margin: 0;
+  width: min(100%, 35rem);
+  color: var(--lavender);
+  font-size: clamp(0.92rem, 1.6vw, 1rem);
+  line-height: 1.4;
+  text-align: center;
+}
+
 .experiencias-block {
   display: grid;
   align-content: start;
