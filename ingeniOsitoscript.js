@@ -107,3 +107,32 @@ window.addEventListener('popstate', () => {
 });
 
 navigateToSection(window.location.hash, { historyMode: 'replace' });
+
+const experienciasCarousels = [...document.querySelectorAll('[data-experiencias-carousel]')];
+
+experienciasCarousels.forEach((carousel) => {
+  const track = carousel.querySelector('[data-carousel-track]');
+  const previousControl = carousel.querySelector('[data-carousel-prev]');
+  const nextControl = carousel.querySelector('[data-carousel-next]');
+
+  if (!track || !previousControl || !nextControl) {
+    return;
+  }
+
+  const getCardWidth = () => track.clientWidth;
+
+  const scrollCards = (direction) => {
+    track.scrollBy({
+      left: direction * getCardWidth(),
+      behavior: 'smooth',
+    });
+  };
+
+  previousControl.addEventListener('click', () => {
+    scrollCards(-1);
+  });
+
+  nextControl.addEventListener('click', () => {
+    scrollCards(1);
+  });
+});

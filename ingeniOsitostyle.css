@@ -631,8 +631,39 @@ img {
   position: relative;
   z-index: 1;
   display: grid;
-  align-content: start;
-  gap: 0.85rem;
+  height: 100%;
+  align-items: end;
+}
+
+.experiencias-carousel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.55rem;
+  width: min(100%, 27rem);
+  margin-inline: auto;
+}
+
+.experiencias-carousel__control {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(123, 233, 255, 0.42);
+  border-radius: 999px;
+  background: rgba(3, 12, 28, 0.8);
+  color: var(--cyan);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.experiencias-carousel__control:hover,
+.experiencias-carousel__control:focus-visible {
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
+  transform: scale(1.04);
 }
 
 .experiencias-block__dead-tree {
@@ -668,19 +699,30 @@ img {
 
 .experiencias-list {
   display: grid;
-  gap: 0.7rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 0;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.experiencias-list::-webkit-scrollbar {
+  display: none;
 }
 
 .experiencias-item {
   display: grid;
   gap: 0.24rem;
-  padding: 0.7rem 0.75rem;
-  border: 0;
+  padding: 0.75rem 0.82rem;
+  border: 1px solid rgba(123, 233, 255, 0.25);
   border-radius: 0.85rem;
-  background: transparent;
+  background: linear-gradient(145deg, rgba(3, 10, 28, 0.88), rgba(3, 26, 34, 0.82));
+  scroll-snap-align: center;
 }
 
 .experiencias-item__title,
@@ -1750,6 +1792,17 @@ img {
   .experto-panel__question-list,
   .experto-panel__text {
     font-size: 0.9rem;
+  }
+
+  .experiencias-carousel {
+    width: min(100%, 24rem);
+    gap: 0.45rem;
+  }
+
+  .experiencias-carousel__control {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.2rem;
   }
 
   .experiencias-item {
