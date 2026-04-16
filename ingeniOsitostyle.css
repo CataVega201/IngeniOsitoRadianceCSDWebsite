@@ -603,6 +603,18 @@ img {
   pointer-events: none;
 }
 
+.experiencias-block__dead-leaf,
+.experiencias-block__alive-leaf {
+  position: absolute;
+  left: 50%;
+  top: 64%;
+  z-index: 0;
+  width: clamp(2.3rem, 8vw, 3.4rem);
+  height: auto;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 .experiencias-block--inspiracion {
   position: relative;
   overflow: hidden;
