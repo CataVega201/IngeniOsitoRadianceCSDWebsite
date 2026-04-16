@@ -637,21 +637,78 @@ img {
   line-height: 1.4;
 }
 
-.experiencias-list {
+.experiencias-carousel {
+  --carousel-arrow-size: 2.2rem;
+  position: relative;
   display: grid;
-  gap: 0.7rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  border-radius: 0.95rem;
+  outline: 0;
+}
+
+.experiencias-carousel:focus-visible {
+  box-shadow: 0 0 0 0.14rem rgba(123, 233, 255, 0.55);
+}
+
+.experiencias-carousel__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.experiencias-list {
+  display: flex;
+  gap: 0;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
+  transform: translateX(calc(var(--carousel-index, 0) * -100%));
+  transition: transform 260ms ease;
 }
 
 .experiencias-item {
   display: grid;
+  flex: 0 0 100%;
   gap: 0.24rem;
+  min-width: 100%;
   padding: 0.7rem 0.75rem;
-  border: 0;
+  border: 1px solid rgba(123, 233, 255, 0.18);
   border-radius: 0.85rem;
-  background: transparent;
+  background: linear-gradient(140deg, rgba(8, 19, 45, 0.7), rgba(3, 16, 38, 0.42));
+}
+
+.experiencias-carousel__arrow {
+  display: grid;
+  place-items: center;
+  width: var(--carousel-arrow-size);
+  height: var(--carousel-arrow-size);
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(123, 233, 255, 0.42);
+  border-radius: 999px;
+  background: rgba(2, 12, 30, 0.65);
+  color: var(--white);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.experiencias-carousel__arrow:hover,
+.experiencias-carousel__arrow:focus-visible {
+  transform: translateY(-0.04rem);
+  border-color: rgba(123, 233, 255, 0.9);
+  box-shadow: 0 0 0.65rem rgba(123, 233, 255, 0.45);
+  outline: 0;
+}
+
+.experiencias-carousel__arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 .experiencias-item__title,
@@ -1559,6 +1616,11 @@ img {
     padding-left: clamp(5rem, 18vw, 7rem);
   }
 
+  .experiencias-carousel {
+    --carousel-arrow-size: 2.1rem;
+    gap: 0.45rem;
+  }
+
   .experto-cv {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1675,6 +1737,11 @@ img {
 
   .experiencias-block--inspiracion {
     padding-left: clamp(4.8rem, 23vw, 6.2rem);
+  }
+
+  .experiencias-carousel {
+    --carousel-arrow-size: 2rem;
+    gap: 0.35rem;
   }
 
   .experiencias-block__dead-tree {
