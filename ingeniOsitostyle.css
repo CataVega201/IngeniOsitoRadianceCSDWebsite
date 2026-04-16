@@ -638,20 +638,64 @@ img {
 }
 
 .experiencias-list {
-  display: grid;
-  gap: 0.7rem;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.experiencias-item {
+.experiencias-carousel {
   display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+.experiencias-carousel__arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid rgba(123, 233, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(4, 17, 42, 0.84);
+  color: var(--cyan);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.experiencias-carousel__arrow:hover,
+.experiencias-carousel__arrow:focus-visible {
+  border-color: rgba(123, 233, 255, 0.75);
+  background: rgba(4, 25, 56, 0.95);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.experiencias-carousel__arrow:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 2px;
+}
+
+.experiencias-item {
+  display: none;
   gap: 0.24rem;
   padding: 0.7rem 0.75rem;
   border: 0;
   border-radius: 0.85rem;
   background: transparent;
+}
+
+.experiencias-list .experiencias-item:first-child {
+  display: grid;
+}
+
+.experiencias-item.is-active {
+  display: grid;
 }
 
 .experiencias-item__title,
@@ -1667,6 +1711,11 @@ img {
 
   .experiencias-block {
     padding: 0.95rem;
+  }
+
+  .experiencias-carousel__arrow {
+    width: 1.9rem;
+    height: 1.9rem;
   }
 
   .experiencias-block--inmersion {

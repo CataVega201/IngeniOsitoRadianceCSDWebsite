@@ -89,3 +89,38 @@ window.addEventListener('popstate', () => {
 });
 
 navigateToSection(window.location.hash, { historyMode: 'replace' });
+
+const carousels = [...document.querySelectorAll('[data-carousel]')];
+
+carousels.forEach((carousel) => {
+  const list = carousel.querySelector('[data-carousel-list]');
+  const prevButton = carousel.querySelector('[data-carousel-prev]');
+  const nextButton = carousel.querySelector('[data-carousel-next]');
+  const items = list ? [...list.querySelectorAll('.experiencias-item')] : [];
+  let activeIndex = 0;
+
+  if (!list || !prevButton || !nextButton || items.length === 0) {
+    return;
+  }
+
+  const updateCarousel = () => {
+    items.forEach((item, index) => {
+      const isActive = index === activeIndex;
+      item.classList.toggle('is-active', isActive);
+      item.toggleAttribute('hidden', !isActive);
+      item.setAttribute('aria-hidden', String(!isActive));
+    });
+  };
+
+  prevButton.addEventListener('click', () => {
+    activeIndex = (activeIndex - 1 + items.length) % items.length;
+    updateCarousel();
+  });
+
+  nextButton.addEventListener('click', () => {
+    activeIndex = (activeIndex + 1) % items.length;
+    updateCarousel();
+  });
+
+  updateCarousel();
+});
