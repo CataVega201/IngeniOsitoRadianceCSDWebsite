@@ -589,7 +589,7 @@ img {
   display: grid;
   align-content: start;
   gap: 0.5rem;
-  width: min(100%, 35.5rem);
+  width: min(100%, 31rem);
 }
 
 .experiencias-column__heading {
@@ -611,9 +611,10 @@ img {
   display: grid;
   align-content: start;
   gap: 0.85rem;
-  width: min(100%, 35.5rem);
+  width: min(100%, 31rem);
   height: clamp(38rem, 56vw, 44rem);
-  padding: 1rem;
+  padding-block: 1rem;
+  padding-inline: clamp(0.95rem, 2.2vw, 1.2rem);
   border: 0;
   border-radius: 1.1rem;
   background: transparent;
@@ -623,7 +624,6 @@ img {
 .experiencias-block--inmersion {
   position: relative;
   overflow: hidden;
-  padding-right: clamp(4.5rem, 14vw, 7.25rem);
   border-color: rgba(255, 117, 212, 0.3);
 }
 
@@ -635,7 +635,7 @@ img {
   justify-items: center;
   gap: 0.62rem;
   min-height: 100%;
-  padding-block-start: clamp(8rem, 32%, 12rem);
+  padding-block-start: clamp(14rem, 56%, 20rem);
 }
 
 .experiencias-block__dead-tree {
@@ -653,7 +653,6 @@ img {
 .experiencias-block--inspiracion {
   position: relative;
   overflow: hidden;
-  padding-left: clamp(4.5rem, 14vw, 7.25rem);
   border-color: rgba(143, 255, 192, 0.32);
 }
 
@@ -1669,15 +1668,7 @@ img {
   }
 
   .experiencias-column {
-    width: min(100%, 36rem);
-  }
-
-  .experiencias-block--inmersion {
-    padding-right: clamp(5rem, 18vw, 7rem);
-  }
-
-  .experiencias-block--inspiracion {
-    padding-left: clamp(5rem, 18vw, 7rem);
+    width: min(100%, 31rem);
   }
 
   .experto-cv {
@@ -1801,14 +1792,6 @@ img {
     width: 1.9rem;
     height: 1.9rem;
     font-size: 1.14rem;
-  }
-
-  .experiencias-block--inmersion {
-    padding-right: clamp(4.8rem, 23vw, 6.2rem);
-  }
-
-  .experiencias-block--inspiracion {
-    padding-left: clamp(4.8rem, 23vw, 6.2rem);
   }
 
   .experiencias-block__dead-tree {
