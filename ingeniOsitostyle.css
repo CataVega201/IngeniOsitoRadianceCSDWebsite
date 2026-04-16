@@ -97,6 +97,25 @@ img {
   outline-offset: 0.24rem;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0.65rem;
+  left: 0.65rem;
+  z-index: 120;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.7rem;
+  background: rgba(3, 9, 31, 0.96);
+  border: 1px solid rgba(123, 233, 255, 0.4);
+  color: var(--gold-bright);
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
 .page-shell {
   display: grid;
   grid-template-rows: auto auto;
@@ -242,6 +261,7 @@ img {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  contain: content;
 }
 
 
