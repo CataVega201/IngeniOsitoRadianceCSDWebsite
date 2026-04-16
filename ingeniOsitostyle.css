@@ -559,16 +559,44 @@ img {
 
 .experiencias-panel__columns {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(18rem, 1fr));
   width: 100%;
   gap: 1rem;
+  justify-content: center;
+  align-items: start;
+}
+
+.experiencias-column {
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+}
+
+.experiencias-column__label,
+.experiencias-column__name {
+  margin: 0;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.experiencias-column__label {
+  color: var(--gold-bright);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.35;
+}
+
+.experiencias-column__name {
+  color: var(--lavender);
+  font-size: clamp(0.92rem, 1.6vw, 1rem);
+  line-height: 1.4;
 }
 
 .experiencias-block {
   display: grid;
   align-content: start;
   gap: 0.85rem;
-  min-height: 100%;
+  inline-size: clamp(17rem, 42vw, 35rem);
+  min-block-size: clamp(30rem, 55vw, 38rem);
   padding: 1rem;
   border: 0;
   border-radius: 1.1rem;
@@ -620,21 +648,6 @@ img {
   height: calc(100% - 1.4rem);
   transform: translateY(-50%);
   pointer-events: none;
-}
-
-.experiencias-block__heading {
-  margin: 0;
-  color: var(--gold-bright);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.35;
-  text-wrap: balance;
-}
-
-.experiencias-block__place {
-  margin: 0;
-  color: var(--lavender);
-  font-size: clamp(0.92rem, 1.6vw, 1rem);
-  line-height: 1.4;
 }
 
 .experiencias-list {
@@ -1549,6 +1562,11 @@ img {
 
   .experiencias-panel__columns {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .experiencias-block {
+    inline-size: clamp(17rem, 88vw, 36rem);
+    min-block-size: clamp(28rem, 96vw, 38rem);
   }
 
   .experiencias-block--inmersion {
