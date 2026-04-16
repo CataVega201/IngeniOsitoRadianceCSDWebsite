@@ -607,9 +607,9 @@ img {
 .experiencias-block__alive-leaf {
   position: absolute;
   left: 50%;
-  top: 64%;
+  top: 70%;
   z-index: 0;
-  width: clamp(4.8rem, 14vw, 7.25rem);
+  width: clamp(6rem, 18vw, 8.8rem);
   height: auto;
   transform: translate(-50%, -50%);
   pointer-events: none;
