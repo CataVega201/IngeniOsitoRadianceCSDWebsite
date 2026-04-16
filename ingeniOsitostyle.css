@@ -588,7 +588,9 @@ img {
   z-index: 1;
   display: grid;
   align-content: start;
+  grid-template-rows: auto auto minmax(0, 1fr);
   gap: 0.85rem;
+  min-height: 100%;
 }
 
 .experiencias-block__dead-tree {
@@ -639,7 +641,8 @@ img {
 
 .experiencias-list {
   display: grid;
-  gap: 0.7rem;
+  align-items: center;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -648,10 +651,74 @@ img {
 .experiencias-item {
   display: grid;
   gap: 0.24rem;
-  padding: 0.7rem 0.75rem;
+  min-height: 100%;
+  padding: 0.9rem 2.3rem;
   border: 0;
   border-radius: 0.85rem;
-  background: transparent;
+  background: linear-gradient(130deg, rgba(1, 14, 33, 0.44), rgba(3, 28, 31, 0.38));
+  box-shadow: inset 0 0 0 1px rgba(123, 233, 255, 0.14);
+}
+
+.experiencias-carousel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: stretch;
+  min-height: 100%;
+  width: 100%;
+}
+
+.experiencias-carousel__arrow {
+  align-self: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(123, 233, 255, 0.42);
+  border-radius: 999px;
+  background: rgba(4, 18, 45, 0.8);
+  color: var(--cyan);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.experiencias-carousel__arrow:hover,
+.experiencias-carousel__arrow:focus-visible {
+  border-color: rgba(143, 255, 192, 0.8);
+  box-shadow: 0 0 0.7rem rgba(143, 255, 192, 0.32);
+  transform: scale(1.06);
+  outline: none;
+}
+
+.experiencias-carousel__arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.experiencias-carousel__arrow--prev {
+  margin-right: 0.45rem;
+}
+
+.experiencias-carousel__arrow--next {
+  margin-left: 0.45rem;
+}
+
+.experiencias-list[data-carousel-track] {
+  position: relative;
+}
+
+.experiencias-item[data-carousel-slide] {
+  display: none;
+}
+
+.experiencias-item[data-carousel-slide].is-active {
+  display: grid;
+}
+
+.experiencias-list[data-carousel-track]:focus-visible {
+  outline: 2px solid rgba(123, 233, 255, 0.62);
+  outline-offset: 0.2rem;
 }
 
 .experiencias-item__title,
@@ -1718,7 +1785,21 @@ img {
   }
 
   .experiencias-item {
-    padding: 0.65rem 0.68rem;
+    padding: 0.75rem 1.55rem;
+  }
+
+  .experiencias-carousel__arrow {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.96rem;
+  }
+
+  .experiencias-carousel__arrow--prev {
+    margin-right: 0.3rem;
+  }
+
+  .experiencias-carousel__arrow--next {
+    margin-left: 0.3rem;
   }
 
   .que-es-esto-panel__textbox {

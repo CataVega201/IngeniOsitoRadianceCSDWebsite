@@ -89,3 +89,57 @@ window.addEventListener('popstate', () => {
 });
 
 navigateToSection(window.location.hash, { historyMode: 'replace' });
+
+const carousels = [...document.querySelectorAll('[data-carousel]')];
+
+carousels.forEach((carousel) => {
+  const track = carousel.querySelector('[data-carousel-track]');
+  const slides = track ? [...track.querySelectorAll('[data-carousel-slide]')] : [];
+  const prevButton = carousel.querySelector('[data-carousel-prev]');
+  const nextButton = carousel.querySelector('[data-carousel-next]');
+
+  if (!track || !prevButton || !nextButton || slides.length === 0) {
+    return;
+  }
+
+  let activeIndex = 0;
+
+  const syncCarousel = () => {
+    slides.forEach((slide, index) => {
+      const isActive = index === activeIndex;
+      slide.classList.toggle('is-active', isActive);
+      slide.setAttribute('aria-hidden', String(!isActive));
+    });
+
+    prevButton.disabled = activeIndex === 0;
+    nextButton.disabled = activeIndex === slides.length - 1;
+    track.setAttribute('aria-live', 'polite');
+  };
+
+  const moveCarousel = (nextIndex) => {
+    activeIndex = Math.max(0, Math.min(slides.length - 1, nextIndex));
+    syncCarousel();
+  };
+
+  prevButton.addEventListener('click', () => {
+    moveCarousel(activeIndex - 1);
+  });
+
+  nextButton.addEventListener('click', () => {
+    moveCarousel(activeIndex + 1);
+  });
+
+  track.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      moveCarousel(activeIndex - 1);
+    }
+
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      moveCarousel(activeIndex + 1);
+    }
+  });
+
+  syncCarousel();
+});
