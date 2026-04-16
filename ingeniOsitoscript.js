@@ -15,6 +15,7 @@ const logoLink = document.querySelector('.topbar__logo[data-route]');
 const routeLinks = logoLink ? [logoLink, ...navLinks] : navLinks;
 const sectionMap = new Map(sections.map((section) => [section.id, section]));
 const defaultSectionId = sections[0]?.id || '';
+const highPriorityImageLimit = 2;
 let activeSectionId = '';
 
 const syncPageTitle = (targetId) => {
@@ -44,6 +45,22 @@ const updateSectionState = (targetId) => {
   });
 };
 
+const optimizeImages = (targetId) => {
+  const pinnedImages = new Set([...document.querySelectorAll('.topbar__logo-image')]);
+  const currentSection = sectionMap.get(targetId);
+  const currentSectionImages = currentSection ? [...currentSection.querySelectorAll('img')] : [];
+  const highPriorityImages = new Set(currentSectionImages.slice(0, highPriorityImageLimit));
+
+  document.querySelectorAll('img').forEach((image) => {
+    image.decoding = 'async';
+    const isPinnedImage = pinnedImages.has(image);
+    const isCurrentSectionImage = currentSectionImages.includes(image);
+
+    image.loading = isPinnedImage || isCurrentSectionImage ? 'eager' : 'lazy';
+    image.fetchPriority = isPinnedImage || highPriorityImages.has(image) ? 'high' : 'low';
+  });
+};
+
 const resolveSectionId = (hash) => {
   const normalizedHash = hash.replace('#', '');
   return sectionMap.has(normalizedHash) ? normalizedHash : defaultSectionId;
@@ -63,6 +80,7 @@ const navigateToSection = (targetId, options = {}) => {
     activeSectionId = resolvedId;
     updateNavigationState(resolvedId);
     updateSectionState(resolvedId);
+    optimizeImages(resolvedId);
     syncPageTitle(resolvedId);
   }
 
