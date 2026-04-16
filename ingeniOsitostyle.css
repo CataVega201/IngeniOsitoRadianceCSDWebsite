@@ -565,6 +565,14 @@ img {
   gap: 1rem;
 }
 
+.experiencias-column {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 0.6rem;
+  width: min(100%, 35rem);
+}
+
 .experiencias-block {
   display: grid;
   align-content: start;
@@ -626,9 +634,11 @@ img {
 
 .experiencias-block__heading {
   margin: 0;
+  width: min(100%, 35rem);
   color: var(--gold-bright);
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.35;
+  text-align: center;
   text-wrap: balance;
 }
 
