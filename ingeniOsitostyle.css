@@ -578,17 +578,48 @@ img {
 }
 
 .experiencias-panel__columns {
+  --experiencias-block-width: clamp(16.5rem, 43vw, 27rem);
+  --experiencias-block-min-height: clamp(28rem, 61vw, 40rem);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
   gap: 1rem;
 }
 
+.experiencias-column {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.experiencias-column__header {
+  width: min(100%, var(--experiencias-block-width));
+  display: grid;
+  gap: 0.25rem;
+}
+
+.experiencias-column__heading {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.experiencias-column__place {
+  margin: 0;
+  color: var(--lavender);
+  font-size: clamp(0.92rem, 1.6vw, 1rem);
+  line-height: 1.4;
+}
+
 .experiencias-block {
+  width: min(100%, var(--experiencias-block-width));
+  min-height: var(--experiencias-block-min-height);
   display: grid;
   align-content: start;
   gap: 0.85rem;
-  min-height: 100%;
   padding: 1rem;
   border: 0;
   border-radius: 1.1rem;
@@ -640,21 +671,6 @@ img {
   height: calc(100% - 1.4rem);
   transform: translateY(-50%);
   pointer-events: none;
-}
-
-.experiencias-block__heading {
-  margin: 0;
-  color: var(--gold-bright);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.35;
-  text-wrap: balance;
-}
-
-.experiencias-block__place {
-  margin: 0;
-  color: var(--lavender);
-  font-size: clamp(0.92rem, 1.6vw, 1rem);
-  line-height: 1.4;
 }
 
 .experiencias-list {
@@ -1571,6 +1587,14 @@ img {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .experiencias-column__header {
+    width: min(100%, clamp(18rem, 70vw, 27rem));
+  }
+
+  .experiencias-block {
+    width: min(100%, clamp(18rem, 70vw, 27rem));
+  }
+
   .experiencias-block--inmersion {
     padding-right: clamp(5rem, 18vw, 7rem);
   }
@@ -1685,7 +1709,13 @@ img {
     gap: 0.9rem;
   }
 
+  .experiencias-column__header {
+    width: min(100%, clamp(15.6rem, 92vw, 20.5rem));
+  }
+
   .experiencias-block {
+    width: min(100%, clamp(15.6rem, 92vw, 20.5rem));
+    min-height: clamp(31rem, 150vw, 40rem);
     padding: 0.95rem;
   }
 
