@@ -589,7 +589,7 @@ img {
   display: grid;
   align-content: start;
   gap: 0.5rem;
-  width: min(100%, 31rem);
+  width: min(100%, 34rem);
 }
 
 .experiencias-column--inmersion {
@@ -637,8 +637,8 @@ img {
   display: grid;
   align-content: start;
   gap: 0.85rem;
-  width: min(100%, 31rem);
-  height: clamp(38rem, 56vw, 44rem);
+  width: min(100%, 34rem);
+  height: clamp(40rem, 60vw, 48rem);
   padding-block: 1rem;
   padding-inline: clamp(0.95rem, 2.2vw, 1.2rem);
   border: 0;
@@ -661,7 +661,7 @@ img {
   justify-items: center;
   gap: 0.62rem;
   min-height: 100%;
-  padding-block-start: clamp(16rem, 62%, 22rem);
+  padding-block-start: clamp(18rem, 68%, 26rem);
 }
 
 .experiencias-block__dead-tree {
@@ -1694,7 +1694,7 @@ img {
   }
 
   .experiencias-column {
-    width: min(100%, 31rem);
+    width: min(100%, 34rem);
     justify-self: start;
     justify-items: start;
   }
@@ -1813,7 +1813,7 @@ img {
   .experiencias-block {
     padding: 0.95rem;
     width: 100%;
-    height: clamp(36rem, 120vw, 41rem);
+    height: clamp(38rem, 126vw, 44rem);
   }
 
   .experiencias-carousel {
