@@ -588,18 +588,17 @@ img {
 .experiencias-column {
   display: grid;
   align-content: start;
+  justify-items: center;
   gap: 0.5rem;
   width: min(100%, 34rem);
 }
 
 .experiencias-column--inmersion {
   justify-self: end;
-  justify-items: start;
 }
 
 .experiencias-column--inspiracion {
   justify-self: start;
-  justify-items: start;
 }
 
 .experiencias-column__heading {
@@ -607,15 +606,16 @@ img {
   color: var(--gold-bright);
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.35;
+  text-align: center;
   text-wrap: balance;
 }
 
 .experiencias-column__heading--inmersion {
-  text-align: left;
+  text-align: center;
 }
 
 .experiencias-column__heading--inspiracion {
-  text-align: left;
+  text-align: center;
 }
 
 .experiencias-column__place {
@@ -623,14 +623,15 @@ img {
   color: var(--lavender);
   font-size: clamp(0.92rem, 1.6vw, 1rem);
   line-height: 1.4;
+  text-align: center;
 }
 
 .experiencias-column__place--inmersion {
-  text-align: left;
+  text-align: center;
 }
 
 .experiencias-column__place--inspiracion {
-  text-align: left;
+  text-align: center;
 }
 
 .experiencias-block {
@@ -643,8 +644,8 @@ img {
   padding-inline: clamp(0.95rem, 2.2vw, 1.2rem);
   border: 0;
   border-radius: 1.1rem;
-  background: transparent;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.32), inset 0 0 1rem rgba(207, 196, 255, 0.06);
+  background: #0b1434;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.28);
 }
 
 .experiencias-block--inmersion {
@@ -661,7 +662,7 @@ img {
   justify-items: center;
   gap: 0.62rem;
   min-height: 100%;
-  padding-block-start: clamp(18rem, 68%, 26rem);
+  padding-block-start: clamp(20rem, 72%, 28rem);
 }
 
 .experiencias-block__dead-tree {
@@ -1696,12 +1697,12 @@ img {
   .experiencias-column {
     width: min(100%, 34rem);
     justify-self: start;
-    justify-items: start;
+    justify-items: center;
   }
 
   .experiencias-column__heading--inmersion,
   .experiencias-column__place--inmersion {
-    text-align: left;
+    text-align: center;
   }
 
   .experto-cv {
