@@ -593,10 +593,12 @@ img {
 }
 
 .experiencias-column--inmersion {
-  justify-items: end;
+  justify-self: end;
+  justify-items: start;
 }
 
 .experiencias-column--inspiracion {
+  justify-self: start;
   justify-items: start;
 }
 
@@ -609,7 +611,7 @@ img {
 }
 
 .experiencias-column__heading--inmersion {
-  text-align: right;
+  text-align: left;
 }
 
 .experiencias-column__heading--inspiracion {
@@ -624,7 +626,7 @@ img {
 }
 
 .experiencias-column__place--inmersion {
-  text-align: right;
+  text-align: left;
 }
 
 .experiencias-column__place--inspiracion {
@@ -648,7 +650,6 @@ img {
 .experiencias-block--inmersion {
   position: relative;
   overflow: hidden;
-  justify-self: end;
   border-color: rgba(255, 117, 212, 0.3);
 }
 
@@ -678,7 +679,6 @@ img {
 .experiencias-block--inspiracion {
   position: relative;
   overflow: hidden;
-  justify-self: start;
   border-color: rgba(143, 255, 192, 0.32);
 }
 
@@ -1695,17 +1695,13 @@ img {
 
   .experiencias-column {
     width: min(100%, 31rem);
+    justify-self: start;
     justify-items: start;
   }
 
   .experiencias-column__heading--inmersion,
   .experiencias-column__place--inmersion {
     text-align: left;
-  }
-
-  .experiencias-block--inmersion,
-  .experiencias-block--inspiracion {
-    justify-self: start;
   }
 
   .experto-cv {
