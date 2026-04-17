@@ -759,6 +759,102 @@ img {
   background: linear-gradient(155deg, rgba(8, 20, 53, 0.9), rgba(10, 30, 44, 0.88));
 }
 
+.experiencias-block--inmersion .experiencias-item {
+  border: 1px solid rgba(164, 172, 186, 0.32);
+  background: linear-gradient(155deg, rgba(34, 39, 50, 0.94), rgba(16, 20, 29, 0.95));
+  box-shadow: 0 0.5rem 1.1rem rgba(8, 10, 14, 0.4);
+}
+
+.experiencias-block--inmersion .experiencias-item__title {
+  color: #d9e0ed;
+}
+
+.experiencias-block--inmersion .experiencias-item__lead {
+  color: #a9b3c2;
+}
+
+.experiencias-block--inmersion .experiencias-item__text {
+  color: #eef2f8;
+}
+
+.experiencias-block--inmersion .experiencias-carousel__control {
+  border-color: rgba(170, 183, 200, 0.5);
+  background: rgba(26, 30, 40, 0.9);
+}
+
+.experiencias-block--inmersion .experiencias-carousel__control:hover,
+.experiencias-block--inmersion .experiencias-carousel__control:focus-visible {
+  border-color: rgba(225, 231, 241, 0.8);
+  background: rgba(39, 45, 59, 0.95);
+}
+
+.experiencias-block--inmersion .experiencias-carousel__dot {
+  background: rgba(194, 204, 219, 0.46);
+}
+
+.experiencias-block--inmersion .experiencias-carousel__dot:hover,
+.experiencias-block--inmersion .experiencias-carousel__dot:focus-visible {
+  background: rgba(234, 240, 249, 0.9);
+}
+
+.experiencias-block--inmersion .experiencias-carousel__dot[aria-current='true'] {
+  background: #f3f7ff;
+}
+
+.experiencias-block--inspiracion .experiencias-item {
+  border: 1px solid rgba(129, 255, 228, 0.45);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(122, 255, 226, 0.27), transparent 48%),
+    radial-gradient(circle at 84% 78%, rgba(95, 182, 255, 0.29), transparent 52%),
+    linear-gradient(150deg, rgba(8, 50, 63, 0.93), rgba(7, 33, 80, 0.92));
+  box-shadow: 0 0 0.8rem rgba(105, 248, 219, 0.36), 0 0 1.5rem rgba(96, 172, 255, 0.26);
+}
+
+.experiencias-block--inspiracion .experiencias-item__title {
+  color: #90fff1;
+}
+
+.experiencias-block--inspiracion .experiencias-item__lead {
+  color: #6cd3ff;
+}
+
+.experiencias-block--inspiracion .experiencias-item__text {
+  color: #f3fffc;
+}
+
+.experiencias-block--inspiracion .experiencias-carousel__control {
+  border-color: rgba(121, 250, 218, 0.62);
+  background:
+    radial-gradient(circle at 30% 28%, rgba(139, 255, 235, 0.2), transparent 58%),
+    linear-gradient(150deg, rgba(6, 55, 72, 0.88), rgba(8, 41, 89, 0.9));
+  box-shadow: 0 0 0.65rem rgba(102, 242, 227, 0.36);
+}
+
+.experiencias-block--inspiracion .experiencias-carousel__control:hover,
+.experiencias-block--inspiracion .experiencias-carousel__control:focus-visible {
+  border-color: rgba(154, 255, 230, 0.95);
+  background:
+    radial-gradient(circle at 28% 24%, rgba(171, 255, 238, 0.28), transparent 56%),
+    linear-gradient(150deg, rgba(8, 71, 82, 0.92), rgba(9, 49, 104, 0.94));
+  box-shadow: 0 0 0.9rem rgba(122, 255, 230, 0.5), 0 0 1.5rem rgba(108, 179, 255, 0.34);
+}
+
+.experiencias-block--inspiracion .experiencias-carousel__dot {
+  background: rgba(128, 255, 223, 0.5);
+  box-shadow: 0 0 0.42rem rgba(120, 255, 223, 0.45);
+}
+
+.experiencias-block--inspiracion .experiencias-carousel__dot:hover,
+.experiencias-block--inspiracion .experiencias-carousel__dot:focus-visible {
+  background: rgba(132, 214, 255, 0.92);
+  box-shadow: 0 0 0.6rem rgba(124, 217, 255, 0.6);
+}
+
+.experiencias-block--inspiracion .experiencias-carousel__dot[aria-current='true'] {
+  background: #9fffe8;
+  box-shadow: 0 0 0.75rem rgba(147, 255, 233, 0.82);
+}
+
 .experiencias-carousel__card {
   flex: 0 0 100%;
   min-width: 100%;
