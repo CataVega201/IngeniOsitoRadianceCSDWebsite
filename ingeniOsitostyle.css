@@ -661,7 +661,7 @@ img {
   justify-items: center;
   gap: 0.62rem;
   min-height: 100%;
-  padding-block-start: clamp(20rem, 72%, 28rem);
+  padding-block-start: clamp(23rem, 78%, 32rem);
 }
 
 .experiencias-block__dead-tree {
@@ -699,6 +699,7 @@ img {
   align-items: center;
   gap: 0.6rem;
   width: min(100%, 24rem);
+  margin-block-start: 0.8rem;
 }
 
 .experiencias-carousel__control {
