@@ -592,6 +592,14 @@ img {
   width: min(100%, 31rem);
 }
 
+.experiencias-column--inmersion {
+  justify-items: end;
+}
+
+.experiencias-column--inspiracion {
+  justify-items: start;
+}
+
 .experiencias-column__heading {
   margin: 0;
   color: var(--gold-bright);
@@ -600,11 +608,27 @@ img {
   text-wrap: balance;
 }
 
+.experiencias-column__heading--inmersion {
+  text-align: right;
+}
+
+.experiencias-column__heading--inspiracion {
+  text-align: left;
+}
+
 .experiencias-column__place {
   margin: 0;
   color: var(--lavender);
   font-size: clamp(0.92rem, 1.6vw, 1rem);
   line-height: 1.4;
+}
+
+.experiencias-column__place--inmersion {
+  text-align: right;
+}
+
+.experiencias-column__place--inspiracion {
+  text-align: left;
 }
 
 .experiencias-block {
@@ -624,6 +648,7 @@ img {
 .experiencias-block--inmersion {
   position: relative;
   overflow: hidden;
+  justify-self: end;
   border-color: rgba(255, 117, 212, 0.3);
 }
 
@@ -653,6 +678,7 @@ img {
 .experiencias-block--inspiracion {
   position: relative;
   overflow: hidden;
+  justify-self: start;
   border-color: rgba(143, 255, 192, 0.32);
 }
 
@@ -1669,6 +1695,17 @@ img {
 
   .experiencias-column {
     width: min(100%, 31rem);
+    justify-items: start;
+  }
+
+  .experiencias-column__heading--inmersion,
+  .experiencias-column__place--inmersion {
+    text-align: left;
+  }
+
+  .experiencias-block--inmersion,
+  .experiencias-block--inspiracion {
+    justify-self: start;
   }
 
   .experto-cv {
