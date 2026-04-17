@@ -653,6 +653,51 @@ img {
   overflow: hidden;
 }
 
+.experiencias-aura {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.experiencias-aura__bubble {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(clamp(22px, 4.2vw, 42px));
+  transform: translateZ(0);
+}
+
+.experiencias-aura--inmersion {
+  opacity: 0.82;
+}
+
+.experiencias-aura__bubble--inmersion-1 {
+  width: clamp(11rem, 30vw, 14.5rem);
+  height: clamp(11rem, 30vw, 14.5rem);
+  left: -12%;
+  top: 5%;
+  background:
+    radial-gradient(circle at 40% 42%, rgba(162, 171, 185, 0.33), rgba(20, 24, 32, 0.05) 67%, transparent 100%);
+}
+
+.experiencias-aura__bubble--inmersion-2 {
+  width: clamp(12rem, 34vw, 16rem);
+  height: clamp(12rem, 34vw, 16rem);
+  right: -11%;
+  top: 26%;
+  background:
+    radial-gradient(circle at 52% 44%, rgba(113, 121, 135, 0.32), rgba(16, 19, 26, 0.07) 68%, transparent 100%);
+}
+
+.experiencias-aura__bubble--inmersion-3 {
+  width: clamp(10rem, 28vw, 13rem);
+  height: clamp(10rem, 28vw, 13rem);
+  left: 16%;
+  bottom: -7%;
+  background:
+    radial-gradient(circle at 48% 52%, rgba(80, 86, 98, 0.34), rgba(12, 15, 22, 0.06) 70%, transparent 100%);
+}
+
 .experiencias-block__content {
   position: relative;
   z-index: 1;
@@ -679,6 +724,37 @@ img {
 .experiencias-block--inspiracion {
   position: relative;
   overflow: hidden;
+}
+
+.experiencias-aura--inspiracion {
+  opacity: 0.88;
+}
+
+.experiencias-aura__bubble--inspiracion-1 {
+  width: clamp(11.5rem, 30vw, 15rem);
+  height: clamp(11.5rem, 30vw, 15rem);
+  left: -9%;
+  top: 7%;
+  background:
+    radial-gradient(circle at 42% 38%, rgba(120, 255, 226, 0.5), rgba(47, 195, 180, 0.16) 58%, transparent 100%);
+}
+
+.experiencias-aura__bubble--inspiracion-2 {
+  width: clamp(13rem, 34vw, 17.5rem);
+  height: clamp(13rem, 34vw, 17.5rem);
+  right: -10%;
+  top: 20%;
+  background:
+    radial-gradient(circle at 52% 48%, rgba(124, 237, 255, 0.42), rgba(48, 131, 209, 0.14) 62%, transparent 100%);
+}
+
+.experiencias-aura__bubble--inspiracion-3 {
+  width: clamp(10.5rem, 28vw, 14rem);
+  height: clamp(10.5rem, 28vw, 14rem);
+  left: 20%;
+  bottom: -8%;
+  background:
+    radial-gradient(circle at 47% 50%, rgba(135, 255, 213, 0.47), rgba(38, 188, 165, 0.12) 60%, transparent 100%);
 }
 
 .experiencias-block__alive-tree {
