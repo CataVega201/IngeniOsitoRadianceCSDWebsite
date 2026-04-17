@@ -653,9 +653,21 @@ img {
   overflow: hidden;
 }
 
+.experiencias-block--inmersion::before {
+  content: '';
+  position: absolute;
+  inset: 6% 10% 8%;
+  z-index: 0;
+  border-radius: 1.2rem;
+  background: radial-gradient(circle at 52% 45%, rgba(102, 112, 128, 0.28), rgba(16, 20, 28, 0.04) 68%);
+  box-shadow: 0 0 1.8rem rgba(74, 82, 96, 0.48), 0 0 3.2rem rgba(18, 23, 32, 0.38);
+  filter: blur(0.15rem);
+  pointer-events: none;
+}
+
 .experiencias-block__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: grid;
   align-content: end;
   justify-items: center;
@@ -668,7 +680,7 @@ img {
   position: absolute;
   right: 0.2rem;
   top: 50%;
-  z-index: 0;
+  z-index: 1;
   width: auto;
   max-height: 100%;
   height: calc(100% - 1.4rem);
@@ -681,11 +693,38 @@ img {
   overflow: hidden;
 }
 
+.experiencias-block--inspiracion::before {
+  content: '';
+  position: absolute;
+  inset: 4% 6% 6%;
+  z-index: 0;
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(circle at 22% 28%, rgba(132, 255, 229, 0.32), transparent 54%),
+    radial-gradient(circle at 78% 26%, rgba(116, 234, 255, 0.3), transparent 52%),
+    radial-gradient(circle at 58% 74%, rgba(106, 255, 198, 0.28), transparent 58%);
+  box-shadow: 0 0 1.4rem rgba(102, 255, 223, 0.52), 0 0 2.8rem rgba(86, 190, 255, 0.34);
+  filter: blur(0.1rem);
+  pointer-events: none;
+}
+
+.experiencias-block--inspiracion::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(165, 255, 234, 0.24), transparent 22%),
+    radial-gradient(circle at 84% 38%, rgba(130, 240, 255, 0.22), transparent 20%),
+    radial-gradient(circle at 64% 86%, rgba(143, 255, 221, 0.22), transparent 18%);
+  pointer-events: none;
+}
+
 .experiencias-block__alive-tree {
   position: absolute;
   left: 0.2rem;
   top: 50%;
-  z-index: 0;
+  z-index: 1;
   width: auto;
   max-height: 100%;
   height: calc(100% - 1.4rem);
