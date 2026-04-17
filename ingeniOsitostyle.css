@@ -643,15 +643,14 @@ img {
   padding-block: 1rem;
   padding-inline: clamp(0.95rem, 2.2vw, 1.2rem);
   border: 0;
-  border-radius: 1.1rem;
-  background: #0b1434;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.28);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
 }
 
 .experiencias-block--inmersion {
   position: relative;
   overflow: hidden;
-  border-color: rgba(255, 117, 212, 0.3);
 }
 
 .experiencias-block__content {
@@ -680,7 +679,6 @@ img {
 .experiencias-block--inspiracion {
   position: relative;
   overflow: hidden;
-  border-color: rgba(143, 255, 192, 0.32);
 }
 
 .experiencias-block__alive-tree {
