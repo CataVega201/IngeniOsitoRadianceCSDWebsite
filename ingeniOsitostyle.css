@@ -365,6 +365,205 @@ img {
   padding-top: clamp(1rem, 2.5vw, 1.5rem);
 }
 
+.content-section--proceso {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.proceso-panel {
+  display: grid;
+  width: min(100%, 76rem);
+  gap: 1rem;
+}
+
+.proceso-panel__header {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.proceso-panel__eyebrow {
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(123, 233, 255, 0.44);
+  border-radius: 999px;
+  background: rgba(17, 39, 66, 0.62);
+  color: rgba(227, 246, 255, 0.92);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proceso-panel__title {
+  margin: 0;
+  text-align: center;
+  text-wrap: balance;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.proceso-panel__intro {
+  width: min(100%, 52rem);
+  margin: 0;
+  color: rgba(236, 244, 255, 0.92);
+  text-align: center;
+  text-wrap: pretty;
+  line-height: 1.68;
+}
+
+.proceso-timeline {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.proceso-timeline__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.65rem;
+}
+
+.proceso-timeline__marker {
+  position: sticky;
+  top: 0.8rem;
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  border: 1px solid rgba(123, 233, 255, 0.4);
+  background: radial-gradient(circle at 50% 25%, rgba(55, 113, 179, 0.95), rgba(20, 45, 79, 0.9));
+  box-shadow: 0 0 0.8rem rgba(73, 179, 255, 0.26);
+  color: #f6fcff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.proceso-timeline__card {
+  display: grid;
+  gap: 0.65rem;
+  padding: clamp(0.85rem, 1.8vw, 1.15rem);
+  border-radius: 0.9rem;
+  border: 1px solid rgba(107, 167, 229, 0.32);
+  background: linear-gradient(145deg, rgba(8, 19, 36, 0.92), rgba(11, 29, 52, 0.86));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0.85rem 1.8rem rgba(0, 0, 0, 0.26);
+}
+
+.proceso-timeline__title {
+  margin: 0;
+  color: #f7fbff;
+  font-size: clamp(1.1rem, 2.3vw, 1.5rem);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-wrap: pretty;
+}
+
+.proceso-timeline__subtitle {
+  margin: 0.2rem 0 0;
+  color: rgba(235, 246, 255, 0.94);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.proceso-timeline__text {
+  margin: 0;
+  color: rgba(227, 241, 255, 0.9);
+  line-height: 1.66;
+  text-wrap: pretty;
+}
+
+.proceso-timeline__list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1rem;
+  color: rgba(227, 241, 255, 0.9);
+  line-height: 1.62;
+}
+
+.proceso-cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 0.65rem;
+}
+
+.proceso-cluster-card {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(113, 168, 235, 0.3);
+  background: rgba(13, 34, 61, 0.72);
+}
+
+.proceso-cluster-card__title {
+  margin: 0;
+  color: #f4f9ff;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.proceso-cluster-card__text {
+  margin: 0;
+  color: rgba(225, 240, 255, 0.88);
+  line-height: 1.58;
+}
+
+.proceso-ideas {
+  border: 1px solid rgba(122, 182, 247, 0.36);
+  border-radius: 0.65rem;
+  background: rgba(10, 28, 49, 0.6);
+  overflow: clip;
+}
+
+.proceso-ideas__summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.68rem 0.8rem;
+  color: #f0f8ff;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.proceso-ideas__summary::-webkit-details-marker {
+  display: none;
+}
+
+.proceso-ideas__list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0 0.95rem 0.85rem 1.7rem;
+  color: rgba(224, 239, 255, 0.9);
+  line-height: 1.62;
+}
+
+.proceso-media-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: clamp(8rem, 20vw, 12rem);
+  border-radius: 0.7rem;
+  border: 1px dashed rgba(132, 194, 255, 0.62);
+  background: linear-gradient(140deg, rgba(13, 36, 64, 0.58), rgba(20, 47, 80, 0.42));
+}
+
+.proceso-media-placeholder__label {
+  margin: 0;
+  color: rgba(214, 235, 255, 0.9);
+  text-align: center;
+  text-wrap: balance;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
 .experto-panel {
   display: grid;
   justify-items: center;
@@ -1911,6 +2110,14 @@ img {
   .experto-panel__intro {
     width: min(100%, 60ch);
   }
+
+  .proceso-timeline__item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .proceso-timeline__marker {
+    position: static;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1975,6 +2182,30 @@ img {
 
   .content-section__placeholder {
     font-size: clamp(1.85rem, 12vw, 3.1rem);
+  }
+
+  .proceso-panel__intro {
+    font-size: 0.93rem;
+  }
+
+  .proceso-timeline__card {
+    padding: 0.85rem;
+  }
+
+  .proceso-timeline__title {
+    font-size: 1.06rem;
+  }
+
+  .proceso-ideas__summary {
+    padding: 0.62rem 0.72rem;
+    font-size: 0.92rem;
+  }
+
+  .proceso-ideas__list,
+  .proceso-timeline__list,
+  .proceso-timeline__text,
+  .proceso-cluster-card__text {
+    font-size: 0.9rem;
   }
 
   .que-es-esto-panel__graphic {
