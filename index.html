@@ -819,8 +819,150 @@
             </div>
           </div>
         </section>
-        <section class="content-section" id="proceso" data-section aria-labelledby="titulo-proceso" inert hidden>
-          <p class="content-section__placeholder content-section__layer" id="titulo-proceso">Contenido de Proceso en construcción.</p>
+        <section
+          class="content-section content-section--proceso"
+          id="proceso"
+          data-section
+          aria-labelledby="titulo-proceso"
+          inert
+          hidden
+        >
+          <div class="proceso-panel content-section__layer">
+            <h2 class="proceso-panel__title" id="titulo-proceso">Proceso</h2>
+            <div class="proceso-panel__divider" aria-hidden="true"></div>
+            <p class="proceso-panel__intro">
+              Transformamos la investigación en una línea de tiempo visual para mostrar cómo pasamos del problema a una
+              propuesta concreta: IngeniOsito.
+            </p>
+
+            <div class="proceso-timeline" aria-label="Línea de tiempo del proceso de diseño">
+              <article class="proceso-evento proceso-evento--contexto" aria-labelledby="proceso-contexto">
+                <header class="proceso-evento__header">
+                  <span class="proceso-evento__etapa">Fase 01</span>
+                  <h3 class="proceso-evento__title" id="proceso-contexto">Contexto de la problemática</h3>
+                </header>
+                <div class="proceso-evento__content">
+                  <p class="proceso-evento__text">
+                    En la universidad se desarrollan proyectos y trabajos prácticos con aprendizajes valiosos, pero ese
+                    conocimiento suele perderse al terminar cada semestre. Como resultado, muchos estudiantes repiten
+                    errores y no pueden apoyarse en experiencias previas.
+                  </p>
+                  <p class="proceso-evento__text proceso-evento__text--highlight">
+                    Es una problemática transversal: afecta a estudiantes de todas las carreras y aumenta el estrés por
+                    la pérdida de materiales clave.
+                  </p>
+                </div>
+                <aside class="proceso-evento__media" aria-label="Espacio para imagen de contexto">
+                  <span class="proceso-evento__media-label">Espacio para imagen</span>
+                  <span class="proceso-evento__media-caption">Contexto general de la problemática (1 slide)</span>
+                </aside>
+              </article>
+
+              <article class="proceso-evento proceso-evento--motivacion" aria-labelledby="proceso-motivacion">
+                <header class="proceso-evento__header">
+                  <span class="proceso-evento__etapa">Fase 02</span>
+                  <h3 class="proceso-evento__title" id="proceso-motivacion">¿Qué nos emociona de este reto?</h3>
+                </header>
+                <div class="proceso-evento__content">
+                  <p class="proceso-evento__text">
+                    Nos conecta directamente con nuestra comunidad estudiantil y con un problema que también viviremos
+                    en el corto plazo. Entender errores, aciertos y estrategias de semestres avanzados nos permite
+                    aprender con más intención.
+                  </p>
+                </div>
+                <aside class="proceso-evento__media" aria-label="Espacio para imagen de motivación">
+                  <span class="proceso-evento__media-label">Espacio para imagen</span>
+                  <span class="proceso-evento__media-caption">Motivación del equipo y conexión con la comunidad</span>
+                </aside>
+              </article>
+
+              <article class="proceso-evento proceso-evento--inmersion" aria-labelledby="proceso-inmersion">
+                <header class="proceso-evento__header">
+                  <span class="proceso-evento__etapa">Fase 03</span>
+                  <h3 class="proceso-evento__title" id="proceso-inmersion">Actividad de inmersión</h3>
+                </header>
+                <div class="proceso-evento__content">
+                  <p class="proceso-evento__text">
+                    Simulamos el regreso de vacaciones presentando un parcial de cálculo integral de segundo semestre
+                    sin preparación específica. La experiencia fue frustrante y nos puso en el lugar de quienes retoman
+                    clases sintiéndose en desventaja.
+                  </p>
+                </div>
+                <aside class="proceso-evento__media" aria-label="Espacio para imagen de inmersión">
+                  <span class="proceso-evento__media-label">Espacio para imagen</span>
+                  <span class="proceso-evento__media-caption">Evidencia de la inmersión: parcial y resultados</span>
+                </aside>
+              </article>
+
+              <article class="proceso-evento proceso-evento--insights" aria-labelledby="proceso-insights">
+                <header class="proceso-evento__header">
+                  <span class="proceso-evento__etapa">Fase 04</span>
+                  <h3 class="proceso-evento__title" id="proceso-insights">Entrevistas e insights clave</h3>
+                </header>
+                <div class="proceso-evento__content">
+                  <ul class="proceso-evento__list">
+                    <li>
+                      <strong>Gestión documental:</strong> falta una forma continua de guardar y organizar información.
+                    </li>
+                    <li><strong>Estrés por notas:</strong> la presión por calificaciones genera ansiedad y desmotivación.</li>
+                    <li>
+                      <strong>Aprendizaje significativo:</strong> se estudia para aprobar, pero el conocimiento no se
+                      conecta con la práctica ni con semestres futuros.
+                    </li>
+                  </ul>
+                  <p class="proceso-evento__question">¿Cómo podríamos convertir estos hallazgos en oportunidades de diseño?</p>
+                </div>
+                <aside class="proceso-evento__media" aria-label="Espacio para imagen de insights">
+                  <span class="proceso-evento__media-label">Espacio para imagen</span>
+                  <span class="proceso-evento__media-caption">Mapa de insights y clústeres</span>
+                </aside>
+              </article>
+
+              <article class="proceso-evento proceso-evento--ideacion" aria-labelledby="proceso-ideacion">
+                <header class="proceso-evento__header">
+                  <span class="proceso-evento__etapa">Fase 05</span>
+                  <h3 class="proceso-evento__title" id="proceso-ideacion">Lluvia de ideas y oportunidades</h3>
+                </header>
+                <div class="proceso-evento__content">
+                  <p class="proceso-evento__text">
+                    Exploramos ideas como chatbot con IA, asistente de organización automática, sistema gamificado,
+                    mascota virtual, reportes de progreso en tiempo real, realidad aumentada y actividades conectadas
+                    con el mundo real.
+                  </p>
+                  <ul class="proceso-evento__list proceso-evento__list--compact">
+                    <li>Oportunidad 1: continuidad y uso natural de materiales entre semestres.</li>
+                    <li>Oportunidad 2: visibilizar el progreso más allá de la nota final.</li>
+                    <li>Oportunidad 3: impulsar un aprendizaje aplicable y evolutivo.</li>
+                  </ul>
+                </div>
+                <aside class="proceso-evento__media" aria-label="Espacio para imagen de ideación">
+                  <span class="proceso-evento__media-label">Espacio para imagen</span>
+                  <span class="proceso-evento__media-caption">Post-its y sesión de ideación</span>
+                </aside>
+              </article>
+
+              <article class="proceso-evento proceso-evento--solucion" aria-labelledby="proceso-solucion">
+                <header class="proceso-evento__header">
+                  <span class="proceso-evento__etapa">Fase 06</span>
+                  <h3 class="proceso-evento__title" id="proceso-solucion">Propuesta final: IngeniOsito</h3>
+                </header>
+                <div class="proceso-evento__content">
+                  <p class="proceso-evento__text">
+                    IngeniOsito es una plataforma académica con IA para almacenar, organizar y reusar conocimiento
+                    práctico entre semestres. Incluye chatbot, progreso por temas, recomendaciones personalizadas,
+                    herramientas de estudio y repositorio comunitario.
+                  </p>
+                  <p class="proceso-evento__text proceso-evento__text--highlight">
+                    La solución convierte el aprendizaje en un proceso continuo, accesible y acumulativo.
+                  </p>
+                </div>
+                <aside class="proceso-evento__media" aria-label="Espacio para imagen de solución">
+                  <span class="proceso-evento__media-label">Espacio para imagen</span>
+                  <span class="proceso-evento__media-caption">Mockup o storyboard de IngeniOsito</span>
+                </aside>
+              </article>
+            </div>
+          </div>
         </section>
         <section class="content-section" id="aprendizajes" data-section aria-labelledby="titulo-aprendizajes" inert hidden>
           <p class="content-section__placeholder content-section__layer" id="titulo-aprendizajes">Contenido de Aprendizajes en construcción.</p>
