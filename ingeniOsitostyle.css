@@ -1902,7 +1902,7 @@ img {
   position: relative;
   display: grid;
   width: 100%;
-  gap: 1rem;
+  gap: clamp(1.4rem, 2.6vw, 1.9rem);
   padding: 0.3rem 0 0.2rem;
 }
 
@@ -2016,6 +2016,11 @@ img {
   font-size: clamp(0.86rem, 1.4vw, 0.95rem);
   line-height: 1.45;
   text-wrap: balance;
+}
+
+.proceso-card__image-placeholder--decorativa {
+  min-height: clamp(6.8rem, 17vw, 8.6rem);
+  margin-top: 0.25rem;
 }
 
 .proceso-card__image-grid {
