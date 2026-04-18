@@ -1902,7 +1902,7 @@ img {
   position: relative;
   display: grid;
   width: 100%;
-  gap: clamp(1.4rem, 2.6vw, 1.9rem);
+  gap: clamp(2.8rem, 6vw, 4.5rem);
   padding: 0.3rem 0 0.2rem;
 }
 
