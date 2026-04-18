@@ -1726,6 +1726,185 @@ img {
   color: #9cffb9;
 }
 
+.content-section--proceso {
+  justify-items: center;
+  align-content: start;
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.proceso-panel {
+  display: grid;
+  width: min(100%, 72rem);
+  gap: 1rem;
+}
+
+.proceso-panel__header {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.4rem;
+}
+
+.proceso-panel__kicker {
+  margin: 0;
+  font-size: 0.86rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(123, 233, 255, 0.84);
+}
+
+.proceso-panel__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.6vw, 2.35rem);
+  line-height: 1.15;
+  text-wrap: balance;
+  background: linear-gradient(120deg, #fff4ce 0%, #ffe39a 28%, #c9952a 62%, #ffefbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.proceso-panel__subtitle {
+  margin: 0;
+  max-width: 65ch;
+  font-size: clamp(0.93rem, 1.8vw, 1rem);
+  line-height: 1.55;
+  color: rgba(237, 243, 255, 0.9);
+}
+
+.proceso-timeline {
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.proceso-timeline__entry {
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.proceso-timeline__entry::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.95rem;
+  bottom: -0.95rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(123, 233, 255, 0.5), rgba(255, 227, 154, 0.2));
+}
+
+.proceso-timeline__entry:last-child::before {
+  bottom: 0.95rem;
+}
+
+.proceso-card {
+  border: 1px solid rgba(123, 233, 255, 0.22);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, rgba(3, 9, 31, 0.92), rgba(4, 31, 39, 0.84));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.28), inset 0 0 1rem rgba(207, 196, 255, 0.05);
+  overflow: hidden;
+}
+
+.proceso-card__summary {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.82rem 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.proceso-card__summary::-webkit-details-marker {
+  display: none;
+}
+
+.proceso-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.2rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: #ffe39a;
+  background: rgba(201, 149, 42, 0.2);
+  border: 1px solid rgba(255, 227, 154, 0.3);
+}
+
+.proceso-card__title {
+  font-size: clamp(0.94rem, 2vw, 1.08rem);
+  color: var(--white);
+}
+
+.proceso-card__content {
+  display: grid;
+  gap: 0.72rem;
+  padding: 0 1rem 1rem;
+}
+
+.proceso-card__content h3,
+.proceso-card__content h4,
+.proceso-cluster-card h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.35;
+  color: #ffe39a;
+}
+
+.proceso-card__content p,
+.proceso-card__content li {
+  margin: 0;
+  color: rgba(237, 243, 255, 0.92);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.proceso-card__content ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.proceso-cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.proceso-cluster-card {
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.75rem;
+  border-radius: 0.86rem;
+  border: 1px solid rgba(123, 233, 255, 0.2);
+  background: rgba(7, 22, 47, 0.72);
+}
+
+.proceso-image-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: clamp(7.5rem, 22vw, 10rem);
+  margin: 0.3rem 0 0;
+  border-radius: 0.9rem;
+  border: 1px dashed rgba(255, 227, 154, 0.45);
+  background:
+    linear-gradient(145deg, rgba(255, 227, 154, 0.08), rgba(123, 233, 255, 0.08)),
+    rgba(3, 9, 31, 0.5);
+}
+
+.proceso-image-placeholder span {
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.84rem;
+  color: rgba(255, 227, 154, 0.9);
+}
+
 @keyframes bg-flow {
   0% {
     background-position: 0% 0%, 100% 0%, 0% 100%, 0% 50%;
@@ -1859,6 +2038,10 @@ img {
 
   .page-shell {
     padding-inline: 0.85rem;
+  }
+
+  .proceso-cluster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .topbar {
@@ -2115,6 +2298,28 @@ img {
 
   .que-es-esto-feature__content {
     padding: 0.82rem;
+  }
+
+  .proceso-panel__title {
+    font-size: clamp(1.4rem, 8vw, 1.7rem);
+  }
+
+  .proceso-timeline__entry {
+    padding-left: 0.8rem;
+  }
+
+  .proceso-card__summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+  }
+
+  .proceso-card__content {
+    padding-inline: 0.82rem;
+  }
+
+  .proceso-cluster-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
