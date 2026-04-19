@@ -2181,6 +2181,8 @@ img {
 }
 
 .aprendizajes-empathy-card {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 0.35rem;
   max-width: min(100%, 31rem);
@@ -2205,6 +2207,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background-repeat: no-repeat;
   pointer-events: none;
 }
@@ -2257,7 +2260,7 @@ img {
   margin: 0;
   color: var(--white);
   font-size: clamp(1.65rem, 2.9vw, 2.62rem);
-  line-height: 0.95;
+  line-height: 1.05;
   font-family: "Times New Roman", Georgia, serif;
 }
 
@@ -2291,6 +2294,7 @@ img {
 
 .aprendizajes-profile__avatar {
   width: clamp(4.8rem, 9vw, 6.8rem);
+  height: clamp(4.8rem, 9vw, 6.8rem);
   aspect-ratio: 1;
   border-radius: 50%;
   padding: 0.34rem;
