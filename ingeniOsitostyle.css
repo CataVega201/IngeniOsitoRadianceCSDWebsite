@@ -693,7 +693,7 @@ img {
   align-content: start;
   gap: 0.85rem;
   width: min(100%, 34rem);
-  height: clamp(40rem, 60vw, 48rem);
+  height: clamp(49rem, 70vw, 57rem);
   padding-block: 1rem;
   padding-inline: clamp(0.95rem, 2.2vw, 1.2rem);
   border: 0;
@@ -704,7 +704,7 @@ img {
 
 .experiencias-block--inmersion {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .experiencias-block__content {
@@ -720,29 +720,29 @@ img {
 
 .experiencias-block__dead-tree {
   position: absolute;
-  right: -4rem;
+  right: 0;
   top: 50%;
   z-index: 0;
   width: auto;
-  max-height: none;
-  height: calc(100% + 13rem);
+  max-height: 100%;
+  height: calc(100% - 0.4rem);
   transform: translateY(-50%);
   pointer-events: none;
 }
 
 .experiencias-block--inspiracion {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .experiencias-block__alive-tree {
   position: absolute;
-  left: -4rem;
+  left: 0;
   top: 50%;
   z-index: 0;
   width: auto;
-  max-height: none;
-  height: calc(100% + 13rem);
+  max-height: 100%;
+  height: calc(100% - 0.4rem);
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -750,61 +750,82 @@ img {
 .experiencias-floating-gallery {
   position: relative;
   width: min(100%, 24rem);
-  min-height: clamp(9rem, 20vw, 10.5rem);
-  margin-block-end: 0.15rem;
+  min-height: clamp(11.5rem, 24vw, 13rem);
+  margin-block-end: 0.25rem;
 }
 
 .experiencias-floating-gallery__image {
   position: absolute;
   height: auto;
   object-fit: contain;
+  padding: 0.25rem;
   border-radius: 0.7rem;
-  box-shadow: 0 0.6rem 1.5rem rgba(8, 14, 26, 0.36);
+  border: 1px solid rgba(186, 229, 255, 0.7);
+  background: rgba(5, 17, 45, 0.6);
+  box-shadow: 0 0.6rem 1.5rem rgba(8, 14, 26, 0.3);
+  animation-name: experiencias-floating-image-drift;
+  animation-duration: 5.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.experiencias-floating-gallery__image--primary {
-  width: clamp(7.2rem, 34%, 9.4rem);
+.experiencias-floating-gallery__image--inmersion-primary,
+.experiencias-floating-gallery__image--inspiracion-primary {
+  width: clamp(9.6rem, 42%, 12rem);
 }
 
-.experiencias-floating-gallery__image--secondary-a,
-.experiencias-floating-gallery__image--secondary-b {
+.experiencias-floating-gallery__image--inmersion-secondary-a,
+.experiencias-floating-gallery__image--inmersion-secondary-b,
+.experiencias-floating-gallery__image--inspiracion-secondary-a,
+.experiencias-floating-gallery__image--inspiracion-secondary-b {
   width: clamp(4.2rem, 23%, 5.8rem);
 }
 
-.experiencias-floating-gallery--inmersion .experiencias-floating-gallery__image--primary {
-  top: 0.3rem;
-  left: 0.85rem;
-  transform: rotate(-5deg);
+.experiencias-floating-gallery__image--inmersion-primary {
+  top: 0.2rem;
+  left: 0;
+  animation-delay: 0s;
 }
 
-.experiencias-floating-gallery--inmersion .experiencias-floating-gallery__image--secondary-a {
-  top: 3.2rem;
-  right: 1rem;
-  transform: rotate(7deg);
-}
-
-.experiencias-floating-gallery--inmersion .experiencias-floating-gallery__image--secondary-b {
-  top: 4.4rem;
-  left: 5.4rem;
-  transform: rotate(-9deg);
-}
-
-.experiencias-floating-gallery--inspiracion .experiencias-floating-gallery__image--primary {
-  top: 0.45rem;
-  right: 0.65rem;
-  transform: rotate(4deg);
-}
-
-.experiencias-floating-gallery--inspiracion .experiencias-floating-gallery__image--secondary-a {
+.experiencias-floating-gallery__image--inmersion-secondary-a {
   top: 4rem;
-  left: 1.35rem;
-  transform: rotate(-8deg);
+  right: 1rem;
+  animation-delay: 0.7s;
 }
 
-.experiencias-floating-gallery--inspiracion .experiencias-floating-gallery__image--secondary-b {
-  top: 3.1rem;
-  right: 5.3rem;
-  transform: rotate(9deg);
+.experiencias-floating-gallery__image--inmersion-secondary-b {
+  top: 5.1rem;
+  left: 7rem;
+  animation-delay: 1.15s;
+}
+
+.experiencias-floating-gallery__image--inspiracion-primary {
+  top: 0.2rem;
+  left: 0;
+  animation-delay: 0.2s;
+}
+
+.experiencias-floating-gallery__image--inspiracion-secondary-a {
+  top: 4.2rem;
+  right: 0.9rem;
+  animation-delay: 0.9s;
+}
+
+.experiencias-floating-gallery__image--inspiracion-secondary-b {
+  top: 5rem;
+  left: 7rem;
+  animation-delay: 1.35s;
+}
+
+@keyframes experiencias-floating-image-drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -0.35rem, 0);
+  }
 }
 
 .experiencias-carousel {
@@ -2786,7 +2807,7 @@ img {
   .experiencias-block {
     padding: 0.95rem;
     width: 100%;
-    height: clamp(38rem, 126vw, 44rem);
+    height: clamp(46rem, 142vw, 52rem);
   }
 
   .experiencias-carousel {
@@ -2801,25 +2822,25 @@ img {
   }
 
   .experiencias-block__dead-tree {
-    right: -3rem;
-    height: calc(100% + 10rem);
+    right: 0;
+    height: calc(100% - 0.25rem);
   }
 
   .experiencias-block__alive-tree {
-    left: -3rem;
-    height: calc(100% + 10rem);
+    left: 0;
+    height: calc(100% - 0.25rem);
   }
 
   .experiencias-floating-gallery {
-    min-height: 8.7rem;
+    min-height: 10.8rem;
   }
 
-  .experiencias-floating-gallery--inmersion .experiencias-floating-gallery__image--secondary-b {
-    left: 4.7rem;
+  .experiencias-floating-gallery__image--inmersion-secondary-b {
+    left: 6.1rem;
   }
 
-  .experiencias-floating-gallery--inspiracion .experiencias-floating-gallery__image--secondary-b {
-    right: 4.5rem;
+  .experiencias-floating-gallery__image--inspiracion-secondary-b {
+    left: 6.1rem;
   }
 
   .perspectivas-card {
