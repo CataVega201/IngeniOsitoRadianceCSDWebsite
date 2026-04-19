@@ -82,7 +82,6 @@ body::after {
   background-position: 0 0, 3rem 5rem, 6rem 2rem, 9rem 7rem;
   mix-blend-mode: screen;
   opacity: 0.5;
-  animation: particles-drift 26s linear infinite, particles-twinkle 8s ease-in-out infinite;
 }
 
 img {
@@ -1780,11 +1779,11 @@ img {
 @keyframes particles-twinkle {
   0%,
   100% {
-    opacity: 0.34;
+    opacity: 0.45;
   }
 
   50% {
-    opacity: 0.62;
+    opacity: 0.55;
   }
 }
 
@@ -2770,6 +2769,12 @@ img {
 
   .topbar__links {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body::after {
+    animation: particles-drift 26s linear infinite, particles-twinkle 8s ease-in-out infinite;
   }
 }
 
