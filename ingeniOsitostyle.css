@@ -2067,7 +2067,6 @@ img {
   margin-top: 0.25rem;
 }
 
-.proceso-card__image-link--decorativa-minimal,
 .proceso-card__image-frame--decorativa-minimal {
   width: min(100%, 18rem);
   min-height: 0;
@@ -2078,16 +2077,13 @@ img {
   background: transparent;
 }
 
-.proceso-card__image-link--decorativa-minimal:hover {
-  transform: none;
-  border-color: transparent;
-}
-
 .proceso-card__image {
-  width: 100%;
+  display: block;
+  width: 96%;
   height: auto;
   max-height: 30rem;
   object-fit: contain;
+  margin-inline: auto;
   border-radius: 0.58rem;
 }
 
