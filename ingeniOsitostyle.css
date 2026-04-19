@@ -74,14 +74,29 @@ body::after {
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(circle, rgba(255, 227, 154, 0.92) 0.08rem, transparent 0.12rem),
-    radial-gradient(circle, rgba(123, 233, 255, 0.9) 0.07rem, transparent 0.11rem),
-    radial-gradient(circle, rgba(143, 255, 192, 0.86) 0.08rem, transparent 0.13rem),
-    radial-gradient(circle, rgba(207, 196, 255, 0.88) 0.06rem, transparent 0.1rem);
-  background-size: 12rem 12rem, 15rem 15rem, 18rem 18rem, 22rem 22rem;
-  background-position: 0 0, 3rem 5rem, 6rem 2rem, 9rem 7rem;
+    radial-gradient(circle at 3% 12%, rgba(255, 255, 255, 0.9) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle at 9% 68%, rgba(255, 227, 154, 0.84) 0.08rem, transparent 0.12rem),
+    radial-gradient(circle at 14% 29%, rgba(123, 233, 255, 0.82) 0.07rem, transparent 0.12rem),
+    radial-gradient(circle at 18% 83%, rgba(255, 255, 255, 0.86) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle at 22% 46%, rgba(207, 196, 255, 0.8) 0.06rem, transparent 0.1rem),
+    radial-gradient(circle at 27% 7%, rgba(143, 255, 192, 0.78) 0.08rem, transparent 0.12rem),
+    radial-gradient(circle at 31% 62%, rgba(255, 227, 154, 0.8) 0.08rem, transparent 0.13rem),
+    radial-gradient(circle at 36% 21%, rgba(123, 233, 255, 0.84) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle at 41% 88%, rgba(255, 255, 255, 0.88) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle at 47% 39%, rgba(207, 196, 255, 0.78) 0.06rem, transparent 0.1rem),
+    radial-gradient(circle at 53% 14%, rgba(255, 227, 154, 0.82) 0.08rem, transparent 0.12rem),
+    radial-gradient(circle at 58% 74%, rgba(143, 255, 192, 0.8) 0.08rem, transparent 0.13rem),
+    radial-gradient(circle at 62% 32%, rgba(123, 233, 255, 0.84) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle at 67% 6%, rgba(255, 255, 255, 0.86) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle at 71% 57%, rgba(207, 196, 255, 0.76) 0.06rem, transparent 0.1rem),
+    radial-gradient(circle at 76% 82%, rgba(255, 227, 154, 0.82) 0.08rem, transparent 0.13rem),
+    radial-gradient(circle at 81% 26%, rgba(123, 233, 255, 0.84) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle at 86% 64%, rgba(143, 255, 192, 0.8) 0.08rem, transparent 0.12rem),
+    radial-gradient(circle at 91% 43%, rgba(255, 255, 255, 0.9) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle at 96% 17%, rgba(207, 196, 255, 0.78) 0.06rem, transparent 0.1rem);
   mix-blend-mode: screen;
-  opacity: 0.5;
+  opacity: 0.56;
+  will-change: transform, opacity;
 }
 
 img {
@@ -290,6 +305,40 @@ img {
   place-items: center;
   width: min(60vw, 28rem);
   aspect-ratio: 1;
+}
+
+.hero-lockup__visual::before,
+.hero-lockup__visual::after {
+  content: "";
+  position: absolute;
+  inset: -6%;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+
+.hero-lockup__visual::before {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(123, 233, 255, 0.78) 0.28rem, transparent 0.74rem),
+    radial-gradient(circle at 72% 18%, rgba(69, 166, 255, 0.76) 0.26rem, transparent 0.72rem),
+    radial-gradient(circle at 32% 78%, rgba(11, 69, 81, 0.74) 0.3rem, transparent 0.8rem),
+    radial-gradient(circle at 84% 68%, rgba(255, 117, 212, 0.72) 0.24rem, transparent 0.68rem),
+    radial-gradient(circle at 44% 38%, rgba(143, 255, 192, 0.76) 0.28rem, transparent 0.74rem),
+    radial-gradient(circle at 58% 86%, rgba(255, 255, 255, 0.78) 0.26rem, transparent 0.7rem);
+  opacity: 0.58;
+}
+
+.hero-lockup__visual::after {
+  inset: -10%;
+  background:
+    radial-gradient(circle at 8% 58%, rgba(123, 233, 255, 0.52) 0.22rem, transparent 0.62rem),
+    radial-gradient(circle at 26% 14%, rgba(69, 166, 255, 0.5) 0.2rem, transparent 0.58rem),
+    radial-gradient(circle at 66% 12%, rgba(11, 69, 81, 0.56) 0.24rem, transparent 0.64rem),
+    radial-gradient(circle at 92% 46%, rgba(255, 117, 212, 0.5) 0.2rem, transparent 0.58rem),
+    radial-gradient(circle at 78% 88%, rgba(143, 255, 192, 0.52) 0.22rem, transparent 0.62rem),
+    radial-gradient(circle at 36% 94%, rgba(255, 255, 255, 0.56) 0.2rem, transparent 0.58rem);
+  opacity: 0.46;
 }
 
 
@@ -1764,26 +1813,67 @@ img {
 
 @keyframes particles-drift {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate3d(-0.8rem, -1rem, 0) scale(1.01);
   }
 
   50% {
-    transform: translate3d(-1.6rem, -2.2rem, 0);
+    transform: translate3d(-1.35rem, -1.95rem, 0) scale(1.02);
+  }
+
+  75% {
+    transform: translate3d(-0.65rem, -0.9rem, 0) scale(1.01);
   }
 
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 
 @keyframes particles-twinkle {
   0%,
   100% {
-    opacity: 0.45;
+    opacity: 0.48;
   }
 
   50% {
-    opacity: 0.55;
+    opacity: 0.56;
+  }
+}
+
+@keyframes hero-particles-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0.9rem, -1rem, 0);
+  }
+}
+
+@keyframes hero-particles-drift-reverse {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-0.85rem, 0.95rem, 0);
+  }
+}
+
+@keyframes hero-particles-pulse {
+  0%,
+  100% {
+    opacity: 0.52;
+  }
+
+  50% {
+    opacity: 0.68;
   }
 }
 
@@ -2776,6 +2866,14 @@ img {
   body::after {
     animation: particles-drift 26s linear infinite, particles-twinkle 8s ease-in-out infinite;
   }
+
+  .hero-lockup__visual::before {
+    animation: hero-particles-drift 14s ease-in-out infinite, hero-particles-pulse 8s ease-in-out infinite;
+  }
+
+  .hero-lockup__visual::after {
+    animation: hero-particles-drift-reverse 16s ease-in-out infinite, hero-particles-pulse 9s ease-in-out infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2798,6 +2896,8 @@ img {
 
   .hero-lockup__logo,
   .hero-lockup__title,
+  .hero-lockup__visual::before,
+  .hero-lockup__visual::after,
   .que-es-esto-feature__illustration--magnifier,
   .que-es-esto-feature__illustration--gear,
   .que-es-esto-feature__illustration--expert-star {
