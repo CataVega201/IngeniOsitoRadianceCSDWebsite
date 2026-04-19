@@ -18,6 +18,9 @@ const defaultSectionId = sections[0]?.id || '';
 const highPriorityImageLimit = 2;
 let activeSectionId = '';
 const experienciaCarousels = [...document.querySelectorAll('[data-experiencias-carousel]')];
+const procesoZoomDialog = document.querySelector('[data-proceso-zoom-dialog]');
+const procesoZoomImage = procesoZoomDialog?.querySelector('[data-proceso-zoom-image]');
+const procesoZoomClose = procesoZoomDialog?.querySelector('[data-proceso-zoom-close]');
 
 const syncPageTitle = (targetId) => {
   const label = sectionLabels[targetId] || 'IngeniOsito Radiance';
@@ -159,5 +162,29 @@ window.addEventListener('popstate', () => {
 });
 
 experienciaCarousels.forEach(buildExperienciasCarousel);
+
+if (procesoZoomDialog && procesoZoomImage && procesoZoomClose) {
+  document.addEventListener('click', (event) => {
+    const trigger = event.target.closest('[data-proceso-zoom]');
+
+    if (!trigger) {
+      return;
+    }
+
+    procesoZoomImage.src = trigger.dataset.imageSrc || '';
+    procesoZoomImage.alt = trigger.dataset.imageAlt || '';
+    procesoZoomDialog.showModal();
+  });
+
+  procesoZoomClose.addEventListener('click', () => {
+    procesoZoomDialog.close();
+  });
+
+  procesoZoomDialog.addEventListener('click', (event) => {
+    if (event.target === procesoZoomDialog) {
+      procesoZoomDialog.close();
+    }
+  });
+}
 
 navigateToSection(window.location.hash, { historyMode: 'replace' });
