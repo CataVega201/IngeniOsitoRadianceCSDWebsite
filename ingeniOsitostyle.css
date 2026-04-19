@@ -2319,6 +2319,14 @@ img {
   font-size: clamp(2rem, 3.8vw, 2.2rem);
 }
 
+#aprendizajes-pains {
+  color: #ff5f6d;
+}
+
+#aprendizajes-gains {
+  color: #8fffc0;
+}
+
 .aprendizajes-insights {
   display: grid;
   gap: 0.78rem;
