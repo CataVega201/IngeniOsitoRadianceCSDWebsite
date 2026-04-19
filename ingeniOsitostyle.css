@@ -789,14 +789,14 @@ img {
 }
 
 .experiencias-floating-gallery__image--inmersion-secondary-a {
-  top: 4rem;
-  right: 1rem;
+  top: 4.3rem;
+  right: 2.2rem;
   animation-delay: 0.7s;
 }
 
 .experiencias-floating-gallery__image--inmersion-secondary-b {
-  top: 5.1rem;
-  left: 7rem;
+  top: 4.9rem;
+  left: 13.2rem;
   animation-delay: 1.15s;
 }
 
@@ -807,14 +807,14 @@ img {
 }
 
 .experiencias-floating-gallery__image--inspiracion-secondary-a {
-  top: 4.2rem;
-  right: 0.9rem;
+  top: 4.3rem;
+  right: 2.2rem;
   animation-delay: 0.9s;
 }
 
 .experiencias-floating-gallery__image--inspiracion-secondary-b {
-  top: 5rem;
-  left: 7rem;
+  top: 4.9rem;
+  left: 13.2rem;
   animation-delay: 1.35s;
 }
 
@@ -2836,11 +2836,11 @@ img {
   }
 
   .experiencias-floating-gallery__image--inmersion-secondary-b {
-    left: 6.1rem;
+    left: 10.8rem;
   }
 
   .experiencias-floating-gallery__image--inspiracion-secondary-b {
-    left: 6.1rem;
+    left: 10.8rem;
   }
 
   .perspectivas-card {
