@@ -41,6 +41,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  position: relative;
   font-family: "Zekton", "Segoe UI", sans-serif;
   color: var(--white);
   background:
@@ -71,14 +72,17 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
   background:
-    radial-gradient(circle at 14% 28%, rgba(255, 117, 212, 0.22), transparent 7%),
-    radial-gradient(circle at 82% 22%, rgba(123, 233, 255, 0.24), transparent 8%),
-    radial-gradient(circle at 22% 74%, rgba(143, 255, 192, 0.2), transparent 8%),
-    radial-gradient(circle at 76% 80%, rgba(207, 196, 255, 0.24), transparent 8%);
-  filter: blur(0.2rem) saturate(1.05);
-  opacity: 0.8;
+    radial-gradient(circle, rgba(255, 227, 154, 0.92) 0.08rem, transparent 0.12rem),
+    radial-gradient(circle, rgba(123, 233, 255, 0.9) 0.07rem, transparent 0.11rem),
+    radial-gradient(circle, rgba(143, 255, 192, 0.86) 0.08rem, transparent 0.13rem),
+    radial-gradient(circle, rgba(207, 196, 255, 0.88) 0.06rem, transparent 0.1rem);
+  background-size: 12rem 12rem, 15rem 15rem, 18rem 18rem, 22rem 22rem;
+  background-position: 0 0, 3rem 5rem, 6rem 2rem, 9rem 7rem;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  animation: particles-drift 26s linear infinite, particles-twinkle 8s ease-in-out infinite;
 }
 
 img {
@@ -117,6 +121,8 @@ img {
 }
 
 .page-shell {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-rows: auto auto;
   width: min(100%, calc(var(--max-width) + 3rem));
@@ -318,7 +324,7 @@ img {
 .hero-lockup__subtitle {
   width: 100%;
   margin: 0;
-  font-size: clamp(0.46rem, 0.7vw, 0.56rem);
+  font-size: clamp(1.02rem, 2.3vw, 1.62rem);
   letter-spacing: 0.04em;
   text-align: center;
   color: rgba(237, 243, 255, 0.86);
@@ -1757,6 +1763,31 @@ img {
   }
 }
 
+@keyframes particles-drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-1.6rem, -2.2rem, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes particles-twinkle {
+  0%,
+  100% {
+    opacity: 0.34;
+  }
+
+  50% {
+    opacity: 0.62;
+  }
+}
+
 
 @keyframes hero-float {
   0%,
@@ -2566,7 +2597,7 @@ img {
   }
 
   .hero-lockup__subtitle {
-    font-size: clamp(0.42rem, 1.8vw, 0.52rem);
+    font-size: clamp(0.94rem, 4.2vw, 1.22rem);
     letter-spacing: 0.035em;
   }
 
@@ -2748,7 +2779,8 @@ img {
   }
 
   body,
-  body::before {
+  body::before,
+  body::after {
     animation: none;
   }
 
