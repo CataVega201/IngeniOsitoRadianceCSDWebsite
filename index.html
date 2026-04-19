@@ -1001,8 +1001,133 @@
             </div>
           </div>
         </section>
-        <section class="content-section" id="aprendizajes" data-section aria-labelledby="titulo-aprendizajes" inert hidden>
-          <p class="content-section__placeholder content-section__layer" id="titulo-aprendizajes">Contenido de Aprendizajes en construcción.</p>
+        <section
+          class="content-section content-section--aprendizajes"
+          id="aprendizajes"
+          data-section
+          aria-labelledby="titulo-aprendizajes"
+          inert
+          hidden
+        >
+          <div class="aprendizajes-panel content-section__layer">
+            <h2 class="aprendizajes-panel__title" id="titulo-aprendizajes">Aprendizajes</h2>
+            <div class="aprendizajes-panel__divider" aria-hidden="true"></div>
+            <p class="aprendizajes-panel__intro">Visualiza hallazgos clave y patrones detectados en la investigación.</p>
+
+            <article class="aprendizajes-empathy" aria-labelledby="aprendizajes-empathy-title">
+              <header class="aprendizajes-empathy__header">
+                <p class="aprendizajes-empathy__eyebrow">Mapa de empatía · Estudiante afectado</p>
+                <h3 class="aprendizajes-empathy__title" id="aprendizajes-empathy-title">Perfil ficticio construido a partir de entrevistas y patrones recurrentes</h3>
+              </header>
+
+              <div class="aprendizajes-empathy__grid">
+                <section class="aprendizajes-empathy-card aprendizajes-empathy-card--piensa" aria-labelledby="aprendizajes-piensa">
+                  <h4 class="aprendizajes-empathy-card__title" id="aprendizajes-piensa">¿Qué piensa y siente?</h4>
+                  <ul class="aprendizajes-empathy-card__list">
+                    <li>Siente que no tiene tiempo para nada entre el estudio y la vida social.</li>
+                    <li>Está ocupado la mayor parte del día estudiando todas sus materias y no le alcanza para repasar a diario.</li>
+                    <li>Quiere tener todos sus apuntes, quices, talleres y trabajos de clase en un mismo lugar.</li>
+                  </ul>
+                </section>
+
+                <section class="aprendizajes-empathy-card aprendizajes-empathy-card--ve" aria-labelledby="aprendizajes-ve">
+                  <h4 class="aprendizajes-empathy-card__title" id="aprendizajes-ve">¿Qué ve?</h4>
+                  <ul class="aprendizajes-empathy-card__list">
+                    <li>Ve videos en internet sobre cuál es la mejor manera de estudiar para no olvidar lo visto durante el semestre.</li>
+                    <li>Le salen publicaciones en redes sociales de personas que estudian la misma carrera o una parecida, que estudian todos los días y guardan todo.</li>
+                  </ul>
+                </section>
+
+                <section class="aprendizajes-empathy-card aprendizajes-empathy-card--oye" aria-labelledby="aprendizajes-oye">
+                  <h4 class="aprendizajes-empathy-card__title" id="aprendizajes-oye">¿Qué oye?</h4>
+                  <ul class="aprendizajes-empathy-card__list">
+                    <li>Sus amigos le dicen que lo más importante es pasar la materia y que guardar los materiales de clase al terminar el semestre no importa.</li>
+                    <li>Su papá le aconseja que todos sus materiales de clase son importantes y que debería guardarlos, aunque ya haya pasado de semestre.</li>
+                  </ul>
+                </section>
+
+                <section class="aprendizajes-empathy-card aprendizajes-empathy-card--dice" aria-labelledby="aprendizajes-dice">
+                  <h4 class="aprendizajes-empathy-card__title" id="aprendizajes-dice">¿Qué dice y hace?</h4>
+                  <ul class="aprendizajes-empathy-card__list">
+                    <li>Solo estudia para parciales.</li>
+                    <li>Va a iniciar su quinto semestre y no se acuerda de nada de lo que vio el semestre pasado, pero no sabe dónde tiene todos sus apuntes.</li>
+                    <li>Dice que este semestre quiere cambiar la manera en la que archiva toda su información, pero no sabe cómo hacerlo.</li>
+                  </ul>
+                </section>
+              </div>
+
+              <section class="aprendizajes-profile" aria-labelledby="aprendizajes-profile-title">
+                <h4 class="aprendizajes-profile__name" id="aprendizajes-profile-title">Luis</h4>
+                <p class="aprendizajes-profile__role">Estudiante de Ingeniería Mecánica</p>
+                <div class="aprendizajes-profile__columns">
+                  <article class="aprendizajes-profile-block" aria-labelledby="aprendizajes-pains">
+                    <h5 class="aprendizajes-profile-block__title" id="aprendizajes-pains">Pains</h5>
+                    <ul class="aprendizajes-profile-block__list">
+                      <li>No quiere que le pase como en semestres anteriores, ya que en el primer corte siempre se siente perdido.</li>
+                      <li>Le preocupa que, durante el tiempo que pasa poniéndose al día, se atrase con los nuevos temas.</li>
+                    </ul>
+                  </article>
+                  <article class="aprendizajes-profile-block" aria-labelledby="aprendizajes-gains">
+                    <h5 class="aprendizajes-profile-block__title" id="aprendizajes-gains">Gains</h5>
+                    <ul class="aprendizajes-profile-block__list">
+                      <li>Tener todos sus materiales de clase centralizados y más accesibles.</li>
+                      <li>No tener que preocuparse por olvidar algo, porque lo puede encontrar fácil.</li>
+                    </ul>
+                  </article>
+                </div>
+              </section>
+            </article>
+
+            <section class="aprendizajes-insights" aria-labelledby="aprendizajes-insights-title">
+              <h3 class="aprendizajes-insights__title" id="aprendizajes-insights-title">Hallazgos por frente</h3>
+              <div class="aprendizajes-insights__grid">
+                <article class="aprendizajes-insight-card" aria-labelledby="aprendizajes-experiencia">
+                  <h4 class="aprendizajes-insight-card__title" id="aprendizajes-experiencia">Experiencia</h4>
+                  <p class="aprendizajes-insight-card__question">¿Qué aprendimos de esta experiencia?</p>
+                  <ul class="aprendizajes-insight-card__list">
+                    <li>El conocimiento práctico se diluye sin rituales de cierre y documentación.</li>
+                    <li>La presión académica desplaza la reflexión y la consolidación.</li>
+                    <li>El valor del aprendizaje se potencia cuando es visible y reutilizable.</li>
+                  </ul>
+                </article>
+
+                <article class="aprendizajes-insight-card" aria-labelledby="aprendizajes-entrevistas">
+                  <h4 class="aprendizajes-insight-card__title" id="aprendizajes-entrevistas">Entrevistas</h4>
+                  <p class="aprendizajes-insight-card__question">¿Qué aprendimos de las entrevistas?</p>
+                  <ul class="aprendizajes-insight-card__list">
+                    <li>Los estudiantes desean acceso a ejemplos reales y cercanos.</li>
+                    <li>Existe frustración por la repetición de errores pasados.</li>
+                    <li>La mayoría guarda proyectos de forma dispersa y personal.</li>
+                  </ul>
+                </article>
+
+                <article class="aprendizajes-insight-card" aria-labelledby="aprendizajes-perspectivas">
+                  <h4 class="aprendizajes-insight-card__title" id="aprendizajes-perspectivas">Perspectivas</h4>
+                  <p class="aprendizajes-insight-card__question">¿Qué aprendimos de las diferentes perspectivas?</p>
+                  <ul class="aprendizajes-insight-card__list">
+                    <li>Los estudiantes priorizan accesibilidad y utilidad inmediata.</li>
+                    <li>El experto destaca cultura, protocolos y métricas de uso.</li>
+                    <li>El problema es tanto técnico como humano y organizacional.</li>
+                  </ul>
+                </article>
+
+                <article class="aprendizajes-insight-card" aria-labelledby="aprendizajes-lugares">
+                  <h4 class="aprendizajes-insight-card__title" id="aprendizajes-lugares">Lugares</h4>
+                  <p class="aprendizajes-insight-card__question">¿Qué aprendimos de los lugares?</p>
+                  <ul class="aprendizajes-insight-card__list">
+                    <li>UniSabana sufre fragmentación y baja continuidad académica.</li>
+                    <li>MIT demuestra que los repositorios abiertos generan memoria colectiva.</li>
+                    <li>La clave está en centralizar, versionar y mantener vigente.</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <article class="aprendizajes-conclusion" aria-labelledby="aprendizajes-conclusion-title">
+              <h3 class="aprendizajes-conclusion__title" id="aprendizajes-conclusion-title">Conclusión general</h3>
+              <p class="aprendizajes-conclusion__text">El conocimiento práctico necesita continuidad. Sin espacios de archivo, reflexión y acceso, cada semestre reinicia el aprendizaje. El hallazgo central es que el problema no es falta de esfuerzo, sino ausencia de una arquitectura compartida que vuelva lo aprendido visible, consultable y evolutivo.</p>
+            </article>
+          </div>
         </section>
       </main>
     </div>
