@@ -1599,6 +1599,16 @@ img {
   gap: 1.25rem;
 }
 
+.que-es-esto-panel__legal-note {
+  width: min(100%, 64rem);
+  margin: 1.5rem 0 0;
+  color: rgba(240, 248, 255, 0.62);
+  font-size: clamp(0.66rem, 1.2vw, 0.74rem);
+  line-height: 1.45;
+  text-align: left;
+  text-wrap: pretty;
+}
+
 .que-es-esto-feature {
   --que-es-esto-feature-media-column: clamp(8.75rem, 18vw, 11rem);
   display: grid;
