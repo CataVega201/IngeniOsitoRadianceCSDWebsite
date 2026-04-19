@@ -2177,7 +2177,7 @@ img {
   line-height: 1.1;
   text-decoration: underline;
   text-underline-offset: 0.18em;
-  font-family: "Times New Roman", Georgia, serif;
+  font-family: inherit;
 }
 
 .aprendizajes-empathy-card {
@@ -2204,30 +2204,7 @@ img {
 
 .aprendizajes-empathy-map::before,
 .aprendizajes-empathy-map::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
-
-.aprendizajes-empathy-map::before {
-  background-image: linear-gradient(
-    to bottom right,
-    transparent calc(50% - 1px),
-    rgba(214, 229, 255, 0.62) 50%,
-    transparent calc(50% + 1px)
-  );
-}
-
-.aprendizajes-empathy-map::after {
-  background-image: linear-gradient(
-    to bottom left,
-    transparent calc(50% - 1px),
-    rgba(214, 229, 255, 0.62) 50%,
-    transparent calc(50% + 1px)
-  );
+  display: none;
 }
 
 .aprendizajes-empathy-card--piensa {
@@ -2258,10 +2235,10 @@ img {
 
 .aprendizajes-empathy-card__title {
   margin: 0;
-  color: var(--white);
+  color: var(--gold-bright);
   font-size: clamp(1.65rem, 2.9vw, 2.62rem);
   line-height: 1.05;
-  font-family: "Times New Roman", Georgia, serif;
+  font-family: inherit;
 }
 
 .aprendizajes-empathy-card__list,
@@ -2289,6 +2266,10 @@ img {
   display: grid;
   justify-items: center;
   gap: 0.25rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid rgba(214, 229, 255, 0.82);
+  border-radius: 0.95rem;
+  background: rgba(11, 31, 58, 0.86);
   text-align: center;
 }
 
@@ -2334,7 +2315,7 @@ img {
   margin: 0;
   color: var(--white);
   text-align: center;
-  font-family: "Times New Roman", Georgia, serif;
+  font-family: inherit;
   font-size: clamp(2rem, 3.8vw, 2.2rem);
 }
 
