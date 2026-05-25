@@ -1147,17 +1147,13 @@ img {
   gap: 0.75rem;
 }
 
-.perspectivas-entrevista__pfp-placeholder {
-  display: grid;
-  place-items: center;
-  width: clamp(3.1rem, 8vw, 3.5rem);
+.perspectivas-entrevista__pfp {
+  display: block;
+  width: clamp(3.45rem, 8.8vw, 3.95rem);
   aspect-ratio: 1;
-  border: 2px dashed rgba(255, 255, 255, 0.55);
   border-radius: 50%;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -1185,17 +1181,13 @@ img {
   text-wrap: pretty;
 }
 
-.perspectivas-entrevista__image-placeholder {
-  display: grid;
-  place-items: center;
+.perspectivas-entrevista__image {
+  display: block;
   width: 100%;
-  min-height: clamp(8.25rem, 24vw, 9.5rem);
-  border: 2px dashed rgba(255, 227, 154, 0.6);
+  min-height: clamp(6.9rem, 20vw, 8.1rem);
+  border: 1px solid rgba(255, 227, 154, 0.6);
   border-radius: 0.88rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  object-fit: cover;
   background: rgba(255, 255, 255, 0.07);
 }
 
