@@ -1149,7 +1149,7 @@ img {
 
 .perspectivas-entrevista__pfp {
   display: block;
-  width: clamp(3.1rem, 8vw, 3.5rem);
+  width: clamp(3.45rem, 8.8vw, 3.95rem);
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
@@ -1184,7 +1184,7 @@ img {
 .perspectivas-entrevista__image {
   display: block;
   width: 100%;
-  min-height: clamp(8.25rem, 24vw, 9.5rem);
+  min-height: clamp(6.9rem, 20vw, 8.1rem);
   border: 1px solid rgba(255, 227, 154, 0.6);
   border-radius: 0.88rem;
   object-fit: cover;
