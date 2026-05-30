@@ -2302,7 +2302,7 @@ img {
   justify-items: center;
   width: min(100%, 76rem);
   margin-inline: auto;
-  gap: 1rem;
+  gap: clamp(1.7rem, 4vw, 3rem);
 }
 
 .estrategias-panel__title {
@@ -2336,11 +2336,183 @@ img {
   text-wrap: pretty;
 }
 
+.estrategias-puntos {
+  display: grid;
+  width: 100%;
+  gap: clamp(1.2rem, 2.8vw, 1.8rem);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
+  border: 1px solid rgba(123, 233, 255, 0.32);
+  border-radius: 1.2rem;
+  background: linear-gradient(160deg, rgba(5, 14, 39, 0.94), rgba(10, 35, 56, 0.78));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.28);
+}
+
+.estrategias-puntos__header {
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+}
+
+.estrategias-puntos__title {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.1;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.estrategias-puntos__intro {
+  width: min(100%, 50rem);
+  margin: 0;
+  color: rgba(237, 243, 255, 0.84);
+  font-size: clamp(0.86rem, 1.45vw, 0.98rem);
+  line-height: 1.5;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.estrategias-puntos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: clamp(1rem, 2.5vw, 1.45rem);
+  width: 100%;
+}
+
+.estrategias-punto {
+  display: grid;
+  align-content: start;
+  gap: clamp(0.9rem, 2vw, 1.15rem);
+  min-width: 0;
+  padding: clamp(0.72rem, 1.8vw, 0.95rem);
+  border: 1px solid rgba(123, 233, 255, 0.26);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(14, 23, 58, 0.82), rgba(10, 39, 54, 0.68));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+}
+
+.estrategias-punto__media {
+  display: block;
+  width: 100%;
+  padding: 0.35rem;
+  border: 1px solid rgba(255, 227, 154, 0.34);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: zoom-in;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.estrategias-punto__media:hover,
+.estrategias-punto__media:focus-visible {
+  border-color: rgba(255, 227, 154, 0.78);
+  box-shadow: 0 0.75rem 1.4rem rgba(0, 0, 0, 0.24);
+  transform: translateY(-0.08rem);
+}
+
+.estrategias-punto__media:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 0.18rem;
+}
+
+.estrategias-punto__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  border-radius: 0.58rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.estrategias-punto__content {
+  display: grid;
+  gap: 0.48rem;
+}
+
+.estrategias-punto__title {
+  margin: 0;
+  color: var(--cyan);
+  font-size: clamp(1.02rem, 2vw, 1.18rem);
+  line-height: 1.2;
+}
+
+.estrategias-punto__scene,
+.estrategias-punto__text {
+  margin: 0;
+  color: rgba(237, 243, 255, 0.9);
+  font-size: clamp(0.86rem, 1.35vw, 0.96rem);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.estrategias-punto__scene {
+  color: rgba(255, 244, 206, 0.92);
+}
+
+.estrategias-punto__text strong {
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+
+.estrategias-evolucion {
+  display: grid;
+  width: min(100%, 66rem);
+  gap: clamp(1.35rem, 3vw, 2rem);
+  padding: clamp(0.25rem, 1vw, 0.45rem);
+}
+
+.estrategias-evolucion__title {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.1;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.estrategias-evolucion__version {
+  position: relative;
+  display: grid;
+  gap: clamp(0.7rem, 1.6vw, 0.95rem);
+  padding: clamp(1rem, 2.5vw, 1.45rem);
+  border: 1px solid rgba(255, 227, 154, 0.34);
+  border-left: clamp(0.22rem, 0.8vw, 0.36rem) solid rgba(255, 69, 69, 0.78);
+  border-radius: 1.05rem;
+  background: linear-gradient(145deg, rgba(14, 23, 58, 0.64), rgba(10, 39, 54, 0.48));
+  box-shadow: 0 0.9rem 1.8rem rgba(0, 0, 0, 0.22), inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+  overflow: hidden;
+}
+
+.estrategias-evolucion__subtitle {
+  width: fit-content;
+  margin: 0;
+  padding: 0.18rem 0.7rem;
+  border: 1px solid rgba(123, 233, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(123, 233, 255, 0.08);
+  color: var(--white);
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.estrategias-evolucion__text {
+  margin: 0;
+  padding-left: clamp(0.05rem, 0.6vw, 0.35rem);
+  color: rgba(237, 243, 255, 0.92);
+  font-size: clamp(0.98rem, 1.75vw, 1.18rem);
+  line-height: 1.42;
+  text-wrap: pretty;
+}
+
+.estrategias-evolucion__highlight {
+  color: #ff4545;
+}
+
 .estrategias-cronograma {
   display: grid;
   width: 100%;
-  gap: 0.85rem;
-  padding: clamp(0.9rem, 2vw, 1.25rem);
+  gap: clamp(1rem, 2.4vw, 1.4rem);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
   border: 1px solid rgba(123, 233, 255, 0.36);
   border-radius: 1.2rem;
   background: linear-gradient(160deg, rgba(5, 14, 39, 0.92), rgba(10, 35, 56, 0.82));
@@ -2429,8 +2601,8 @@ img {
 .estrategias-modelo {
   display: grid;
   width: 100%;
-  gap: 0.85rem;
-  padding: clamp(0.9rem, 2vw, 1.25rem);
+  gap: clamp(1rem, 2.4vw, 1.4rem);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
   border: 1px solid rgba(255, 227, 154, 0.36);
   border-radius: 1.2rem;
   background: linear-gradient(160deg, rgba(5, 14, 39, 0.92), rgba(10, 35, 56, 0.82));
