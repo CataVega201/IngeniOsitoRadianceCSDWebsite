@@ -2663,6 +2663,110 @@ img {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.estrategias-benchmarking {
+  display: grid;
+  width: 100%;
+  gap: clamp(1rem, 2.4vw, 1.4rem);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
+  border: 1px solid rgba(123, 233, 255, 0.36);
+  border-radius: 1.2rem;
+  background: linear-gradient(160deg, rgba(5, 14, 39, 0.92), rgba(10, 35, 56, 0.82));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+}
+
+.estrategias-benchmarking__header,
+.estrategias-benchmarking__table-block,
+.estrategias-benchmarking__conclusion {
+  display: grid;
+  gap: clamp(0.7rem, 1.6vw, 0.95rem);
+}
+
+.estrategias-benchmarking__title,
+.estrategias-benchmarking__subtitle {
+  margin: 0;
+  color: var(--gold-bright);
+  line-height: 1.1;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.estrategias-benchmarking__title {
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+}
+
+.estrategias-benchmarking__subtitle {
+  font-size: clamp(1.08rem, 2vw, 1.32rem);
+}
+
+.estrategias-benchmarking__objective,
+.estrategias-benchmarking__text {
+  margin: 0;
+  color: rgba(237, 243, 255, 0.9);
+  font-size: clamp(0.98rem, 1.75vw, 1.18rem);
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.estrategias-benchmarking__objective strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.estrategias-benchmarking__table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-color: rgba(123, 233, 255, 0.72) rgba(255, 255, 255, 0.08);
+  scrollbar-width: thin;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.estrategias-benchmarking__table-scroll:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 0.18rem;
+}
+
+.estrategias-benchmarking-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  color: rgba(237, 243, 255, 0.92);
+  font-size: clamp(0.86rem, 1.45vw, 1rem);
+  line-height: 1.35;
+}
+
+.estrategias-benchmarking-table--comparison {
+  min-width: 68rem;
+}
+
+.estrategias-benchmarking-table__header,
+.estrategias-benchmarking-table__cell {
+  padding: clamp(0.75rem, 1.6vw, 1rem);
+  border: 1px solid rgba(123, 233, 255, 0.24);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.estrategias-benchmarking-table__header {
+  color: var(--white);
+  background: rgba(123, 233, 255, 0.12);
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.estrategias-benchmarking-table__cell {
+  background: rgba(14, 23, 58, 0.46);
+  text-wrap: pretty;
+}
+
+.estrategias-benchmarking-table__row:hover .estrategias-benchmarking-table__cell {
+  background: rgba(123, 233, 255, 0.08);
+}
+
 .content-section--aprendizajes {
   justify-items: center;
   align-content: start;
@@ -3812,6 +3916,28 @@ img {
 
   .estrategias-cronograma__image {
     height: clamp(10rem, 62vw, 15rem);
+  }
+
+  .estrategias-benchmarking {
+    padding: 0.85rem;
+  }
+
+  .estrategias-benchmarking__objective,
+  .estrategias-benchmarking__text {
+    text-align: left;
+  }
+
+  .estrategias-benchmarking-table {
+    min-width: 34rem;
+  }
+
+  .estrategias-benchmarking-table--comparison {
+    min-width: 56rem;
+  }
+
+  .estrategias-benchmarking-table__header,
+  .estrategias-benchmarking-table__cell {
+    padding: 0.68rem;
   }
 
   .proceso-card {
