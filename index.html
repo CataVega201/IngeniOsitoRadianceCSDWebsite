@@ -40,6 +40,7 @@
             <a class="nav-link" href="#experto" data-route="experto">Experto</a>
             <a class="nav-link" href="#proceso" data-route="proceso">Proceso</a>
             <a class="nav-link" href="#estrategias" data-route="estrategias">Estrategias</a>
+            <a class="nav-link" href="#prototipo" data-route="prototipo">Prototipo</a>
             <a class="nav-link" href="#aprendizajes" data-route="aprendizajes">Aprendizajes</a>
           </div>
         </nav>
@@ -1104,6 +1105,203 @@
                   <button class="estrategias-cronograma__item" type="button" data-proceso-zoom data-image-src="ingeniOsitoAssets/IngOsImages/IngOsStrategiesPics/CronogramaPics/18.png" data-image-alt="Cronograma de estrategias, lámina 18">
                     <img class="estrategias-cronograma__image" src="ingeniOsitoAssets/IngOsImages/IngOsStrategiesPics/CronogramaPics/18.png" alt="Cronograma de estrategias, lámina 18" loading="lazy" decoding="async" />
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="content-section content-section--prototipo"
+          id="prototipo"
+          data-section
+          aria-labelledby="titulo-prototipo"
+          inert
+          hidden
+        >
+          <div class="prototipo-panel content-section__layer">
+            <div class="prototipo-panel__header">
+              <p class="prototipo-panel__eyebrow">Simulación interactiva</p>
+              <h2 class="prototipo-panel__title" id="titulo-prototipo">Prototipo</h2>
+              <p class="prototipo-panel__intro">
+                Explora cómo IngeniOsito guiará a cada estudiante desde su registro inicial hasta un tablero personalizado
+                con calendario, repositorio, asistente, herramientas, jardín virtual y perfil académico.
+              </p>
+            </div>
+
+            <div class="prototipo-stage" data-prototipo-stage>
+              <div class="prototipo-stage__controls" aria-label="Pantallas del prototipo">
+                <button class="prototipo-stage__control" type="button" data-prototipo-target="landing" aria-pressed="true">Inicio</button>
+                <button class="prototipo-stage__control" type="button" data-prototipo-target="registro" aria-pressed="false">Registro</button>
+                <button class="prototipo-stage__control" type="button" data-prototipo-target="cuestionario" aria-pressed="false">Cuestionario</button>
+                <button class="prototipo-stage__control" type="button" data-prototipo-target="resultado" aria-pressed="false">Resultado</button>
+                <button class="prototipo-stage__control" type="button" data-prototipo-target="dashboard" aria-pressed="false">Dashboard</button>
+              </div>
+
+              <div class="prototipo-screen" data-prototipo-screen="landing">
+                <div class="prototipo-landing">
+                  <nav class="prototipo-landing__nav" aria-label="Navegación simulada">
+                    <span class="prototipo-landing__nav-item">Cómo funciona</span>
+                    <span class="prototipo-landing__nav-item">Nosotros</span>
+                    <button class="prototipo-button prototipo-button--compact" type="button" data-prototipo-target="registro">Comenzar</button>
+                  </nav>
+                  <div class="prototipo-landing__content">
+                    <div class="prototipo-landing__copy">
+                      <h3 class="prototipo-landing__title">Conoce a <strong>IngeniOsito</strong></h3>
+                      <p class="prototipo-landing__text">
+                        Una plataforma que te ayuda a guardar tus materiales, entender tu estilo de estudio y llevar tu
+                        progreso de una manera creativa y divertida.
+                      </p>
+                      <div class="prototipo-landing__actions">
+                        <button class="prototipo-button" type="button" data-prototipo-target="registro">Comenzar</button>
+                        <button class="prototipo-button prototipo-button--gold" type="button" data-prototipo-target="dashboard">Conoce más</button>
+                      </div>
+                    </div>
+                    <div class="prototipo-landing__mascot" aria-hidden="true">
+                      <img class="prototipo-landing__logo" src="ingeniOsitoAssets/IngOsGraphics/IngeniOsitoLogoVector.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prototipo-screen" data-prototipo-screen="registro" hidden>
+                <div class="prototipo-auth">
+                  <h3 class="prototipo-auth__title">¡Bienvenido!</h3>
+                  <div class="prototipo-auth__tabs" aria-label="Modo de acceso simulado">
+                    <span class="prototipo-auth__tab prototipo-auth__tab--active">Regístrate</span>
+                    <span class="prototipo-auth__tab">Iniciar sesión</span>
+                  </div>
+                  <form class="prototipo-auth__form" aria-label="Formulario simulado de registro">
+                    <label class="prototipo-field">
+                      <span class="prototipo-field__label">Nombre completo</span>
+                      <input class="prototipo-field__input" type="text" autocomplete="name" />
+                    </label>
+                    <label class="prototipo-field">
+                      <span class="prototipo-field__label">Carrera</span>
+                      <select class="prototipo-field__input">
+                        <option>Selecciona una opción</option>
+                        <option>Ingeniería Informática</option>
+                        <option>Ingeniería Industrial</option>
+                        <option>Ingeniería Mecánica</option>
+                      </select>
+                    </label>
+                    <label class="prototipo-field">
+                      <span class="prototipo-field__label">Correo electrónico institucional</span>
+                      <input class="prototipo-field__input" type="email" autocomplete="email" />
+                    </label>
+                    <label class="prototipo-field">
+                      <span class="prototipo-field__label">Contraseña</span>
+                      <input class="prototipo-field__input" type="password" autocomplete="new-password" />
+                    </label>
+                    <label class="prototipo-field">
+                      <span class="prototipo-field__label">Confirmar contraseña</span>
+                      <input class="prototipo-field__input" type="password" autocomplete="new-password" />
+                    </label>
+                    <div class="prototipo-auth__actions">
+                      <button class="prototipo-button" type="button" data-prototipo-target="cuestionario">Registrarse</button>
+                      <button class="prototipo-button prototipo-button--teal" type="button" data-prototipo-target="cuestionario">Continuar con Microsoft 365</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="prototipo-screen" data-prototipo-screen="cuestionario" hidden>
+                <div class="prototipo-quiz">
+                  <h3 class="prototipo-pill-title">Cuestionario</h3>
+                  <p class="prototipo-quiz__intro">Deja que IngeniOsito aprenda más de ti respondiendo estas preguntas sencillas.</p>
+                  <div class="prototipo-quiz__layout">
+                    <div class="prototipo-quiz__questions">
+                      <fieldset class="prototipo-question">
+                        <legend class="prototipo-question__title">1. ¿Cuál es tu entorno favorito para estudiar?</legend>
+                        <div class="prototipo-question__answers">
+                          <label><input type="radio" name="entorno" checked /> En una biblioteca</label>
+                          <label><input type="radio" name="entorno" /> En casa</label>
+                          <label><input type="radio" name="entorno" /> En grupo</label>
+                          <label><input type="radio" name="entorno" /> Otro</label>
+                        </div>
+                      </fieldset>
+                      <fieldset class="prototipo-question">
+                        <legend class="prototipo-question__title">2. Cuando tengo que estudiar para un examen...</legend>
+                        <div class="prototipo-question__answers">
+                          <label><input type="radio" name="examen" checked /> Hago un plan detallado con horarios</label>
+                          <label><input type="radio" name="examen" /> Repaso lo más importante a última hora</label>
+                          <label><input type="radio" name="examen" /> Veo videos acerca del tema</label>
+                          <label><input type="radio" name="examen" /> Practico con ejercicios y ejemplos</label>
+                        </div>
+                      </fieldset>
+                      <fieldset class="prototipo-question">
+                        <legend class="prototipo-question__title">3. En clase normalmente...</legend>
+                        <div class="prototipo-question__answers">
+                          <label><input type="radio" name="clase" checked /> Tomo apuntes organizados</label>
+                          <label><input type="radio" name="clase" /> Me distraigo fácilmente</label>
+                          <label><input type="radio" name="clase" /> Participo y hago preguntas</label>
+                          <label><input type="radio" name="clase" /> Prefiero practicar haciendo ejercicios</label>
+                        </div>
+                      </fieldset>
+                      <div class="prototipo-quiz__footer">
+                        <span class="prototipo-quiz__dot prototipo-quiz__dot--active"></span>
+                        <span class="prototipo-quiz__dot"></span>
+                        <span class="prototipo-quiz__dot"></span>
+                        <button class="prototipo-button" type="button" data-prototipo-target="resultado">Siguiente</button>
+                      </div>
+                    </div>
+                    <img class="prototipo-quiz__mascot" src="ingeniOsitoAssets/IngOsGraphics/IngeniOsitoLogoVector.svg" alt="IngeniOsito acompañando el cuestionario" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="prototipo-screen" data-prototipo-screen="resultado" hidden>
+                <div class="prototipo-result">
+                  <h3 class="prototipo-pill-title">Resultado</h3>
+                  <div class="prototipo-result__content">
+                    <article class="prototipo-result__card">
+                      <h4 class="prototipo-result__title">📅 Estudiante organizado</h4>
+                      <p class="prototipo-result__text"><strong>Tu estilo:</strong> eres disciplinado y planificado.</p>
+                      <p class="prototipo-result__text"><strong>Riesgo:</strong> puedes sobrecargarte o ser muy rígido.</p>
+                      <h5 class="prototipo-result__subtitle">🧠 ¿Cómo es este tipo de estudiante?</h5>
+                      <p class="prototipo-result__text">
+                        Es alguien que anticipa tareas, registra avances y necesita una plataforma que mantenga sus
+                        materiales claros, conectados y disponibles.
+                      </p>
+                    </article>
+                    <img class="prototipo-result__mascot" src="ingeniOsitoAssets/IngOsGraphics/IngeniOsitoLogoVector.svg" alt="IngeniOsito mostrando el resultado" />
+                  </div>
+                  <button class="prototipo-button" type="button" data-prototipo-target="dashboard">Continuar</button>
+                </div>
+              </div>
+
+              <div class="prototipo-screen" data-prototipo-screen="dashboard" hidden>
+                <div class="prototipo-dashboard">
+                  <nav class="prototipo-dashboard__nav" aria-label="Módulos simulados">
+                    <span>Subir documentos</span>
+                    <span>Repositorio</span>
+                    <span>IngeniOsito responde</span>
+                    <span>Herramientas</span>
+                    <span>Jardín virtual</span>
+                    <span>Mi perfil</span>
+                  </nav>
+                  <div class="prototipo-dashboard__body">
+                    <section class="prototipo-calendar" aria-labelledby="prototipo-calendario">
+                      <h3 class="prototipo-calendar__title" id="prototipo-calendario">Calendario</h3>
+                      <div class="prototipo-calendar__grid" aria-label="Calendario de mayo">
+                        <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sá</span><span>Do</span>
+                        <span>5</span><span>6</span><strong>7</strong><span>8</span><span>9</span><span>10</span><span>11</span>
+                        <span>12</span><strong>13</strong><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+                      </div>
+                      <div class="prototipo-calendar__tasks">
+                        <h4>Trabajos pendientes:</h4>
+                        <p>Quiz de cálculo integral · 7 de mayo</p>
+                        <p>Taller de estructuras y algoritmos · 20 de mayo</p>
+                        <h4>IngeniOsito recomienda:</h4>
+                        <p>Repasar arreglos en Java y Python con práctica guiada.</p>
+                        <p>Subir las notas del quiz de probabilidad y estadística.</p>
+                      </div>
+                    </section>
+                    <aside class="prototipo-dashboard__plant" aria-label="Progreso del jardín virtual">
+                      <img class="prototipo-dashboard__plant-image" src="ingeniOsitoAssets/IngOsGraphics/CyberPlantPot.svg" alt="Planta virtual creciendo" />
+                      <div class="prototipo-dashboard__progress"><span></span></div>
+                      <img class="prototipo-dashboard__mascot" src="ingeniOsitoAssets/IngOsGraphics/IngeniOsitoLogoVector.svg" alt="IngeniOsito en el dashboard" />
+                    </aside>
+                  </div>
                 </div>
               </div>
             </div>
