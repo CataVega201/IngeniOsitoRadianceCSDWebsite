@@ -7,6 +7,7 @@ const sectionLabels = {
   experto: 'Experto',
   proceso: 'Proceso',
   estrategias: 'Estrategias',
+  prototipo: 'Prototipo',
   aprendizajes: 'Aprendizajes',
 };
 
@@ -22,6 +23,7 @@ const experienciaCarousels = [...document.querySelectorAll('[data-experiencias-c
 const procesoZoomDialog = document.querySelector('[data-proceso-zoom-dialog]');
 const procesoZoomImage = procesoZoomDialog?.querySelector('[data-proceso-zoom-image]');
 const procesoZoomClose = procesoZoomDialog?.querySelector('[data-proceso-zoom-close]');
+const prototipoStage = document.querySelector('[data-prototipo-stage]');
 
 const syncPageTitle = (targetId) => {
   const label = sectionLabels[targetId] || 'IngeniOsito Radiance';
@@ -122,6 +124,34 @@ const buildExperienciasCarousel = (carousel) => {
   render();
 };
 
+
+const showPrototipoScreen = (targetId) => {
+  if (!prototipoStage) {
+    return;
+  }
+
+  const screens = [...prototipoStage.querySelectorAll('[data-prototipo-screen]')];
+  const controls = [...prototipoStage.querySelectorAll('[data-prototipo-target]')];
+  const hasScreen = screens.some((screen) => screen.dataset.prototipoScreen === targetId);
+
+  if (!hasScreen) {
+    return;
+  }
+
+  screens.forEach((screen) => {
+    const isActive = screen.dataset.prototipoScreen === targetId;
+    screen.toggleAttribute('hidden', !isActive);
+  });
+
+  controls.forEach((control) => {
+    const isActive = control.dataset.prototipoTarget === targetId;
+
+    if (control.classList.contains('prototipo-stage__control')) {
+      control.setAttribute('aria-pressed', String(isActive));
+    }
+  });
+};
+
 const navigateToSection = (targetId, options = {}) => {
   const { historyMode = 'push' } = options;
   const resolvedId = resolveSectionId(targetId);
@@ -163,6 +193,19 @@ window.addEventListener('popstate', () => {
 });
 
 experienciaCarousels.forEach(buildExperienciasCarousel);
+
+if (prototipoStage) {
+  prototipoStage.addEventListener('click', (event) => {
+    const trigger = event.target.closest('[data-prototipo-target]');
+
+    if (!trigger) {
+      return;
+    }
+
+    showPrototipoScreen(trigger.dataset.prototipoTarget);
+  });
+}
+
 
 if (procesoZoomDialog && procesoZoomImage && procesoZoomClose) {
   document.addEventListener('click', (event) => {
