@@ -6,6 +6,7 @@ const sectionLabels = {
   perspectivas: 'Perspectivas',
   experto: 'Experto',
   proceso: 'Proceso',
+  estrategias: 'Estrategias',
   aprendizajes: 'Aprendizajes',
 };
 
