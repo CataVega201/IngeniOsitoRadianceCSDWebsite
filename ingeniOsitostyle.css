@@ -2302,7 +2302,7 @@ img {
   justify-items: center;
   width: min(100%, 76rem);
   margin-inline: auto;
-  gap: 1rem;
+  gap: clamp(1.7rem, 4vw, 3rem);
 }
 
 .estrategias-panel__title {
@@ -2339,8 +2339,8 @@ img {
 .estrategias-puntos {
   display: grid;
   width: 100%;
-  gap: 1rem;
-  padding: clamp(0.9rem, 2vw, 1.25rem);
+  gap: clamp(1.2rem, 2.8vw, 1.8rem);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
   border: 1px solid rgba(123, 233, 255, 0.32);
   border-radius: 1.2rem;
   background: linear-gradient(160deg, rgba(5, 14, 39, 0.94), rgba(10, 35, 56, 0.78));
@@ -2375,14 +2375,14 @@ img {
 .estrategias-puntos__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-  gap: clamp(0.8rem, 2vw, 1.1rem);
+  gap: clamp(1rem, 2.5vw, 1.45rem);
   width: 100%;
 }
 
 .estrategias-punto {
   display: grid;
   align-content: start;
-  gap: 0.8rem;
+  gap: clamp(0.9rem, 2vw, 1.15rem);
   min-width: 0;
   padding: clamp(0.72rem, 1.8vw, 0.95rem);
   border: 1px solid rgba(123, 233, 255, 0.26);
@@ -2455,9 +2455,9 @@ img {
 
 .estrategias-evolucion {
   display: grid;
-  width: min(100%, 62rem);
-  gap: clamp(1rem, 2.4vw, 1.35rem);
-  padding-block: clamp(0.35rem, 1.4vw, 0.7rem);
+  width: min(100%, 66rem);
+  gap: clamp(1.35rem, 3vw, 2rem);
+  padding: clamp(0.25rem, 1vw, 0.45rem);
 }
 
 .estrategias-evolucion__title {
@@ -2470,12 +2470,25 @@ img {
 }
 
 .estrategias-evolucion__version {
+  position: relative;
   display: grid;
-  gap: 0.55rem;
+  gap: clamp(0.7rem, 1.6vw, 0.95rem);
+  padding: clamp(1rem, 2.5vw, 1.45rem);
+  border: 1px solid rgba(255, 227, 154, 0.34);
+  border-left: clamp(0.22rem, 0.8vw, 0.36rem) solid rgba(255, 69, 69, 0.78);
+  border-radius: 1.05rem;
+  background: linear-gradient(145deg, rgba(14, 23, 58, 0.64), rgba(10, 39, 54, 0.48));
+  box-shadow: 0 0.9rem 1.8rem rgba(0, 0, 0, 0.22), inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+  overflow: hidden;
 }
 
 .estrategias-evolucion__subtitle {
+  width: fit-content;
   margin: 0;
+  padding: 0.18rem 0.7rem;
+  border: 1px solid rgba(123, 233, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(123, 233, 255, 0.08);
   color: var(--white);
   font-size: clamp(1.08rem, 2vw, 1.28rem);
   font-weight: 500;
@@ -2484,6 +2497,7 @@ img {
 
 .estrategias-evolucion__text {
   margin: 0;
+  padding-left: clamp(0.05rem, 0.6vw, 0.35rem);
   color: rgba(237, 243, 255, 0.92);
   font-size: clamp(0.98rem, 1.75vw, 1.18rem);
   line-height: 1.42;
@@ -2497,8 +2511,8 @@ img {
 .estrategias-cronograma {
   display: grid;
   width: 100%;
-  gap: 0.85rem;
-  padding: clamp(0.9rem, 2vw, 1.25rem);
+  gap: clamp(1rem, 2.4vw, 1.4rem);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
   border: 1px solid rgba(123, 233, 255, 0.36);
   border-radius: 1.2rem;
   background: linear-gradient(160deg, rgba(5, 14, 39, 0.92), rgba(10, 35, 56, 0.82));
@@ -2587,8 +2601,8 @@ img {
 .estrategias-modelo {
   display: grid;
   width: 100%;
-  gap: 0.85rem;
-  padding: clamp(0.9rem, 2vw, 1.25rem);
+  gap: clamp(1rem, 2.4vw, 1.4rem);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
   border: 1px solid rgba(255, 227, 154, 0.36);
   border-radius: 1.2rem;
   background: linear-gradient(160deg, rgba(5, 14, 39, 0.92), rgba(10, 35, 56, 0.82));
